@@ -1,0 +1,7 @@
+# Default ownership for the Pozytywka repository.
+* @3SM-Studio/developers
+
+/.github/ @3SM-Studio/developers
+/package.json @3SM-Studio/developers
+/pnpm-lock.yaml @3SM-Studio/developers
+/pnpm-workspace.yaml @3SM-Studio/developers

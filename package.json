@@ -1,0 +1,14 @@
+{
+  "name": "pozytywka",
+  "version": "0.0.0",
+  "private": true,
+  "license": "UNLICENSED",
+  "description": "Pozytywka website and Sanity Studio monorepo",
+  "engines": {
+    "node": "24.16.x"
+  },
+  "scripts": {
+    "check:repo": "node scripts/check-repository.mjs"
+  },
+  "packageManager": "pnpm@11.5.2"
+}
