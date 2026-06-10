@@ -39,7 +39,7 @@ jobs:
         run: pnpm install --frozen-lockfile
 
       - name: Validate repository
-        run: pnpm check:repo
+        run: pnpm check
 
       - name: Check whitespace
         run: git diff --check

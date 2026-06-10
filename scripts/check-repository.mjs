@@ -7,11 +7,12 @@ const requiredFiles = [
   '.gitignore',
   '.node-version',
   '.nvmrc',
-  '.npmrc',
   'README.md',
   'package.json',
   'pnpm-lock.yaml',
   'pnpm-workspace.yaml',
+  'turbo.json',
+  'apps/web/package.json',
 ]
 
 for (const file of requiredFiles) {

@@ -8,7 +8,16 @@
     "node": "24.16.x"
   },
   "scripts": {
-    "check:repo": "node scripts/check-repository.mjs"
+    "check:repo": "node scripts/check-repository.mjs",
+    "dev": "turbo run dev",
+    "build": "turbo run build",
+    "lint": "turbo run lint",
+    "typecheck": "turbo run typecheck",
+    "test": "turbo run test",
+    "check": "pnpm check:repo && turbo run lint typecheck build"
   },
-  "packageManager": "pnpm@11.5.2"
+  "packageManager": "pnpm@11.5.2",
+  "devDependencies": {
+    "turbo": "2.9.17"
+  }
 }

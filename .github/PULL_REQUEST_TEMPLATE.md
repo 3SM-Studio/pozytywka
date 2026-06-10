@@ -8,7 +8,7 @@
 
 ## Testy
 
-- [ ] `pnpm check:repo`
+- [ ] `pnpm check`
 - [ ] test manualny, jeśli wymagany
 - [ ] mobile i dostępność, jeśli dotyczy UI
 
