@@ -2,7 +2,7 @@
 
 Monorepo strony internetowej Pracowni Twórczej Pozytywka.
 
-## Planowany stack
+## Stack
 
 - Next.js
 - React
@@ -11,7 +11,7 @@ Monorepo strony internetowej Pracowni Twórczej Pozytywka.
 - pnpm workspaces
 - Turborepo
 
-## Planowana struktura
+## Struktura
 
 - `apps/web` — publiczna strona internetowa
 - `apps/studio` — Sanity Studio
@@ -20,4 +20,4 @@ Monorepo strony internetowej Pracowni Twórczej Pozytywka.
 
 ## Status
 
-Projekt jest w fazie inicjalizacji.
+Monorepo zawiera aplikację Next.js oraz Sanity Studio dla datasetu `development`.

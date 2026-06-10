@@ -13,6 +13,10 @@ const requiredFiles = [
   'pnpm-workspace.yaml',
   'turbo.json',
   'apps/web/package.json',
+  'apps/studio/package.json',
+  'apps/studio/sanity.config.ts',
+  'apps/studio/sanity.cli.ts',
+  'apps/studio/schemaTypes/index.ts',
 ]
 
 for (const file of requiredFiles) {
