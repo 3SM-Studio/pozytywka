@@ -1,1 +1,115 @@
 @import 'tailwindcss';
+
+@theme inline {
+  --font-sans: var(--font-montserrat);
+  --font-serif: var(--font-playfair);
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-surface: var(--surface);
+  --color-surface-muted: var(--surface-muted);
+  --color-surface-raised: var(--surface-raised);
+  --color-ink: var(--ink);
+
+  --radius-sm: calc(var(--radius) - 0.5rem);
+  --radius-md: calc(var(--radius) - 0.25rem);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 0.5rem);
+  --radius-2xl: calc(var(--radius) + 1rem);
+
+  --spacing-container: min(100% - 2rem, 72rem);
+  --spacing-section: clamp(4rem, 8vw, 7rem);
+}
+
+:root {
+  --background: oklch(0.985 0.018 92);
+  --foreground: oklch(0.18 0.025 70);
+
+  --card: oklch(1 0 0);
+  --card-foreground: var(--foreground);
+
+  --primary: oklch(0.82 0.17 88);
+  --primary-foreground: oklch(0.18 0.025 70);
+
+  --secondary: oklch(0.93 0.045 87);
+  --secondary-foreground: oklch(0.24 0.035 70);
+
+  --muted: oklch(0.94 0.025 88);
+  --muted-foreground: oklch(0.45 0.035 70);
+
+  --accent: oklch(0.76 0.14 42);
+  --accent-foreground: oklch(0.2 0.035 55);
+
+  --border: oklch(0.86 0.026 82);
+  --input: var(--border);
+  --ring: oklch(0.72 0.16 82);
+
+  --surface: oklch(0.985 0.018 92);
+  --surface-muted: oklch(0.94 0.037 88);
+  --surface-raised: oklch(1 0 0);
+  --ink: oklch(0.22 0.018 70);
+
+  --radius: 1rem;
+}
+
+@layer base {
+  * {
+    border-color: var(--border);
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    min-height: 100vh;
+    background:
+      radial-gradient(circle at top left, oklch(0.92 0.08 87 / 45%), transparent 28rem),
+      var(--background);
+    color: var(--foreground);
+    font-family: var(--font-sans);
+    text-rendering: optimizeLegibility;
+  }
+
+  ::selection {
+    background: var(--primary);
+    color: var(--primary-foreground);
+  }
+
+  a {
+    text-underline-offset: 0.2em;
+  }
+
+  :focus-visible {
+    outline: 3px solid var(--ring);
+    outline-offset: 4px;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+      scroll-behavior: auto !important;
+      transition-duration: 0.01ms !important;
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+    }
+  }
+}
