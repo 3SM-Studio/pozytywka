@@ -6,7 +6,7 @@ updates:
     schedule:
       interval: weekly
       day: monday
-      time: "06:00"
+      time: '06:00'
       timezone: Europe/Warsaw
     versioning-strategy: increase
     open-pull-requests-limit: 10
@@ -17,12 +17,12 @@ updates:
           - react
           - react-dom
           - eslint-config-next
-          - "@types/react"
-          - "@types/react-dom"
+          - '@types/react'
+          - '@types/react-dom'
       sanity:
         patterns:
           - sanity
-          - "@sanity/*"
+          - '@sanity/*'
           - styled-components
       tooling:
         dependency-type: development
@@ -32,14 +32,14 @@ updates:
           - eslint
           - prettier
           - tailwindcss
-          - "@tailwindcss/*"
-          - "@types/*"
+          - '@tailwindcss/*'
+          - '@types/*'
 
   - package-ecosystem: github-actions
     directory: /
     schedule:
       interval: weekly
       day: monday
-      time: "06:30"
+      time: '06:30'
       timezone: Europe/Warsaw
     open-pull-requests-limit: 5

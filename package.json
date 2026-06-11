@@ -15,10 +15,14 @@
     "lint": "turbo run lint",
     "typecheck": "turbo run typecheck",
     "check:repo": "node scripts/check-repository.mjs",
-    "check": "pnpm check:repo && turbo run lint typecheck build"
+    "check": "pnpm check:repo && pnpm format:check && turbo run lint typecheck build",
+    "format": "prettier . --write --ignore-unknown",
+    "format:check": "prettier . --check --ignore-unknown"
   },
   "packageManager": "pnpm@11.5.2",
   "devDependencies": {
+    "prettier": "3.8.4",
+    "prettier-plugin-tailwindcss": "0.8.0",
     "turbo": "2.9.17"
   }
 }

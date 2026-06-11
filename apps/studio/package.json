@@ -22,13 +22,6 @@
     "@sanity/eslint-config-studio": "6.0.0",
     "@types/react": "19.2.17",
     "eslint": "9.39.4",
-    "prettier": "3.8.4",
     "typescript": "5.9.3"
-  },
-  "prettier": {
-    "bracketSpacing": false,
-    "printWidth": 100,
-    "semi": false,
-    "singleQuote": true
   }
 }

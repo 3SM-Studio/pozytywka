@@ -132,7 +132,11 @@ assert.equal(turboConfig.tasks?.dev?.cache, false)
 assert.equal(turboConfig.tasks?.build?.dependsOn?.includes('typecheck'), true)
 assert.equal(turboConfig.tasks?.build?.outputs?.includes('.next/**'), true)
 assert.equal(turboConfig.tasks?.build?.outputs?.includes('dist/**'), true)
-assert.equal('test' in (turboConfig.tasks ?? {}), false, 'Remove placeholder test task until real tests exist')
+assert.equal(
+  'test' in (turboConfig.tasks ?? {}),
+  false,
+  'Remove placeholder test task until real tests exist',
+)
 
 const gitignore = readFileSync('.gitignore', 'utf8')
 assert.match(gitignore, /^\/apps\/web\/next-env\.d\.ts$/m)
