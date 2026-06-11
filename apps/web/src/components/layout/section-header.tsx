@@ -11,7 +11,7 @@ export function SectionHeader({eyebrow, title, description, align = 'left'}: Sec
   return (
     <div className={`max-w-3xl ${alignment}`}>
       {eyebrow ? (
-        <p className="text-primary mb-3 text-sm font-semibold tracking-[0.14em] uppercase">
+        <p className="text-primary mb-4 text-sm font-semibold tracking-[0.16em] uppercase">
           {eyebrow}
         </p>
       ) : null}
@@ -38,7 +38,7 @@ export function SectionShell({
     default: 'bg-background',
     muted: 'bg-surface-container-low',
     surface: 'bg-surface',
-    ink: 'bg-inverse-surface text-inverse-surface-foreground',
+    ink: 'bg-ink text-inverse-surface-foreground',
   }[tone]
 
   return (

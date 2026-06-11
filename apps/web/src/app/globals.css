@@ -50,43 +50,45 @@
 }
 
 :root {
-  --background: #fff8ef;
-  --foreground: #1f1b0e;
+  color-scheme: dark;
 
-  --card: #ffffff;
-  --card-foreground: #1f1b0e;
+  --background: #100d09;
+  --foreground: #fff3d7;
 
-  --primary: #705d00;
-  --primary-foreground: #ffffff;
-  --primary-container: #ffd700;
-  --primary-container-foreground: #705e00;
+  --card: #1e170f;
+  --card-foreground: #fff3d7;
 
-  --secondary: #5f5e5e;
-  --secondary-foreground: #ffffff;
+  --primary: #ffd54a;
+  --primary-foreground: #1c1406;
+  --primary-container: #ffd54a;
+  --primary-container-foreground: #1c1406;
 
-  --muted: #ebe2cc;
-  --muted-foreground: #4d4732;
+  --secondary: #d6c49f;
+  --secondary-foreground: #1c1406;
 
-  --accent: #ffd700;
-  --accent-foreground: #705e00;
+  --muted: #2b2115;
+  --muted-foreground: #cdbd98;
 
-  --border: #d0c6ab;
-  --input: #d0c6ab;
-  --ring: #705d00;
+  --accent: #ffb84d;
+  --accent-foreground: #1c1406;
 
-  --surface: #fff8ef;
-  --surface-muted: #f7edd7;
-  --surface-raised: #ffffff;
-  --surface-container-low: #fdf3dc;
-  --surface-container: #f7edd7;
-  --surface-container-high: #f1e7d1;
-  --surface-container-highest: #ebe2cc;
+  --border: #3c2f1f;
+  --input: #4b3a25;
+  --ring: #ffd54a;
 
-  --inverse-surface: #353021;
-  --inverse-surface-foreground: #faf0d9;
-  --outline: #7e775f;
-  --outline-variant: #d0c6ab;
-  --ink: #1a1a1a;
+  --surface: #15110c;
+  --surface-muted: #1b150e;
+  --surface-raised: #21180f;
+  --surface-container-low: #18130d;
+  --surface-container: #241b11;
+  --surface-container-high: #302416;
+  --surface-container-highest: #3b2b1a;
+
+  --inverse-surface: #080604;
+  --inverse-surface-foreground: #fff3d7;
+  --outline: #a88d58;
+  --outline-variant: #4a3924;
+  --ink: #080604;
 }
 
 @layer base {
@@ -100,7 +102,10 @@
 
   body {
     min-height: 100vh;
-    background: var(--background);
+    background:
+      radial-gradient(circle at 18% 0%, rgb(255 213 74 / 0.14), transparent 22rem),
+      radial-gradient(circle at 85% 12%, rgb(255 184 77 / 0.1), transparent 26rem),
+      linear-gradient(180deg, #141009 0%, var(--background) 36rem);
     color: var(--foreground);
     overflow-x: hidden;
     font-family: var(--font-sans);
