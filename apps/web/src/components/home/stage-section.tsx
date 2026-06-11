@@ -1,5 +1,5 @@
 import type {HomePageContent} from '@/lib/content/types'
-import {SectionHeader, SectionShell} from './section-header'
+import {SectionHeader, SectionShell} from '@/components/layout/section-header'
 
 type StageSectionProps = {
   content: HomePageContent['stage']

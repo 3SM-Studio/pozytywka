@@ -1,5 +1,5 @@
 import type {CampContent} from '@/lib/content/types'
-import {SectionShell} from './section-header'
+import {SectionShell} from '@/components/layout/section-header'
 
 type CampSectionProps = {
   content: CampContent
@@ -10,7 +10,7 @@ export function CampSection({content}: CampSectionProps) {
     <SectionShell id="obozy">
       <div className="grid items-center gap-10 md:grid-cols-12">
         <div className="min-w-0 md:col-span-7">
-          <div className="border-outline-variant/60 bg-inverse-surface relative isolate grid aspect-4/3 w-full min-w-0 place-items-center overflow-hidden rounded-2xl border shadow-lg md:aspect-auto md:h-124">
+          <div className="border-outline-variant/60 bg-inverse-surface relative isolate grid min-h-[352px] w-full min-w-0 place-items-center overflow-hidden rounded-2xl border shadow-lg md:min-h-[496px]">
             <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_70%_30%,rgba(255,215,0,0.24),transparent_18rem),linear-gradient(135deg,rgba(255,248,239,0.14),transparent_42%)]" />
             <div className="absolute inset-0 -z-10 bg-black/20" />
             <p className="text-inverse-surface-foreground/75 max-w-xs px-6 text-center text-sm font-semibold tracking-[0.16em] uppercase">

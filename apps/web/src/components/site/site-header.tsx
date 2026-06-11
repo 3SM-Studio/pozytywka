@@ -1,3 +1,4 @@
+import {SiteLogo} from '@/components/site/site-logo'
 import type {NavigationItem} from '@/lib/content/types'
 
 type SiteHeaderProps = {
@@ -6,14 +7,10 @@ type SiteHeaderProps = {
 
 export function SiteHeader({navigation}: SiteHeaderProps) {
   return (
-    <header className="border-outline-variant/60 bg-background/95 sticky top-0 z-50 w-full border-b shadow-[0_1px_10px_rgba(31,27,14,0.06)] backdrop-blur">
+    <header className="border-outline-variant/60 bg-background sticky top-0 z-50 w-full border-b shadow-[0_1px_10px_rgba(31,27,14,0.06)]">
       <div className="w-container mx-auto flex min-h-16 items-center justify-between gap-6">
         <a href="#top" className="flex items-center gap-3" aria-label="Pozytywka — strona główna">
-          <span className="border-outline-variant bg-surface-raised grid h-12 w-40 place-items-center rounded-lg border px-4 text-left shadow-sm">
-            <span className="flex flex-col leading-none">
-              <span className="font-serif text-2xl font-semibold tracking-tight">Pozytywka</span>
-            </span>
-          </span>
+          <SiteLogo size="header" />
         </a>
 
         <nav aria-label="Główna nawigacja" className="hidden items-center gap-7 md:flex">

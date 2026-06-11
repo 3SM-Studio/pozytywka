@@ -91,9 +91,21 @@ export type FooterLinkGroup = {
   links: LinkTarget[]
 }
 
-export type HomePageContent = {
+export type FooterContent = {
+  description: string
+  contact: string[]
+  social: LinkTarget[]
+  legal: LinkTarget[]
+  groups: FooterLinkGroup[]
+}
+
+export type SiteContent = {
   announcement: AnnouncementContent
   navigation: NavigationItem[]
+  footer: FooterContent
+}
+
+export type HomePageContent = {
   hero: HeroContent
   quickLinks: QuickLink[]
   stage: {
@@ -143,12 +155,5 @@ export type HomePageContent = {
     meta: string
     primaryAction: LinkTarget
     secondaryAction: LinkTarget
-  }
-  footer: {
-    description: string
-    contact: string[]
-    social: LinkTarget[]
-    legal: LinkTarget[]
-    groups: FooterLinkGroup[]
   }
 }

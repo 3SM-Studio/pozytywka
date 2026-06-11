@@ -1,7 +1,8 @@
-import type {HomePageContent} from '@/lib/content/types'
+import {SiteLogo} from '@/components/site/site-logo'
+import type {FooterContent} from '@/lib/content/types'
 
 type SiteFooterProps = {
-  content: HomePageContent['footer']
+  content: FooterContent
 }
 
 export function SiteFooter({content}: SiteFooterProps) {
@@ -9,11 +10,7 @@ export function SiteFooter({content}: SiteFooterProps) {
     <footer id="kontakt" className="border-outline-variant/60 bg-surface-container-low border-t">
       <div className="w-container mx-auto grid gap-10 py-12 md:grid-cols-[1.25fr_1fr_1fr_1fr]">
         <div>
-          <div className="border-outline-variant bg-surface-raised grid h-14 w-44 place-items-center rounded-lg border px-4 shadow-sm">
-            <span className="flex flex-col leading-none">
-              <span className="font-serif text-2xl font-semibold tracking-tight">Pozytywka</span>
-            </span>
-          </div>
+          <SiteLogo size="footer" />
           <p className="text-muted-foreground mt-5 max-w-md text-sm leading-7">
             {content.description}
           </p>

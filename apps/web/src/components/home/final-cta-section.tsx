@@ -1,5 +1,5 @@
 import type {HomePageContent} from '@/lib/content/types'
-import {SectionShell} from './section-header'
+import {SectionShell} from '@/components/layout/section-header'
 
 type FinalCtaSectionProps = {
   content: HomePageContent['finalCta']

@@ -18,7 +18,7 @@ export function HeroSection({content}: HeroSectionProps) {
       </div>
 
       <div className="w-container relative z-10 mx-auto flex min-h-[58vh] items-center">
-        <div className="bg-surface/95 text-foreground max-w-2xl rounded-2xl p-8 shadow-2xl backdrop-blur-sm md:p-12 lg:p-14">
+        <div className="bg-surface text-foreground max-w-2xl rounded-2xl p-8 shadow-2xl md:p-12 lg:p-14">
           <h1 className="font-serif text-[2.65rem] leading-[1.08] font-bold tracking-[-0.025em] md:text-[4.25rem] md:leading-[1.02]">
             {content.title}
           </h1>
