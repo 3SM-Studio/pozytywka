@@ -1,6 +1,7 @@
+import {SiteShell} from '@/components/layout/site-shell'
+import {ThemeProvider} from '@/components/theme/theme-provider'
 import type {Metadata} from 'next'
 import {Montserrat, Playfair_Display} from 'next/font/google'
-import {SiteShell} from '@/components/layout/site-shell'
 import './globals.css'
 
 const montserrat = Montserrat({
@@ -30,9 +31,20 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="pl" className={`${montserrat.variable} ${playfair.variable}`}>
+    <html
+      lang="pl"
+      suppressHydrationWarning
+      className={`${montserrat.variable} ${playfair.variable}`}
+    >
       <body>
-        <SiteShell>{children}</SiteShell>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <SiteShell>{children}</SiteShell>
+        </ThemeProvider>
       </body>
     </html>
   )
