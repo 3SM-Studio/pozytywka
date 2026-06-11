@@ -24,6 +24,35 @@ Po uruchomieniu:
 - Web: `http://localhost:3000`
 - Sanity Studio: `http://localhost:3333`
 
+## Dla nowego developera
+
+Nie musisz rozumieć całej konfiguracji repozytorium przed pierwszym zadaniem.
+
+Na początku masz umieć:
+
+1. uruchomić projekt lokalnie,
+2. zrobić branch,
+3. wprowadzić małą zmianę,
+4. uruchomić `pnpm check`,
+5. wypchnąć branch,
+6. otworzyć Pull Request,
+7. przeczytać wynik CI,
+8. poprosić o review.
+
+Nie zmieniaj konfiguracji repozytorium bez konsultacji, jeżeli nie rozumiesz skutków zmiany.
+
+Dotyczy to szczególnie:
+
+- `pnpm-workspace.yaml`,
+- `turbo.json`,
+- `.github/workflows/ci.yml`,
+- `scripts/check-repository.mjs`,
+- `package.json`,
+- `pnpm-lock.yaml`,
+- `.husky/`,
+- `.prettierrc.json`,
+- `.gitignore`.
+
 ## Najważniejsze komendy
 
 ```bash
@@ -47,6 +76,21 @@ pnpm check        # lokalny odpowiednik CI
 
 Jeżeli `pnpm check` nie przechodzi lokalnie, PR nie jest gotowy do review.
 
+## Słownik
+
+- **root** — główny katalog repozytorium.
+- **workspace** — aplikacja lub pakiet zarządzany przez pnpm w ramach jednego repo.
+- **Web** — aplikacja Next.js w `apps/web`.
+- **Studio** — Sanity Studio w `apps/studio`.
+- **PR / Pull Request** — propozycja zmiany do review przed merge do `main`.
+- **CI** — automatyczne sprawdzenie kodu na GitHub Actions.
+- **staged files** — pliki dodane do commita przez `git add`.
+- **lint** — sprawdzenie jakości i reguł kodu.
+- **typecheck** — sprawdzenie typów TypeScript.
+- **build** — produkcyjna kompilacja aplikacji.
+- **baseline** — minimalny standard techniczny repozytorium.
+- **generated file** — plik tworzony automatycznie przez narzędzie, którego zwykle nie edytujemy ręcznie.
+
 ## Monorepo
 
 Repozytorium ma dwa główne workspace:
@@ -59,9 +103,9 @@ Nie twórz osobnego `pnpm-lock.yaml` ani `pnpm-workspace.yaml` w `apps/web` lub 
 Zależności dodawaj z katalogu głównego:
 
 ```bash
-pnpm add -Dw <package>
-pnpm --filter @pozytywka/web add <package>
-pnpm --filter @pozytywka/studio add <package>
+pnpm add -Dw PACKAGE_NAME
+pnpm --filter @pozytywka/web add PACKAGE_NAME
+pnpm --filter @pozytywka/studio add PACKAGE_NAME
 ```
 
 Pierwsza komenda dodaje zależność do root workspace. Druga i trzecia dodają zależność do konkretnej aplikacji.
@@ -106,6 +150,33 @@ pnpm check
 
 Pull request musi przejść CI i dostać wymagane review.
 
+## Pierwszy PR juniora
+
+Pierwszy PR powinien być mały.
+
+Dobry pierwszy PR:
+
+- zmienia jeden widoczny tekst,
+- poprawia prosty styl,
+- aktualizuje dokumentację,
+- dodaje prosty komponent bez logiki biznesowej.
+
+Zły pierwszy PR:
+
+- zmienia konfigurację CI,
+- aktualizuje wiele zależności naraz,
+- przebudowuje strukturę katalogów,
+- zmienia Sanity schema bez uzgodnienia,
+- dodaje nowy framework lub narzędzie.
+
+Przed otwarciem PR uruchom:
+
+```bash
+pnpm check
+```
+
+Jeżeli `pnpm check` nie przechodzi, nie otwieraj PR jako gotowego do review.
+
 ## Czego nie dodawać bez decyzji
 
 Nie dodawaj bez świadomej decyzji zespołu:
@@ -121,6 +192,20 @@ Nie dodawaj bez świadomej decyzji zespołu:
 - ADR,
 - `.npmrc`,
 - sekretów lub plików `.env`.
+
+## Kiedy zapytać seniora
+
+Zapytaj przed zmianą, jeżeli:
+
+- nie wiesz, czy zależność powinna trafić do root, Web czy Studio,
+- chcesz zmienić `turbo.json`,
+- chcesz zmienić workflow GitHub Actions,
+- chcesz zmienić `pnpm-workspace.yaml`,
+- chcesz dodać nowy package manager config,
+- chcesz zmienić Sanity dataset,
+- chcesz dodać sekret, token albo plik `.env`,
+- `pnpm-lock.yaml` zmienił się, a nie dodawałeś zależności,
+- CI przechodzi lokalnie, ale pada na GitHubie.
 
 ## Typowe problemy
 
