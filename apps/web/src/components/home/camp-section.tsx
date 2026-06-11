@@ -9,15 +9,17 @@ export function CampSection({content}: CampSectionProps) {
   return (
     <SectionShell id="obozy">
       <div className="grid items-center gap-10 md:grid-cols-12">
-        <div className="md:col-span-7">
-          <div className="bg-surface-container-highest border-outline-variant/60 grid aspect-video place-items-center overflow-hidden rounded-2xl border shadow-lg md:h-[31rem]">
-            <p className="text-muted-foreground max-w-xs px-6 text-center text-sm font-semibold tracking-[0.16em] uppercase">
+        <div className="min-w-0 md:col-span-7">
+          <div className="border-outline-variant/60 bg-inverse-surface relative isolate grid aspect-[4/3] w-full min-w-0 place-items-center overflow-hidden rounded-2xl border shadow-lg md:aspect-auto md:h-[31rem]">
+            <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_70%_30%,rgba(255,215,0,0.24),transparent_18rem),linear-gradient(135deg,rgba(255,248,239,0.14),transparent_42%)]" />
+            <div className="absolute inset-0 -z-10 bg-black/20" />
+            <p className="text-inverse-surface-foreground/75 max-w-xs px-6 text-center text-sm font-semibold tracking-[0.16em] uppercase">
               {content.mediaLabel}
             </p>
           </div>
         </div>
 
-        <div className="md:col-span-5">
+        <div className="min-w-0 md:col-span-5">
           <p className="text-primary text-sm font-semibold tracking-[0.14em] uppercase">
             {content.eyebrow}
           </p>

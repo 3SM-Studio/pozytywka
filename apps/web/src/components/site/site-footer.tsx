@@ -12,9 +12,6 @@ export function SiteFooter({content}: SiteFooterProps) {
           <div className="border-outline-variant bg-surface-raised grid h-14 w-44 place-items-center rounded-lg border px-4 shadow-sm">
             <span className="flex flex-col leading-none">
               <span className="font-serif text-2xl font-semibold tracking-tight">Pozytywka</span>
-              <span className="text-muted-foreground mt-1 text-[0.62rem] font-bold tracking-[0.2em] uppercase">
-                logo — do podmiany
-              </span>
             </span>
           </div>
           <p className="text-muted-foreground mt-5 max-w-md text-sm leading-7">

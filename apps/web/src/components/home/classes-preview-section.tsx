@@ -31,8 +31,9 @@ export function ClassesPreviewSection({content}: ClassesPreviewSectionProps) {
             key={`${item.category}-${item.title}`}
             className="group border-outline-variant/60 bg-surface-raised overflow-hidden rounded-2xl border shadow-sm"
           >
-            <div className="bg-surface-container-highest text-muted-foreground grid aspect-[4/3] place-items-center px-6 text-center text-xs font-semibold tracking-[0.14em] uppercase transition group-hover:scale-[1.02]">
-              {item.imageLabel}
+            <div className="bg-surface-container-highest text-muted-foreground relative grid aspect-[4/3] place-items-center overflow-hidden px-6 text-center text-xs font-semibold tracking-[0.14em] uppercase transition group-hover:scale-[1.02]">
+              <span className="absolute inset-0 bg-[radial-gradient(circle_at_70%_20%,rgba(255,215,0,0.18),transparent_12rem)]" />
+              <span className="relative">{item.imageLabel}</span>
             </div>
             <div className="p-6">
               <p className="text-primary text-xs font-semibold tracking-[0.14em] uppercase">

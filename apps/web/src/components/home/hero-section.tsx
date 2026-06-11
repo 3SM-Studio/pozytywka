@@ -8,24 +8,23 @@ export function HeroSection({content}: HeroSectionProps) {
   return (
     <section
       id="top"
-      className="bg-surface-container-highest relative flex min-h-[80vh] items-center overflow-hidden px-5"
+      className="bg-inverse-surface text-inverse-surface-foreground relative isolate flex min-h-[78vh] items-center overflow-hidden px-5 py-20 md:min-h-[80vh]"
     >
-      <div className="absolute inset-0 z-0">
-        <div className="from-inverse-surface via-foreground to-primary h-full w-full bg-gradient-to-br" />
-        <div className="absolute inset-0 bg-black/40" />
-        <div className="absolute inset-0 grid place-items-center p-8 text-center">
-          <p className="max-w-xs rounded-lg border border-white/25 bg-black/25 px-5 py-4 text-xs font-semibold tracking-[0.18em] text-white/70 uppercase">
-            {content.mediaLabel}
-          </p>
-        </div>
+      <div className="absolute inset-0 -z-10">
+        <div className="from-inverse-surface via-ink to-primary h-full w-full bg-gradient-to-br" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_78%_22%,rgba(255,215,0,0.35),transparent_24rem),radial-gradient(circle_at_24%_78%,rgba(255,248,239,0.16),transparent_28rem)]" />
+        <div className="absolute inset-0 bg-black/35" />
+        <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-black/35 to-transparent" />
       </div>
 
-      <div className="w-container py-section relative z-10 mx-auto">
-        <div className="bg-surface/90 max-w-2xl rounded-xl p-8 shadow-lg backdrop-blur-sm md:p-12">
-          <h1 className="text-foreground font-serif text-[2.5rem] leading-[1.15] font-bold tracking-[-0.015em] md:text-[4rem] md:leading-[1.08]">
+      <div className="w-container relative z-10 mx-auto flex min-h-[58vh] items-center">
+        <div className="bg-surface/95 text-foreground max-w-2xl rounded-2xl p-8 shadow-2xl backdrop-blur-sm md:p-12 lg:p-14">
+          <h1 className="font-serif text-[2.65rem] leading-[1.08] font-bold tracking-[-0.025em] md:text-[4.25rem] md:leading-[1.02]">
             {content.title}
           </h1>
-          <p className="text-muted-foreground mt-6 text-lg leading-8">{content.description}</p>
+          <p className="text-muted-foreground mt-6 max-w-xl text-lg leading-8">
+            {content.description}
+          </p>
           <div className="mt-8 flex flex-col gap-4 sm:flex-row">
             <a
               href={content.primaryAction.href}
@@ -41,6 +40,10 @@ export function HeroSection({content}: HeroSectionProps) {
             </a>
           </div>
         </div>
+      </div>
+
+      <div className="border-inverse-surface-foreground/25 text-inverse-surface-foreground/75 absolute right-[8%] bottom-[18%] hidden max-w-[18rem] rounded-xl border bg-black/20 px-6 py-5 text-center text-xs font-semibold tracking-[0.18em] uppercase backdrop-blur-sm lg:block">
+        {content.mediaLabel}
       </div>
     </section>
   )
