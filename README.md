@@ -47,6 +47,10 @@ pnpm build        # build wszystkich workspace
 pnpm check        # pełna kontrola lokalna zgodna z CI
 ```
 
+## Praca developerska
+
+Zasady pracy z repozytorium, branchami, formatowaniem i monorepo są opisane w [`CONTRIBUTING.md`](CONTRIBUTING.md).
+
 ## Zasady repozytorium
 
 - istnieje jeden `pnpm-workspace.yaml` i jeden `pnpm-lock.yaml`,
