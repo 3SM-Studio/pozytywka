@@ -1,5 +1,7 @@
 @import 'tailwindcss';
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 @theme inline {
   --font-sans: var(--font-montserrat);
   --font-serif: var(--font-playfair);
@@ -50,6 +52,50 @@
 }
 
 :root {
+  color-scheme: light;
+
+  --background: #fff8ef;
+  --foreground: #1f1b0e;
+
+  --card: #ffffff;
+  --card-foreground: #1f1b0e;
+
+  --primary: #705d00;
+  --primary-foreground: #ffffff;
+  --primary-container: #ffd700;
+  --primary-container-foreground: #705e00;
+
+  --secondary: #5f5e5e;
+  --secondary-foreground: #ffffff;
+
+  --muted: #ebe2cc;
+  --muted-foreground: #4d4732;
+
+  --accent: #ffd700;
+  --accent-foreground: #705e00;
+
+  --border: #d0c6ab;
+  --input: #d0c6ab;
+  --ring: #705d00;
+
+  --surface: #fff8ef;
+  --surface-muted: #f7edd7;
+  --surface-raised: #ffffff;
+  --surface-container-low: #fdf3dc;
+  --surface-container: #f7edd7;
+  --surface-container-high: #f1e7d1;
+  --surface-container-highest: #ebe2cc;
+
+  --inverse-surface: #353021;
+  --inverse-surface-foreground: #faf0d9;
+  --outline: #7e775f;
+  --outline-variant: #d0c6ab;
+  --ink: #1a1a1a;
+
+  --page-background: var(--background);
+}
+
+.dark {
   color-scheme: dark;
 
   --background: #100d09;
@@ -89,6 +135,11 @@
   --outline: #a88d58;
   --outline-variant: #4a3924;
   --ink: #080604;
+
+  --page-background:
+    radial-gradient(circle at 18% 0%, rgb(255 213 74 / 0.14), transparent 22rem),
+    radial-gradient(circle at 85% 12%, rgb(255 184 77 / 0.1), transparent 26rem),
+    linear-gradient(180deg, #141009 0%, var(--background) 36rem);
 }
 
 @layer base {
@@ -102,10 +153,7 @@
 
   body {
     min-height: 100vh;
-    background:
-      radial-gradient(circle at 18% 0%, rgb(255 213 74 / 0.14), transparent 22rem),
-      radial-gradient(circle at 85% 12%, rgb(255 184 77 / 0.1), transparent 26rem),
-      linear-gradient(180deg, #141009 0%, var(--background) 36rem);
+    background: var(--page-background);
     color: var(--foreground);
     overflow-x: hidden;
     font-family: var(--font-sans);

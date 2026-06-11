@@ -11,8 +11,8 @@ export function HeroSection({content}: HeroSectionProps) {
       className="bg-background text-foreground relative isolate overflow-hidden px-5 py-20 md:py-28"
     >
       <div className="absolute inset-0 -z-10">
-        <div className="from-ink via-background to-surface h-full w-full bg-gradient-to-br" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_78%_18%,rgba(255,213,74,0.24),transparent_26rem),radial-gradient(circle_at_18%_80%,rgba(255,184,77,0.12),transparent_28rem)]" />
+        <div className="from-surface-container-low via-background to-surface dark:from-ink h-full w-full bg-gradient-to-br" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_78%_18%,rgba(255,215,0,0.24),transparent_26rem),radial-gradient(circle_at_18%_80%,rgba(112,93,0,0.08),transparent_28rem)] dark:bg-[radial-gradient(circle_at_78%_18%,rgba(255,213,74,0.24),transparent_26rem),radial-gradient(circle_at_18%_80%,rgba(255,184,77,0.12),transparent_28rem)]" />
         <div className="from-background absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t to-transparent" />
       </div>
 
