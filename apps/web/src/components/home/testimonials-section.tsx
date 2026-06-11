@@ -19,13 +19,16 @@ export function TestimonialsSection({content}: TestimonialsSectionProps) {
         {content.items.map((item) => (
           <figure
             key={`${item.author}-${item.caption}`}
-            className="border-border bg-card rounded-3xl border p-6"
+            className="border-outline-variant/60 bg-surface-raised rounded-2xl border p-6"
           >
-            <blockquote className="font-serif text-2xl leading-snug font-semibold">
-              “{item.quote}”
+            <span aria-hidden="true" className="text-primary font-serif text-4xl leading-none">
+              “
+            </span>
+            <blockquote className="mt-3 font-serif text-2xl leading-snug font-semibold">
+              {item.quote}
             </blockquote>
             <figcaption className="mt-6">
-              <p className="font-bold">{item.author}</p>
+              <p className="font-semibold">{item.author}</p>
               <p className="text-muted-foreground mt-1 text-sm">{item.caption}</p>
             </figcaption>
           </figure>

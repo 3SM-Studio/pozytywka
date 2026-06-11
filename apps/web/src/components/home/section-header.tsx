@@ -11,9 +11,11 @@ export function SectionHeader({eyebrow, title, description, align = 'left'}: Sec
   return (
     <div className={`max-w-3xl ${alignment}`}>
       {eyebrow ? (
-        <p className="text-primary mb-4 text-sm font-bold tracking-[0.2em] uppercase">{eyebrow}</p>
+        <p className="text-primary mb-3 text-sm font-semibold tracking-[0.14em] uppercase">
+          {eyebrow}
+        </p>
       ) : null}
-      <h2 className="text-foreground font-serif text-4xl leading-tight font-semibold tracking-tight md:text-5xl">
+      <h2 className="text-foreground font-serif text-4xl leading-tight font-semibold tracking-tight md:text-[3.25rem]">
         {title}
       </h2>
       {description ? (
@@ -29,17 +31,18 @@ export function SectionShell({
   children,
 }: {
   id?: string
-  tone?: 'default' | 'muted' | 'ink'
+  tone?: 'default' | 'muted' | 'surface' | 'ink'
   children: React.ReactNode
 }) {
   const toneClass = {
     default: 'bg-background',
-    muted: 'bg-surface-muted',
-    ink: 'bg-ink text-background',
+    muted: 'bg-surface-container-low',
+    surface: 'bg-surface',
+    ink: 'bg-inverse-surface text-inverse-surface-foreground',
   }[tone]
 
   return (
-    <section id={id} className={`${toneClass} py-section scroll-mt-24 px-4`}>
+    <section id={id} className={`${toneClass} py-section scroll-mt-24 px-5`}>
       <div className="w-container mx-auto">{children}</div>
     </section>
   )

@@ -16,33 +16,44 @@ export function ClassesPreviewSection({content}: ClassesPreviewSectionProps) {
         />
         <a
           href={content.action.href}
-          className="bg-ink text-background inline-flex min-h-12 shrink-0 items-center justify-center rounded-full px-6 text-sm font-bold"
+          className="bg-inverse-surface text-inverse-surface-foreground hover:bg-primary hover:text-primary-foreground inline-flex min-h-11 shrink-0 items-center justify-center rounded-lg px-8 text-sm font-semibold transition-colors"
         >
           {content.action.label}
+          <span aria-hidden="true" className="ml-2">
+            →
+          </span>
         </a>
       </div>
 
-      <div className="mt-12 grid gap-5 lg:grid-cols-3">
+      <div className="mt-12 grid gap-6 lg:grid-cols-3">
         {content.items.map((item) => (
           <article
-            key={item.title}
-            className="border-border bg-card rounded-3xl border p-6 shadow-sm"
+            key={`${item.category}-${item.title}`}
+            className="group border-outline-variant/60 bg-surface-raised overflow-hidden rounded-2xl border shadow-sm"
           >
-            <p className="text-primary text-xs font-bold tracking-[0.2em] uppercase">
-              {item.category}
-            </p>
-            <h3 className="mt-4 font-serif text-3xl font-semibold tracking-tight">{item.title}</h3>
-            <p className="text-muted-foreground mt-4 text-sm leading-7">{item.description}</p>
-            <dl className="mt-6 grid gap-3 text-sm">
-              <div className="bg-muted rounded-2xl p-4">
-                <dt className="font-bold">Informacje</dt>
-                <dd className="text-muted-foreground mt-1">{item.meta}</dd>
+            <div className="bg-surface-container-highest text-muted-foreground grid aspect-[4/3] place-items-center px-6 text-center text-xs font-semibold tracking-[0.14em] uppercase transition group-hover:scale-[1.02]">
+              {item.imageLabel}
+            </div>
+            <div className="p-6">
+              <p className="text-primary text-xs font-semibold tracking-[0.14em] uppercase">
+                {item.category}
+              </p>
+              <h3 className="mt-3 font-serif text-2xl font-semibold tracking-tight">
+                {item.title}
+              </h3>
+              <p className="text-muted-foreground mt-3 text-sm leading-7">{item.description}</p>
+              <div className="bg-surface-container-low mt-5 rounded-xl p-4 text-sm">
+                <p className="font-semibold">Info</p>
+                <p className="text-muted-foreground mt-1 leading-6">{item.meta}</p>
               </div>
-              <div className="border-border rounded-2xl border p-4">
-                <dt className="font-bold">Zapisy</dt>
-                <dd className="text-muted-foreground mt-1">{item.status}</dd>
-              </div>
-            </dl>
+              <p className="text-primary mt-4 text-sm font-semibold">{item.status}</p>
+              <a
+                href={item.action.href}
+                className="text-foreground mt-5 inline-flex text-sm font-semibold"
+              >
+                {item.action.label}
+              </a>
+            </div>
           </article>
         ))}
       </div>

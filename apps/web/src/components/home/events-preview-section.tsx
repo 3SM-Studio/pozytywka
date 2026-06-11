@@ -16,9 +16,12 @@ export function EventsPreviewSection({content}: EventsPreviewSectionProps) {
         />
         <a
           href={content.action.href}
-          className="border-border bg-card text-foreground inline-flex min-h-12 shrink-0 items-center justify-center rounded-full border px-6 text-sm font-bold"
+          className="border-outline bg-surface text-foreground hover:bg-surface-container-high inline-flex min-h-11 shrink-0 items-center justify-center rounded-lg border px-8 text-sm font-semibold transition-colors"
         >
           {content.action.label}
+          <span aria-hidden="true" className="ml-2">
+            →
+          </span>
         </a>
       </div>
 
@@ -26,23 +29,26 @@ export function EventsPreviewSection({content}: EventsPreviewSectionProps) {
         {content.items.map((item) => (
           <article
             key={`${item.type}-${item.title}`}
-            className="border-border bg-card grid gap-6 rounded-3xl border p-6 shadow-sm md:grid-cols-[12rem_1fr_auto] md:items-center"
+            className="border-outline-variant/60 bg-surface-raised grid gap-6 rounded-2xl border p-6 shadow-sm md:grid-cols-[12rem_1fr_auto] md:items-center"
           >
             <div>
-              <p className="text-primary text-sm font-bold">{item.date}</p>
-              <p className="text-muted-foreground mt-2 text-xs font-bold tracking-[0.2em] uppercase">
+              <p className="text-primary text-sm font-semibold tracking-[0.04em] uppercase">
+                {item.date}
+              </p>
+              <p className="text-muted-foreground mt-2 text-xs font-semibold tracking-[0.14em] uppercase">
                 {item.type}
               </p>
             </div>
             <div>
               <h3 className="font-serif text-2xl font-semibold">{item.title}</h3>
               <p className="text-muted-foreground mt-2 text-sm leading-7">{item.description}</p>
-              <p className="text-foreground/75 mt-4 text-sm font-semibold">
-                {item.place} · {item.time}
-              </p>
+              <div className="text-foreground/75 mt-4 flex flex-wrap gap-x-5 gap-y-2 text-sm font-semibold">
+                <span>⌖ {item.place}</span>
+                <span>◷ {item.time}</span>
+              </div>
             </div>
-            <a href="#kontakt" className="text-foreground text-sm font-bold">
-              Zobacz wydarzenie →
+            <a href={item.action.href} className="text-primary text-sm font-semibold">
+              {item.action.label}
             </a>
           </article>
         ))}

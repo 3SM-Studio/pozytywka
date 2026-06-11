@@ -5,18 +5,23 @@ export type LinkTarget = {
 
 export type NavigationItem = LinkTarget
 
+export type AnnouncementContent = {
+  message: string
+  action: LinkTarget
+}
+
 export type HeroContent = {
-  eyebrow: string
   title: string
   description: string
   primaryAction: LinkTarget
   secondaryAction: LinkTarget
-  highlights: string[]
+  mediaLabel: string
 }
 
 export type QuickLink = LinkTarget & {
   description: string
   eyebrow: string
+  icon: string
 }
 
 export type StageHighlight = {
@@ -29,6 +34,7 @@ export type StageHighlight = {
 export type CreativeArea = {
   title: string
   description: string
+  icon: string
 }
 
 export type ClassPreview = {
@@ -37,6 +43,8 @@ export type ClassPreview = {
   description: string
   meta: string
   status: string
+  imageLabel: string
+  action: LinkTarget
 }
 
 export type EventPreview = {
@@ -46,13 +54,21 @@ export type EventPreview = {
   description: string
   place: string
   time: string
+  action: LinkTarget
+}
+
+export type CampDetail = {
+  icon: string
+  label: string
 }
 
 export type CampContent = {
   eyebrow: string
   title: string
   description: string
-  details: string[]
+  mediaLabel: string
+  detailsHeading: string
+  details: CampDetail[]
   primaryAction: LinkTarget
   secondaryAction: LinkTarget
 }
@@ -61,6 +77,7 @@ export type TeamMember = {
   name: string
   role: string
   description: string
+  portraitLabel: string
 }
 
 export type Testimonial = {
@@ -69,7 +86,13 @@ export type Testimonial = {
   caption: string
 }
 
+export type FooterLinkGroup = {
+  title: string
+  links: LinkTarget[]
+}
+
 export type HomePageContent = {
+  announcement: AnnouncementContent
   navigation: NavigationItem[]
   hero: HeroContent
   quickLinks: QuickLink[]
@@ -77,6 +100,7 @@ export type HomePageContent = {
     eyebrow: string
     title: string
     description: string
+    mediaLabel: string
     highlights: StageHighlight[]
   }
   creativeAreas: {
@@ -104,8 +128,8 @@ export type HomePageContent = {
     title: string
     description: string
     featured: TeamMember
-    members: TeamMember[]
     action: LinkTarget
+    members: TeamMember[]
   }
   testimonials: {
     eyebrow: string
@@ -123,5 +147,8 @@ export type HomePageContent = {
   footer: {
     description: string
     contact: string[]
+    social: LinkTarget[]
+    legal: LinkTarget[]
+    groups: FooterLinkGroup[]
   }
 }
