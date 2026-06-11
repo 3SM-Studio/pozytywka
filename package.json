@@ -17,10 +17,14 @@
     "check:repo": "node scripts/check-repository.mjs",
     "check": "pnpm check:repo && pnpm format:check && turbo run lint typecheck build",
     "format": "prettier . --write --ignore-unknown",
-    "format:check": "prettier . --check --ignore-unknown"
+    "format:check": "prettier . --check --ignore-unknown",
+    "prepare": "husky",
+    "lint-staged": "lint-staged"
   },
   "packageManager": "pnpm@11.5.2",
   "devDependencies": {
+    "husky": "9.1.7",
+    "lint-staged": "17.0.7",
     "prettier": "3.8.4",
     "prettier-plugin-tailwindcss": "0.8.0",
     "turbo": "2.9.17"

@@ -16,6 +16,7 @@ concurrency:
 env:
   NEXT_TELEMETRY_DISABLED: '1'
   TURBO_TELEMETRY_DISABLED: '1'
+  HUSKY: 0
 
 jobs:
   quality:
