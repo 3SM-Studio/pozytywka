@@ -1,4 +1,5 @@
 import {SiteLogo} from '@/components/site/site-logo'
+import {ModeToggle} from '@/components/theme/mode-toggle'
 import type {NavigationItem} from '@/lib/content/types'
 
 type SiteHeaderProps = {
@@ -25,12 +26,15 @@ export function SiteHeader({navigation}: SiteHeaderProps) {
           ))}
         </nav>
 
-        <a
-          href="#kontakt"
-          className="bg-inverse-surface text-inverse-surface-foreground hover:bg-primary hover:text-primary-foreground dark:bg-primary-container dark:text-primary-container-foreground dark:hover:bg-primary inline-flex min-h-11 items-center justify-center rounded-lg px-6 text-sm font-semibold transition-colors max-md:hidden dark:shadow-[0_14px_30px_rgba(255,213,74,0.18)]"
-        >
-          Zapisz się
-        </a>
+        <div className="flex items-center gap-4">
+          <ModeToggle />
+          <a
+            href="#kontakt"
+            className="bg-inverse-surface text-inverse-surface-foreground hover:bg-primary hover:text-primary-foreground dark:bg-primary-container dark:text-primary-container-foreground dark:hover:bg-primary inline-flex min-h-11 items-center justify-center rounded-lg px-6 text-sm font-semibold transition-colors max-md:hidden dark:shadow-[0_14px_30px_rgba(255,213,74,0.18)]"
+          >
+            Zapisz się
+          </a>
+        </div>
 
         <details className="group relative md:hidden">
           <summary className="border-outline bg-surface-raised dark:border-outline-variant flex min-h-11 cursor-pointer list-none items-center rounded-lg border px-4 text-sm font-semibold marker:hidden">

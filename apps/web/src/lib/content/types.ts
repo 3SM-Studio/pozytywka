@@ -81,6 +81,7 @@ export type TeamMember = {
 }
 
 export type Testimonial = {
+  id: string
   quote: string
   author: string
   caption: string

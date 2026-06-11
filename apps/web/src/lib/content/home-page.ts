@@ -212,18 +212,21 @@ export const homePageContent = {
     description: 'Prawdziwe opinie uczestników i rodziców — do uzupełnienia.',
     items: [
       {
+        id: 'testimonial-parent-placeholder',
         quote:
           'Opinia — do potwierdzenia. Cudowne miejsce, pełne profesjonalizmu i ciepła. Moje dziecko uwielbia te zajęcia.',
         author: 'Imię — do potwierdzenia',
         caption: 'Rodzic / uczestnik / partner — do potwierdzenia',
       },
       {
+        id: 'testimonial-participant-placeholder',
         quote:
           'Opinia — do potwierdzenia. Scena to mój drugi dom. Świetni instruktorzy i wspaniała atmosfera na próbach.',
         author: 'Imię — do potwierdzenia',
         caption: 'Rodzic / uczestnik / partner — do potwierdzenia',
       },
       {
+        id: 'testimonial-camp-placeholder',
         quote:
           'Opinia — do potwierdzenia. Najlepsze obozy letnie na jakich byłam. Mnóstwo kreatywnych działań.',
         author: 'Imię — do potwierdzenia',

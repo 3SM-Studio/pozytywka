@@ -18,7 +18,7 @@ export function TestimonialsSection({content}: TestimonialsSectionProps) {
       <div className="mt-12 grid gap-5 md:grid-cols-3">
         {content.items.map((item) => (
           <figure
-            key={`${item.author}-${item.caption}`}
+            key={item.id}
             className="border-outline-variant/60 bg-surface-raised rounded-2xl border p-6"
           >
             <span aria-hidden="true" className="text-primary font-serif text-4xl leading-none">
