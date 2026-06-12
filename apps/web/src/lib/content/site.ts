@@ -3,7 +3,7 @@ import {homeAnchors} from './routes'
 
 export const siteContent = {
   announcement: {
-    message: 'Aktualny komunikat — do potwierdzenia',
+    message: 'Program zajęć i wydarzeń jest w przygotowaniu',
     action: {label: 'Sprawdź szczegóły', href: '/kontakt'},
   },
   navigation: [
@@ -37,11 +37,7 @@ export const siteContent = {
         ],
       },
     ],
-    contact: [
-      'Adres — do potwierdzenia',
-      'Telefon — do potwierdzenia',
-      'E-mail — do potwierdzenia',
-    ],
+    contact: ['Dane kontaktowe zostaną uzupełnione przed uruchomieniem zapisów.'],
     social: [
       {label: 'Facebook', href: '/kontakt'},
       {label: 'Instagram', href: '/kontakt'},
