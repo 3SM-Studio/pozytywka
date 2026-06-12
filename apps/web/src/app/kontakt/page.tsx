@@ -1,6 +1,6 @@
 import {homeAnchors, siteRoutes} from '@/lib/content/routes'
+import {LinkButton} from '@/components/ui/link-button'
 import type {Metadata} from 'next'
-import Link from 'next/link'
 
 const contactRoute = siteRoutes.find((route) => route.path === '/kontakt') ?? siteRoutes[0]
 
@@ -30,18 +30,12 @@ export default function ContactPage() {
           potwierdzone dane kontaktowe zostaną dodane w osobnym etapie.
         </p>
         <div className="mt-10 flex flex-wrap gap-3">
-          <Link
-            href={homeAnchors.classes}
-            className="bg-inverse-surface text-inverse-surface-foreground hover:bg-primary hover:text-primary-foreground inline-flex min-h-11 items-center justify-center rounded-lg px-6 text-sm font-semibold transition-colors"
-          >
+          <LinkButton href={homeAnchors.classes} variant="inverse">
             Zobacz zajęcia
-          </Link>
-          <Link
-            href={homeAnchors.events}
-            className="border-outline bg-surface-raised hover:bg-surface-container inline-flex min-h-11 items-center justify-center rounded-lg border px-6 text-sm font-semibold transition-colors"
-          >
+          </LinkButton>
+          <LinkButton href={homeAnchors.events} variant="surfaceOutline">
             Zobacz wydarzenia
-          </Link>
+          </LinkButton>
         </div>
       </div>
     </section>

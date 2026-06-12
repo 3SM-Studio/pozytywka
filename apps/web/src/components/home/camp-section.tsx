@@ -1,7 +1,7 @@
 import type {CampContent} from '@/lib/content/types'
 import {Container} from '@/components/layout/container'
 import {Section} from '@/components/layout/section'
-import Link from 'next/link'
+import {LinkButton} from '@/components/ui/link-button'
 
 type CampSectionProps = {
   content: CampContent
@@ -49,18 +49,12 @@ export function CampSection({content}: CampSectionProps) {
             </div>
 
             <div className="mt-8 flex flex-wrap gap-4">
-              <Link
-                href={content.primaryAction.href}
-                className="bg-primary-container text-primary-container-foreground inline-flex min-h-11 items-center justify-center rounded-lg px-8 text-sm font-semibold transition hover:opacity-90"
-              >
+              <LinkButton href={content.primaryAction.href} variant="brand" size="wide">
                 {content.primaryAction.label}
-              </Link>
-              <Link
-                href={content.secondaryAction.href}
-                className="border-outline-variant hover:bg-surface-container-high inline-flex min-h-11 items-center justify-center rounded-lg border px-8 text-sm font-semibold transition-colors"
-              >
+              </LinkButton>
+              <LinkButton href={content.secondaryAction.href} variant="outline" size="wide">
                 {content.secondaryAction.label}
-              </Link>
+              </LinkButton>
             </div>
           </div>
         </div>

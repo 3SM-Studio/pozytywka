@@ -1,7 +1,7 @@
 import type {HomePageContent} from '@/lib/content/types'
 import {Container} from '@/components/layout/container'
 import {Section} from '@/components/layout/section'
-import Link from 'next/link'
+import {LinkButton} from '@/components/ui/link-button'
 
 type FinalCtaSectionProps = {
   content: HomePageContent['finalCta']
@@ -22,18 +22,12 @@ export function FinalCtaSection({content}: FinalCtaSectionProps) {
             {content.meta}
           </p>
           <div className="mt-9 flex flex-col justify-center gap-4 sm:flex-row">
-            <Link
-              href={content.primaryAction.href}
-              className="bg-primary-container text-primary-container-foreground inline-flex min-h-11 items-center justify-center rounded-lg px-8 text-sm font-semibold transition hover:opacity-90"
-            >
+            <LinkButton href={content.primaryAction.href} variant="brand" size="wide">
               {content.primaryAction.label}
-            </Link>
-            <Link
-              href={content.secondaryAction.href}
-              className="border-inverse-surface-foreground/40 text-inverse-surface-foreground hover:bg-inverse-surface-foreground/10 inline-flex min-h-11 items-center justify-center rounded-lg border px-8 text-sm font-semibold transition-colors"
-            >
+            </LinkButton>
+            <LinkButton href={content.secondaryAction.href} variant="inverseOutline" size="wide">
               {content.secondaryAction.label}
-            </Link>
+            </LinkButton>
           </div>
         </div>
       </Container>
