@@ -5,10 +5,28 @@
   "license": "UNLICENSED",
   "description": "Pozytywka website and Sanity Studio monorepo",
   "engines": {
-    "node": "24.16.x"
+    "node": ">=24.16.0 <25"
   },
   "scripts": {
-    "check:repo": "node scripts/check-repository.mjs"
+    "dev": "turbo run dev",
+    "dev:web": "pnpm --filter @pozytywka/web dev",
+    "dev:studio": "pnpm --filter @pozytywka/studio dev",
+    "build": "turbo run build",
+    "lint": "turbo run lint",
+    "typecheck": "turbo run typecheck",
+    "check:repo": "node scripts/check-repository.mjs",
+    "check": "pnpm check:repo && pnpm format:check && turbo run lint typecheck build",
+    "format": "prettier . --write --ignore-unknown",
+    "format:check": "prettier . --check --ignore-unknown",
+    "prepare": "husky",
+    "lint-staged": "lint-staged"
   },
-  "packageManager": "pnpm@11.5.2"
+  "packageManager": "pnpm@11.5.2",
+  "devDependencies": {
+    "husky": "9.1.7",
+    "lint-staged": "17.0.7",
+    "prettier": "3.8.4",
+    "prettier-plugin-tailwindcss": "0.8.0",
+    "turbo": "2.9.17"
+  }
 }

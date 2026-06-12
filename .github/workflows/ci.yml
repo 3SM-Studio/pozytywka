@@ -13,23 +13,31 @@ concurrency:
   group: ci-${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
 
+env:
+  NEXT_TELEMETRY_DISABLED: '1'
+  TURBO_TELEMETRY_DISABLED: '1'
+  HUSKY: 0
+
 jobs:
   quality:
     name: quality
     runs-on: ubuntu-24.04
-    timeout-minutes: 10
+    timeout-minutes: 15
 
     steps:
+      # GitHub Actions are pinned to full commit SHA for supply-chain safety.
+      # Update them through Dependabot, not by switching back to moving tags.
       - name: Checkout repository
-        uses: actions/checkout@v6
+        uses: actions/checkout@df4cb1c069e1874edd31b4311f1884172cec0e10 # v6
         with:
+          fetch-depth: 0
           persist-credentials: false
 
       - name: Install pnpm
-        uses: pnpm/action-setup@v6
+        uses: pnpm/action-setup@0e279bb959325dab635dd2c09392533439d90093 # v6
 
       - name: Set up Node.js
-        uses: actions/setup-node@v6
+        uses: actions/setup-node@48b55a011bda9f5d6aeb4c2d9c7362e8dae4041e # v6
         with:
           node-version-file: .node-version
           cache: pnpm
@@ -38,8 +46,19 @@ jobs:
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
-      - name: Validate repository
-        run: pnpm check:repo
+      - name: Validate pull request diff
+        if: github.event_name == 'pull_request'
+        env:
+          BASE_SHA: ${{ github.event.pull_request.base.sha }}
+          HEAD_SHA: ${{ github.event.pull_request.head.sha }}
+        run: git diff --check "$BASE_SHA...$HEAD_SHA"
 
-      - name: Check whitespace
-        run: git diff --check
+      - name: Validate pushed commit
+        if: github.event_name == 'push'
+        run: git show --check --format=fuller --no-renames HEAD
+
+      - name: Validate monorepo
+        run: pnpm check
+
+      - name: Verify tracked files were not generated or modified
+        run: git diff --exit-code

@@ -1,0 +1,27 @@
+{
+  "name": "@pozytywka/studio",
+  "private": true,
+  "version": "0.0.0",
+  "license": "UNLICENSED",
+  "scripts": {
+    "build": "sanity build",
+    "deploy": "sanity deploy",
+    "dev": "sanity dev",
+    "start": "sanity start",
+    "lint": "eslint . --max-warnings=0",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@sanity/vision": "5.31.0",
+    "react": "19.2.4",
+    "react-dom": "19.2.4",
+    "sanity": "5.31.0",
+    "styled-components": "6.4.2"
+  },
+  "devDependencies": {
+    "@sanity/eslint-config-studio": "6.0.0",
+    "@types/react": "19.2.17",
+    "eslint": "9.39.4",
+    "typescript": "5.9.3"
+  }
+}

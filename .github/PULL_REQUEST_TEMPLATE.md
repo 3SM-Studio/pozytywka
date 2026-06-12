@@ -8,7 +8,7 @@
 
 ## Testy
 
-- [ ] `pnpm check:repo`
+- [ ] `pnpm check`
 - [ ] test manualny, jeśli wymagany
 - [ ] mobile i dostępność, jeśli dotyczy UI
 
@@ -20,5 +20,5 @@
 
 - [ ] PR ma jedną odpowiedzialność.
 - [ ] Nie zawiera sekretów ani danych osobowych.
-- [ ] Dokumentacja jest aktualna.
-- [ ] Zmiana architektury ma ADR.
+- [ ] Dokumentacja i opis PR są aktualne.
+- [ ] Decyzje oraz kompromisy architektoniczne są wyjaśnione w opisie PR, jeśli zmiana ich dotyczy.
