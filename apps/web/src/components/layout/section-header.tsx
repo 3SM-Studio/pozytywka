@@ -1,49 +1,47 @@
+import {cn} from '@/lib/utils'
+
 type SectionHeaderProps = {
+  id?: string
   eyebrow?: string
   title: string
   description?: string
   align?: 'left' | 'center'
+  inverse?: boolean
+  className?: string
 }
 
-export function SectionHeader({eyebrow, title, description, align = 'left'}: SectionHeaderProps) {
+export function SectionHeader({
+  id,
+  eyebrow,
+  title,
+  description,
+  align = 'left',
+  inverse = false,
+  className,
+}: SectionHeaderProps) {
   const alignment = align === 'center' ? 'mx-auto text-center' : ''
+  const eyebrowClass = inverse ? 'text-primary-container' : 'text-primary'
+  const titleClass = inverse ? 'text-inverse-surface-foreground' : 'text-foreground'
+  const descriptionClass = inverse ? 'text-inverse-surface-foreground/75' : 'text-muted-foreground'
 
   return (
-    <div className={`max-w-3xl ${alignment}`}>
+    <div id={id} className={cn('max-w-3xl', alignment, className)}>
       {eyebrow ? (
-        <p className="text-primary mb-4 text-sm font-semibold tracking-[0.16em] uppercase">
+        <p className={cn(eyebrowClass, 'mb-4 text-sm font-semibold tracking-[0.16em] uppercase')}>
           {eyebrow}
         </p>
       ) : null}
-      <h2 className="text-foreground font-serif text-4xl leading-tight font-semibold tracking-tight md:text-[3.25rem]">
+      <h2
+        className={cn(
+          titleClass,
+          'font-serif text-4xl leading-tight font-semibold tracking-tight md:text-[3.25rem]',
+        )}
+      >
         {title}
       </h2>
       {description ? (
-        <p className="text-muted-foreground mt-5 text-base leading-8 md:text-lg">{description}</p>
+        <p className={cn(descriptionClass, 'mt-5 text-base leading-8 md:text-lg')}>{description}</p>
       ) : null}
     </div>
-  )
-}
-
-export function SectionShell({
-  id,
-  tone = 'default',
-  children,
-}: {
-  id?: string
-  tone?: 'default' | 'muted' | 'surface' | 'ink'
-  children: React.ReactNode
-}) {
-  const toneClass = {
-    default: 'bg-background',
-    muted: 'bg-surface-container-low',
-    surface: 'bg-surface',
-    ink: 'bg-ink text-inverse-surface-foreground',
-  }[tone]
-
-  return (
-    <section id={id} className={`${toneClass} py-section scroll-mt-24 px-5`}>
-      <div className="w-container mx-auto">{children}</div>
-    </section>
   )
 }
