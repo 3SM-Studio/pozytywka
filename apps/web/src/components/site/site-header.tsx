@@ -1,5 +1,5 @@
 import {SiteLogo} from '@/components/site/site-logo'
-import {ModeToggle} from '@/components/theme/mode-toggle'
+import {MobileThemeControls, ModeToggle} from '@/components/theme/mode-toggle'
 import {LinkButton} from '@/components/ui/link-button'
 import type {NavigationItem} from '@/lib/content/types'
 import Link from 'next/link'
@@ -29,7 +29,9 @@ export function SiteHeader({navigation}: SiteHeaderProps) {
         </nav>
 
         <div className="flex items-center gap-4">
-          <ModeToggle />
+          <div className="hidden md:block">
+            <ModeToggle />
+          </div>
           <LinkButton
             href="/kontakt"
             variant="inverse"
@@ -61,6 +63,7 @@ export function SiteHeader({navigation}: SiteHeaderProps) {
               >
                 Zapisz się
               </LinkButton>
+              <MobileThemeControls />
             </nav>
           </div>
         </details>
