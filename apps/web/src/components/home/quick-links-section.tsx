@@ -1,4 +1,5 @@
 import type {QuickLink} from '@/lib/content/types'
+import Link from 'next/link'
 
 type QuickLinksSectionProps = {
   items: QuickLink[]
@@ -9,7 +10,7 @@ export function QuickLinksSection({items}: QuickLinksSectionProps) {
     <section aria-label="Szybkie ścieżki" className="bg-background px-5 py-16">
       <div className="w-container mx-auto grid gap-4 md:grid-cols-3">
         {items.map((item) => (
-          <a
+          <Link
             key={item.eyebrow}
             href={item.href}
             className="group border-outline-variant/70 bg-surface-raised hover:bg-surface-container-low grid gap-4 rounded-2xl border p-6 shadow-sm transition-colors"
@@ -30,7 +31,7 @@ export function QuickLinksSection({items}: QuickLinksSectionProps) {
                 →
               </span>
             </span>
-          </a>
+          </Link>
         ))}
       </div>
     </section>

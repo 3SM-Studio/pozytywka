@@ -1,5 +1,6 @@
 import type {HomePageContent} from '@/lib/content/types'
 import {SectionHeader, SectionShell} from '@/components/layout/section-header'
+import Link from 'next/link'
 
 type EventsPreviewSectionProps = {
   content: HomePageContent['eventsPreview']
@@ -14,7 +15,7 @@ export function EventsPreviewSection({content}: EventsPreviewSectionProps) {
           title={content.title}
           description={content.description}
         />
-        <a
+        <Link
           href={content.action.href}
           className="border-outline bg-surface text-foreground hover:bg-surface-container-high inline-flex min-h-11 shrink-0 items-center justify-center rounded-lg border px-8 text-sm font-semibold transition-colors"
         >
@@ -22,7 +23,7 @@ export function EventsPreviewSection({content}: EventsPreviewSectionProps) {
           <span aria-hidden="true" className="ml-2">
             →
           </span>
-        </a>
+        </Link>
       </div>
 
       <div className="mt-12 grid gap-4">
@@ -47,9 +48,9 @@ export function EventsPreviewSection({content}: EventsPreviewSectionProps) {
                 <span>◷ {item.time}</span>
               </div>
             </div>
-            <a href={item.action.href} className="text-primary text-sm font-semibold">
+            <Link href={item.action.href} className="text-primary text-sm font-semibold">
               {item.action.label}
-            </a>
+            </Link>
           </article>
         ))}
       </div>

@@ -10,9 +10,9 @@ import {TeamPreviewSection} from '@/components/home/team-preview-section'
 import {TestimonialsSection} from '@/components/home/testimonials-section'
 import {homePageContent} from '@/lib/content/home-page'
 
-export default function Home() {
+export default function HomePage() {
   return (
-    <main>
+    <>
       <HeroSection content={homePageContent.hero} />
       <QuickLinksSection items={homePageContent.quickLinks} />
       <StageSection content={homePageContent.stage} />
@@ -23,6 +23,6 @@ export default function Home() {
       <TeamPreviewSection content={homePageContent.team} />
       <TestimonialsSection content={homePageContent.testimonials} />
       <FinalCtaSection content={homePageContent.finalCta} />
-    </main>
+    </>
   )
 }

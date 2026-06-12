@@ -1,5 +1,7 @@
 import {SiteShell} from '@/components/layout/site-shell'
 import {ThemeProvider} from '@/components/theme/theme-provider'
+import {siteRoutes} from '@/lib/content/routes'
+import {getSiteUrl} from '@/lib/site-url'
 import type {Metadata} from 'next'
 import {Montserrat, Playfair_Display} from 'next/font/google'
 import './globals.css'
@@ -16,13 +18,31 @@ const playfair = Playfair_Display({
   display: 'swap',
 })
 
+const homeRoute = siteRoutes.find((route) => route.path === '/') ?? siteRoutes[0]
+
 export const metadata: Metadata = {
+  metadataBase: getSiteUrl(),
+  applicationName: 'Pozytywka',
   title: {
-    default: 'Pozytywka — Pracownia Twórcza',
+    default: homeRoute.title,
     template: '%s | Pozytywka',
   },
-  description:
-    'Teatr, muzyka, ruch, spektakle i artystyczne działania dla dzieci, młodzieży i dorosłych.',
+  description: homeRoute.description,
+  alternates: {
+    canonical: '/',
+  },
+  openGraph: {
+    title: homeRoute.title,
+    description: homeRoute.description,
+    url: '/',
+    siteName: 'Pozytywka',
+    locale: 'pl_PL',
+    type: 'website',
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 }
 
 export default function RootLayout({
@@ -36,7 +56,7 @@ export default function RootLayout({
       suppressHydrationWarning
       className={`${montserrat.variable} ${playfair.variable}`}
     >
-      <body>
+      <body className="grid min-h-svh grid-rows-[auto_auto_minmax(0,1fr)_auto]">
         <ThemeProvider
           attribute="class"
           defaultTheme="system"

@@ -1,5 +1,6 @@
 import type {HomePageContent} from '@/lib/content/types'
 import {SectionHeader, SectionShell} from '@/components/layout/section-header'
+import Link from 'next/link'
 
 type TeamPreviewSectionProps = {
   content: HomePageContent['team']
@@ -31,12 +32,12 @@ export function TeamPreviewSection({content}: TeamPreviewSectionProps) {
             <p className="text-muted-foreground mt-6 leading-7 md:flex-1">
               {content.featured.description}
             </p>
-            <a
+            <Link
               href={content.action.href}
               className="bg-inverse-surface text-inverse-surface-foreground hover:bg-primary hover:text-primary-foreground mt-8 inline-flex min-h-11 w-fit items-center justify-center rounded-lg px-8 text-sm font-semibold transition-colors"
             >
               {content.action.label}
-            </a>
+            </Link>
           </div>
         </article>
 
@@ -58,9 +59,9 @@ export function TeamPreviewSection({content}: TeamPreviewSectionProps) {
               </div>
             </article>
           ))}
-          <a href="#o-pozytywce" className="text-primary mt-2 inline-flex text-sm font-semibold">
+          <Link href="#o-pozytywce" className="text-primary mt-2 inline-flex text-sm font-semibold">
             Poznaj cały zespół →
-          </a>
+          </Link>
         </div>
       </div>
     </SectionShell>
