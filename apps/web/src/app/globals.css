@@ -1,16 +1,21 @@
 @import 'tailwindcss';
+@import 'tw-animate-css';
+@import 'shadcn/tailwind.css';
 
 @custom-variant dark (&:where(.dark, .dark *));
 
 @theme inline {
   --font-sans: var(--font-montserrat);
   --font-serif: var(--font-playfair);
+  --font-heading: var(--font-serif);
 
   --color-background: var(--background);
   --color-foreground: var(--foreground);
 
   --color-card: var(--card);
   --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
 
   --color-primary: var(--primary);
   --color-primary-foreground: var(--primary-foreground);
@@ -29,6 +34,7 @@
   --color-border: var(--border);
   --color-input: var(--input);
   --color-ring: var(--ring);
+  --color-destructive: var(--destructive);
 
   --color-surface: var(--surface);
   --color-surface-muted: var(--surface-muted);
@@ -51,6 +57,7 @@
   --radius-xl: 1.25rem;
   --radius-2xl: 1.5rem;
   --radius-3xl: 2rem;
+  --radius-4xl: 2rem;
 
   --spacing-container: min(100% - clamp(2rem, 5vw, 4rem), 75rem);
   --spacing-section: clamp(4rem, 7vw, 7rem);
@@ -64,6 +71,8 @@
 
   --card: oklch(100% 0 0);
   --card-foreground: var(--foreground);
+  --popover: var(--card);
+  --popover-foreground: var(--foreground);
 
   --primary: oklch(42% 0.095 95);
   --primary-foreground: oklch(100% 0 0);
@@ -83,6 +92,7 @@
   --border: oklch(82.8% 0.038 90);
   --input: var(--border);
   --ring: var(--primary);
+  --destructive: oklch(48% 0.18 29);
 
   --surface: var(--background);
   --surface-muted: oklch(94.8% 0.031 86);
@@ -110,6 +120,8 @@
 
   --card: oklch(21% 0.03 65);
   --card-foreground: var(--foreground);
+  --popover: var(--surface-raised);
+  --popover-foreground: var(--foreground);
 
   --primary: oklch(86% 0.16 92);
   --primary-foreground: oklch(18% 0.025 65);
@@ -129,6 +141,7 @@
   --border: oklch(31% 0.035 65);
   --input: oklch(36% 0.04 65);
   --ring: var(--primary);
+  --destructive: oklch(72% 0.18 29);
 
   --surface: oklch(17% 0.02 65);
   --surface-muted: oklch(20% 0.025 65);
