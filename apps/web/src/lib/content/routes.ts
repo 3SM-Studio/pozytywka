@@ -28,6 +28,22 @@ export const siteRoutes = [
     changeFrequency: 'monthly',
     priority: 0.6,
   },
+  {
+    path: '/zajecia',
+    label: 'Zajęcia',
+    title: 'Zajęcia',
+    description: 'Lista zajęć Pozytywki przygotowana pod przyszłe treści z Sanity.',
+    changeFrequency: 'weekly',
+    priority: 0.8,
+  },
+  {
+    path: '/wydarzenia',
+    label: 'Wydarzenia',
+    title: 'Wydarzenia',
+    description: 'Lista wydarzeń Pozytywki przygotowana pod przyszłe treści z Sanity.',
+    changeFrequency: 'weekly',
+    priority: 0.8,
+  },
 ] satisfies SiteRoute[]
 
 export const homeAnchors = {

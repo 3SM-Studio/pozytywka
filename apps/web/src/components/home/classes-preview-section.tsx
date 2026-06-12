@@ -3,32 +3,11 @@ import {Container} from '@/components/layout/container'
 import {SectionHeader} from '@/components/layout/section-header'
 import {Section} from '@/components/layout/section'
 import {LinkButton} from '@/components/ui/link-button'
+import {classStatusLabel, formatClassInfo} from '@/lib/content/display'
 import Link from 'next/link'
 
 type ClassesPreviewSectionProps = {
   content: HomePageContent['classesPreview']
-}
-
-const classStatusLabel: Record<
-  HomePageContent['classesPreview']['items'][number]['status'],
-  string
-> = {
-  open: 'Zapisy — otwarte',
-  waitlist: 'Zapisy — lista rezerwowa',
-  closed: 'Zapisy — zamknięte',
-  planned: 'Zapisy — status do potwierdzenia',
-}
-
-function formatAgeRange(ageRange: HomePageContent['classesPreview']['items'][number]['ageRange']) {
-  if (ageRange.from === 0 && ageRange.to === undefined) {
-    return 'Wiek'
-  }
-
-  if (ageRange.to === undefined) {
-    return `Wiek ${ageRange.from}+`
-  }
-
-  return `Wiek ${ageRange.from}-${ageRange.to}`
 }
 
 export function ClassesPreviewSection({content}: ClassesPreviewSectionProps) {
@@ -69,10 +48,7 @@ export function ClassesPreviewSection({content}: ClassesPreviewSectionProps) {
                 <p className="text-muted-foreground mt-3 text-sm leading-7">{item.description}</p>
                 <div className="bg-surface-container-low mt-5 rounded-xl p-4 text-sm">
                   <p className="font-semibold">Info</p>
-                  <p className="text-muted-foreground mt-1 leading-6">
-                    {formatAgeRange(item.ageRange)} • {item.scheduleSummary} •{' '}
-                    {item.locationSummary} — do potwierdzenia
-                  </p>
+                  <p className="text-muted-foreground mt-1 leading-6">{formatClassInfo(item)}</p>
                 </div>
                 <p className="text-primary mt-4 text-sm font-semibold">
                   {classStatusLabel[item.status]}

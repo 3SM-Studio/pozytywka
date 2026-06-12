@@ -97,11 +97,11 @@ export const homePageContent = {
     eyebrow: 'Zapisy',
     title: 'Znajdź zajęcia dla siebie.',
     description: 'Aktualna oferta zajęć zostanie uzupełniona po potwierdzeniu programu i terminów.',
-    action: {label: 'Zobacz wszystkie zajęcia', href: '/kontakt'},
+    action: {label: 'Zobacz wszystkie zajęcia', href: '/zajecia'},
     items: [
       {
-        id: 'class-teatr-placeholder',
-        slug: 'teatr-placeholder',
+        id: 'class-teatr-dla-dzieci',
+        slug: 'teatr-dla-dzieci',
         category: 'Teatr — do potwierdzenia',
         title: 'Grupa teatralna — do potwierdzenia',
         description: 'Praca z tekstem, improwizacją i wspólnym przygotowaniem scenicznych działań.',
@@ -110,11 +110,11 @@ export const homePageContent = {
         locationSummary: 'lokalizacja',
         status: 'planned',
         imageLabel: 'Zdjęcie zajęć teatralnych — do podmiany',
-        action: {label: 'Zobacz szczegóły', href: '/kontakt'},
+        action: {label: 'Zobacz szczegóły', href: '/zajecia/teatr-dla-dzieci'},
       },
       {
-        id: 'class-wokal-rytm-placeholder',
-        slug: 'wokal-rytm-placeholder',
+        id: 'class-wokal-i-rytm',
+        slug: 'wokal-i-rytm',
         category: 'Muzyka — do potwierdzenia',
         title: 'Wokal i rytm — do potwierdzenia',
         description: 'Zajęcia rozwijające głos, rytm i wspólne działania muzyczne.',
@@ -123,11 +123,11 @@ export const homePageContent = {
         locationSummary: 'lokalizacja',
         status: 'planned',
         imageLabel: 'Zdjęcie zajęć muzycznych — do podmiany',
-        action: {label: 'Zobacz szczegóły', href: '/kontakt'},
+        action: {label: 'Zobacz szczegóły', href: '/zajecia/wokal-i-rytm'},
       },
       {
-        id: 'class-ruch-sceniczny-placeholder',
-        slug: 'ruch-sceniczny-placeholder',
+        id: 'class-ruch-sceniczny',
+        slug: 'ruch-sceniczny',
         category: 'Ruch — do potwierdzenia',
         title: 'Ruch sceniczny — do potwierdzenia',
         description: 'Świadoma praca z ciałem, ekspresją i obecnością sceniczną.',
@@ -136,7 +136,7 @@ export const homePageContent = {
         locationSummary: 'lokalizacja',
         status: 'planned',
         imageLabel: 'Zdjęcie zajęć ruchowych — do podmiany',
-        action: {label: 'Zobacz szczegóły', href: '/kontakt'},
+        action: {label: 'Zobacz szczegóły', href: '/zajecia/ruch-sceniczny'},
       },
     ],
   },
@@ -145,11 +145,11 @@ export const homePageContent = {
     title: 'Spotkajmy się na żywo.',
     description:
       'Spektakle, koncerty, warsztaty i inne wydarzenia tworzone przez społeczność Pozytywki.',
-    action: {label: 'Zobacz wszystkie wydarzenia', href: '/kontakt'},
+    action: {label: 'Zobacz wszystkie wydarzenia', href: '/wydarzenia'},
     items: [
       {
-        id: 'event-pokaz-sceniczny-placeholder',
-        slug: 'pokaz-sceniczny-placeholder',
+        id: 'event-pokaz-sceniczny',
+        slug: 'pokaz-sceniczny',
         dateLabel: 'Termin — do potwierdzenia',
         timeLabel: 'Godzina — do potwierdzenia',
         locationSummary: 'Miejsce — do potwierdzenia',
@@ -158,11 +158,11 @@ export const homePageContent = {
         title: 'Pokaz sceniczny — do potwierdzenia',
         description:
           'Wydarzenie przygotowywane przez społeczność Pozytywki — szczegóły do uzupełnienia.',
-        action: {label: 'Zobacz wydarzenie', href: '/kontakt'},
+        action: {label: 'Zobacz wydarzenie', href: '/wydarzenia/pokaz-sceniczny'},
       },
       {
-        id: 'event-spotkanie-tworcze-placeholder',
-        slug: 'spotkanie-tworcze-placeholder',
+        id: 'event-spotkanie-tworcze',
+        slug: 'spotkanie-tworcze',
         dateLabel: 'Termin — do potwierdzenia',
         timeLabel: 'Godzina — do potwierdzenia',
         locationSummary: 'Miejsce — do potwierdzenia',
@@ -171,11 +171,11 @@ export const homePageContent = {
         title: 'Spotkanie twórcze — do potwierdzenia',
         description:
           'Warsztat lub działanie artystyczne dla uczestników — zakres do potwierdzenia.',
-        action: {label: 'Zobacz wydarzenie', href: '/kontakt'},
+        action: {label: 'Zobacz wydarzenie', href: '/wydarzenia/spotkanie-tworcze'},
       },
       {
-        id: 'event-wspolne-wydarzenie-placeholder',
-        slug: 'wspolne-wydarzenie-placeholder',
+        id: 'event-wspolne-wydarzenie',
+        slug: 'wspolne-wydarzenie',
         dateLabel: 'Termin — do potwierdzenia',
         timeLabel: 'Godzina — do potwierdzenia',
         locationSummary: 'Miejsce — do potwierdzenia',
@@ -184,7 +184,7 @@ export const homePageContent = {
         title: 'Wspólne wydarzenie — do potwierdzenia',
         description:
           'Otwarte wydarzenie Pozytywki — opis zostanie uzupełniony po potwierdzeniu programu.',
-        action: {label: 'Zobacz wydarzenie', href: '/kontakt'},
+        action: {label: 'Zobacz wydarzenie', href: '/wydarzenia/wspolne-wydarzenie'},
       },
     ],
   },
@@ -218,21 +218,21 @@ export const homePageContent = {
     action: {label: 'Poznaj Pozytywkę', href: '#o-pozytywce'},
     members: [
       {
-        id: 'team-instruktor-teatr-placeholder',
+        id: 'team-instruktor-teatr',
         name: 'Instruktor / instruktorka — do potwierdzenia',
         role: 'Teatr — do potwierdzenia',
         description: 'Obszar pracy i krótka nota — do uzupełnienia',
         portraitLabel: 'Portret — do podmiany',
       },
       {
-        id: 'team-instruktor-muzyka-placeholder',
+        id: 'team-instruktor-muzyka',
         name: 'Instruktor / instruktorka — do potwierdzenia',
         role: 'Muzyka — do potwierdzenia',
         description: 'Obszar pracy i krótka nota — do uzupełnienia',
         portraitLabel: 'Portret — do podmiany',
       },
       {
-        id: 'team-instruktor-ruch-placeholder',
+        id: 'team-instruktor-ruch',
         name: 'Instruktor / instruktorka — do potwierdzenia',
         role: 'Ruch — do potwierdzenia',
         description: 'Obszar pracy i krótka nota — do uzupełnienia',
@@ -246,21 +246,21 @@ export const homePageContent = {
     description: 'Prawdziwe opinie uczestników i rodziców — do uzupełnienia.',
     items: [
       {
-        id: 'testimonial-parent-placeholder',
+        id: 'testimonial-parent',
         quote:
           'Opinia — do potwierdzenia. Cudowne miejsce, pełne profesjonalizmu i ciepła. Moje dziecko uwielbia te zajęcia.',
         author: 'Imię — do potwierdzenia',
         caption: 'Rodzic / uczestnik / partner — do potwierdzenia',
       },
       {
-        id: 'testimonial-participant-placeholder',
+        id: 'testimonial-participant',
         quote:
           'Opinia — do potwierdzenia. Scena to mój drugi dom. Świetni instruktorzy i wspaniała atmosfera na próbach.',
         author: 'Imię — do potwierdzenia',
         caption: 'Rodzic / uczestnik / partner — do potwierdzenia',
       },
       {
-        id: 'testimonial-camp-placeholder',
+        id: 'testimonial-camp',
         quote:
           'Opinia — do potwierdzenia. Najlepsze obozy letnie na jakich byłam. Mnóstwo kreatywnych działań.',
         author: 'Imię — do potwierdzenia',
