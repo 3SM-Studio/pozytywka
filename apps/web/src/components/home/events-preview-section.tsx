@@ -40,7 +40,7 @@ export function EventsPreviewSection({content}: EventsPreviewSectionProps) {
             >
               <div>
                 <p className="text-primary text-sm font-semibold tracking-[0.04em] uppercase">
-                  {item.date}
+                  {item.dateLabel}
                 </p>
                 <p className="text-muted-foreground mt-2 text-xs font-semibold tracking-[0.14em] uppercase">
                   {item.type}
@@ -50,8 +50,8 @@ export function EventsPreviewSection({content}: EventsPreviewSectionProps) {
                 <h3 className="font-serif text-2xl font-semibold">{item.title}</h3>
                 <p className="text-muted-foreground mt-2 text-sm leading-7">{item.description}</p>
                 <div className="text-foreground/75 mt-4 flex flex-wrap gap-x-5 gap-y-2 text-sm font-semibold">
-                  <span>⌖ {item.place}</span>
-                  <span>◷ {item.time}</span>
+                  <span>⌖ {item.locationSummary}</span>
+                  {item.timeLabel ? <span>◷ {item.timeLabel}</span> : null}
                 </div>
               </div>
               <Link href={item.action.href} className="text-primary text-sm font-semibold">

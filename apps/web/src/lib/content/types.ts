@@ -46,8 +46,13 @@ export type ClassPreview = {
   category: string
   title: string
   description: string
-  meta: string
-  status: string
+  ageRange: {
+    from: number
+    to?: number
+  }
+  scheduleSummary: string
+  locationSummary: string
+  status: 'open' | 'waitlist' | 'closed' | 'planned'
   imageLabel: string
   action: LinkTarget
 }
@@ -55,12 +60,14 @@ export type ClassPreview = {
 export type EventPreview = {
   id: string
   slug?: string
-  date: string
+  startsAt?: string
+  dateLabel: string
+  timeLabel?: string
+  locationSummary: string
+  status: 'scheduled' | 'cancelled' | 'past' | 'planned'
   type: string
   title: string
   description: string
-  place: string
-  time: string
   action: LinkTarget
 }
 
