@@ -2,6 +2,7 @@ import type {HomePageContent} from '@/lib/content/types'
 import {Container} from '@/components/layout/container'
 import {SectionHeader} from '@/components/layout/section-header'
 import {Section} from '@/components/layout/section'
+import {LinkButton} from '@/components/ui/link-button'
 import Link from 'next/link'
 
 type EventsPreviewSectionProps = {
@@ -18,15 +19,17 @@ export function EventsPreviewSection({content}: EventsPreviewSectionProps) {
             title={content.title}
             description={content.description}
           />
-          <Link
+          <LinkButton
             href={content.action.href}
-            className="border-outline bg-surface text-foreground hover:bg-surface-container-high inline-flex min-h-11 shrink-0 items-center justify-center rounded-lg border px-8 text-sm font-semibold transition-colors"
+            variant="surfaceOutline"
+            size="wide"
+            className="shrink-0"
           >
             {content.action.label}
             <span aria-hidden="true" className="ml-2">
               →
             </span>
-          </Link>
+          </LinkButton>
         </div>
 
         <div className="mt-12 grid gap-4">

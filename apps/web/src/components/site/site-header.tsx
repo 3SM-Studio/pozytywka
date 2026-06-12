@@ -1,5 +1,6 @@
 import {SiteLogo} from '@/components/site/site-logo'
 import {ModeToggle} from '@/components/theme/mode-toggle'
+import {LinkButton} from '@/components/ui/link-button'
 import type {NavigationItem} from '@/lib/content/types'
 import Link from 'next/link'
 
@@ -29,12 +30,13 @@ export function SiteHeader({navigation}: SiteHeaderProps) {
 
         <div className="flex items-center gap-4">
           <ModeToggle />
-          <Link
+          <LinkButton
             href="/kontakt"
-            className="bg-inverse-surface text-inverse-surface-foreground hover:bg-primary hover:text-primary-foreground dark:bg-primary-container dark:text-primary-container-foreground dark:hover:bg-primary inline-flex min-h-11 items-center justify-center rounded-lg px-6 text-sm font-semibold transition-colors max-md:hidden dark:shadow-[0_14px_30px_rgba(255,213,74,0.18)]"
+            variant="inverse"
+            className="dark:bg-primary-container dark:text-primary-container-foreground dark:hover:bg-primary max-md:hidden dark:shadow-[0_14px_30px_rgba(255,213,74,0.18)]"
           >
             Zapisz się
-          </Link>
+          </LinkButton>
         </div>
 
         <details className="group relative md:hidden">
@@ -52,12 +54,13 @@ export function SiteHeader({navigation}: SiteHeaderProps) {
                   {item.label}
                 </Link>
               ))}
-              <Link
+              <LinkButton
                 href="/kontakt"
-                className="bg-inverse-surface text-inverse-surface-foreground dark:bg-primary-container dark:text-primary-container-foreground mt-2 rounded-lg px-4 py-3 text-sm font-bold"
+                variant="inverse"
+                className="dark:bg-primary-container dark:text-primary-container-foreground mt-2 justify-start"
               >
                 Zapisz się
-              </Link>
+              </LinkButton>
             </nav>
           </div>
         </details>

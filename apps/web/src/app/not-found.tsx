@@ -1,4 +1,4 @@
-import Link from 'next/link'
+import {LinkButton} from '@/components/ui/link-button'
 
 export default function NotFound() {
   return (
@@ -9,12 +9,9 @@ export default function NotFound() {
         <p className="text-muted-foreground mt-5 text-lg leading-8">
           Ta podstrona nie jest jeszcze dostępna albo zmieniła adres.
         </p>
-        <Link
-          href="/"
-          className="bg-inverse-surface text-inverse-surface-foreground hover:bg-primary hover:text-primary-foreground mt-8 inline-flex min-h-11 items-center justify-center rounded-lg px-6 text-sm font-semibold transition-colors"
-        >
+        <LinkButton href="/" variant="inverse" className="mt-8">
           Wróć na stronę główną
-        </Link>
+        </LinkButton>
       </div>
     </section>
   )

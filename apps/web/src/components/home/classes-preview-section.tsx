@@ -2,6 +2,7 @@ import type {HomePageContent} from '@/lib/content/types'
 import {Container} from '@/components/layout/container'
 import {SectionHeader} from '@/components/layout/section-header'
 import {Section} from '@/components/layout/section'
+import {LinkButton} from '@/components/ui/link-button'
 import Link from 'next/link'
 
 type ClassesPreviewSectionProps = {
@@ -18,15 +19,12 @@ export function ClassesPreviewSection({content}: ClassesPreviewSectionProps) {
             title={content.title}
             description={content.description}
           />
-          <Link
-            href={content.action.href}
-            className="bg-inverse-surface text-inverse-surface-foreground hover:bg-primary hover:text-primary-foreground inline-flex min-h-11 shrink-0 items-center justify-center rounded-lg px-8 text-sm font-semibold transition-colors"
-          >
+          <LinkButton href={content.action.href} variant="inverse" size="wide" className="shrink-0">
             {content.action.label}
             <span aria-hidden="true" className="ml-2">
               →
             </span>
-          </Link>
+          </LinkButton>
         </div>
 
         <div className="mt-12 grid gap-6 lg:grid-cols-3">

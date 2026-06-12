@@ -2,6 +2,7 @@ import type {HomePageContent} from '@/lib/content/types'
 import {Container} from '@/components/layout/container'
 import {SectionHeader} from '@/components/layout/section-header'
 import {Section} from '@/components/layout/section'
+import {LinkButton} from '@/components/ui/link-button'
 import Link from 'next/link'
 
 type TeamPreviewSectionProps = {
@@ -35,12 +36,14 @@ export function TeamPreviewSection({content}: TeamPreviewSectionProps) {
               <p className="text-muted-foreground mt-6 leading-7 md:flex-1">
                 {content.featured.description}
               </p>
-              <Link
+              <LinkButton
                 href={content.action.href}
-                className="bg-inverse-surface text-inverse-surface-foreground hover:bg-primary hover:text-primary-foreground mt-8 inline-flex min-h-11 w-fit items-center justify-center rounded-lg px-8 text-sm font-semibold transition-colors"
+                variant="inverse"
+                size="wide"
+                className="mt-8 w-fit"
               >
                 {content.action.label}
-              </Link>
+              </LinkButton>
             </div>
           </article>
 
