@@ -1,5 +1,6 @@
 import type {HomePageContent} from '@/lib/content/types'
 import {SectionHeader, SectionShell} from '@/components/layout/section-header'
+import Link from 'next/link'
 
 type ClassesPreviewSectionProps = {
   content: HomePageContent['classesPreview']
@@ -14,7 +15,7 @@ export function ClassesPreviewSection({content}: ClassesPreviewSectionProps) {
           title={content.title}
           description={content.description}
         />
-        <a
+        <Link
           href={content.action.href}
           className="bg-inverse-surface text-inverse-surface-foreground hover:bg-primary hover:text-primary-foreground inline-flex min-h-11 shrink-0 items-center justify-center rounded-lg px-8 text-sm font-semibold transition-colors"
         >
@@ -22,7 +23,7 @@ export function ClassesPreviewSection({content}: ClassesPreviewSectionProps) {
           <span aria-hidden="true" className="ml-2">
             →
           </span>
-        </a>
+        </Link>
       </div>
 
       <div className="mt-12 grid gap-6 lg:grid-cols-3">
@@ -48,12 +49,12 @@ export function ClassesPreviewSection({content}: ClassesPreviewSectionProps) {
                 <p className="text-muted-foreground mt-1 leading-6">{item.meta}</p>
               </div>
               <p className="text-primary mt-4 text-sm font-semibold">{item.status}</p>
-              <a
+              <Link
                 href={item.action.href}
                 className="text-foreground mt-5 inline-flex text-sm font-semibold"
               >
                 {item.action.label}
-              </a>
+              </Link>
             </div>
           </article>
         ))}

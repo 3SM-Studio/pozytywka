@@ -1,16 +1,17 @@
 import type {SiteContent} from './types'
+import {homeAnchors} from './routes'
 
 export const siteContent = {
   announcement: {
     message: 'Aktualny komunikat — do potwierdzenia',
-    action: {label: 'Sprawdź szczegóły', href: '#kontakt'},
+    action: {label: 'Sprawdź szczegóły', href: '/kontakt'},
   },
   navigation: [
-    {label: 'Zajęcia', href: '#zajecia'},
-    {label: 'Scena', href: '#scena'},
-    {label: 'Obozy', href: '#obozy'},
-    {label: 'O Pozytywce', href: '#o-pozytywce'},
-    {label: 'Kontakt', href: '#kontakt'},
+    {label: 'Zajęcia', href: homeAnchors.classes},
+    {label: 'Scena', href: homeAnchors.stage},
+    {label: 'Obozy', href: homeAnchors.camp},
+    {label: 'O Pozytywce', href: homeAnchors.about},
+    {label: 'Kontakt', href: '/kontakt'},
   ],
   footer: {
     description:
@@ -19,20 +20,20 @@ export const siteContent = {
       {
         title: 'Strona',
         links: [
-          {label: 'Zajęcia', href: '#zajecia'},
-          {label: 'Scena', href: '#scena'},
-          {label: 'Obozy', href: '#obozy'},
-          {label: 'O Pozytywce', href: '#o-pozytywce'},
+          {label: 'Zajęcia', href: homeAnchors.classes},
+          {label: 'Scena', href: homeAnchors.stage},
+          {label: 'Obozy', href: homeAnchors.camp},
+          {label: 'O Pozytywce', href: homeAnchors.about},
         ],
       },
       {
         title: 'Informacje',
         links: [
-          {label: 'Teatry', href: '#scena'},
-          {label: 'Spektakle', href: '#wydarzenia'},
-          {label: 'Wydarzenia', href: '#wydarzenia'},
-          {label: 'FAQ', href: '#kontakt'},
-          {label: 'Dokumenty', href: '#kontakt'},
+          {label: 'Teatry', href: homeAnchors.stage},
+          {label: 'Spektakle', href: homeAnchors.events},
+          {label: 'Wydarzenia', href: homeAnchors.events},
+          {label: 'FAQ', href: '/kontakt'},
+          {label: 'Dokumenty', href: '/kontakt'},
         ],
       },
     ],
@@ -42,12 +43,12 @@ export const siteContent = {
       'E-mail — do potwierdzenia',
     ],
     social: [
-      {label: 'Facebook', href: '#kontakt'},
-      {label: 'Instagram', href: '#kontakt'},
+      {label: 'Facebook', href: '/kontakt'},
+      {label: 'Instagram', href: '/kontakt'},
     ],
     legal: [
-      {label: 'Polityka prywatności', href: '#kontakt'},
-      {label: 'Polityka cookies', href: '#kontakt'},
+      {label: 'Polityka prywatności', href: '/kontakt'},
+      {label: 'Polityka cookies', href: '/kontakt'},
     ],
   },
 } satisfies SiteContent

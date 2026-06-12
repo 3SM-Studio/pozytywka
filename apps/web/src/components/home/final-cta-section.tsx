@@ -1,5 +1,6 @@
 import type {HomePageContent} from '@/lib/content/types'
 import {SectionShell} from '@/components/layout/section-header'
+import Link from 'next/link'
 
 type FinalCtaSectionProps = {
   content: HomePageContent['finalCta']
@@ -19,18 +20,18 @@ export function FinalCtaSection({content}: FinalCtaSectionProps) {
           {content.meta}
         </p>
         <div className="mt-9 flex flex-col justify-center gap-4 sm:flex-row">
-          <a
+          <Link
             href={content.primaryAction.href}
             className="bg-primary-container text-primary-container-foreground inline-flex min-h-11 items-center justify-center rounded-lg px-8 text-sm font-semibold transition hover:opacity-90"
           >
             {content.primaryAction.label}
-          </a>
-          <a
+          </Link>
+          <Link
             href={content.secondaryAction.href}
             className="border-inverse-surface-foreground/40 text-inverse-surface-foreground hover:bg-inverse-surface-foreground/10 inline-flex min-h-11 items-center justify-center rounded-lg border px-8 text-sm font-semibold transition-colors"
           >
             {content.secondaryAction.label}
-          </a>
+          </Link>
         </div>
       </div>
     </SectionShell>

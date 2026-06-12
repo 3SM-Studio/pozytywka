@@ -1,4 +1,5 @@
 import type {HeroContent} from '@/lib/content/types'
+import Link from 'next/link'
 
 type HeroSectionProps = {
   content: HeroContent
@@ -28,18 +29,18 @@ export function HeroSection({content}: HeroSectionProps) {
             {content.description}
           </p>
           <div className="mt-9 flex flex-col gap-4 sm:flex-row">
-            <a
+            <Link
               href={content.primaryAction.href}
               className="bg-primary-container text-primary-container-foreground hover:bg-primary inline-flex min-h-12 items-center justify-center rounded-lg px-8 text-sm font-semibold shadow-[0_18px_38px_rgba(255,213,74,0.18)] transition-colors"
             >
               {content.primaryAction.label}
-            </a>
-            <a
+            </Link>
+            <Link
               href={content.secondaryAction.href}
               className="border-outline-variant/80 bg-surface-raised/70 text-foreground hover:bg-surface-container inline-flex min-h-12 items-center justify-center rounded-lg border px-8 text-sm font-semibold transition-colors"
             >
               {content.secondaryAction.label}
-            </a>
+            </Link>
           </div>
         </div>
 

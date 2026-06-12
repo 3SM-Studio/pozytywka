@@ -88,7 +88,7 @@ export const homePageContent = {
     eyebrow: 'Zapisy',
     title: 'Znajdź zajęcia dla siebie.',
     description: 'Aktualna oferta zajęć zostanie uzupełniona po potwierdzeniu programu i terminów.',
-    action: {label: 'Zobacz wszystkie zajęcia', href: '#kontakt'},
+    action: {label: 'Zobacz wszystkie zajęcia', href: '/kontakt'},
     items: [
       {
         category: 'Teatr — do potwierdzenia',
@@ -97,7 +97,7 @@ export const homePageContent = {
         meta: 'Wiek • termin • lokalizacja — do potwierdzenia',
         status: 'Zapisy — status do potwierdzenia',
         imageLabel: 'Zdjęcie zajęć teatralnych — do podmiany',
-        action: {label: 'Zobacz szczegóły', href: '#kontakt'},
+        action: {label: 'Zobacz szczegóły', href: '/kontakt'},
       },
       {
         category: 'Muzyka — do potwierdzenia',
@@ -106,7 +106,7 @@ export const homePageContent = {
         meta: 'Wiek • termin • lokalizacja — do potwierdzenia',
         status: 'Zapisy — status do potwierdzenia',
         imageLabel: 'Zdjęcie zajęć muzycznych — do podmiany',
-        action: {label: 'Zobacz szczegóły', href: '#kontakt'},
+        action: {label: 'Zobacz szczegóły', href: '/kontakt'},
       },
       {
         category: 'Ruch — do potwierdzenia',
@@ -115,7 +115,7 @@ export const homePageContent = {
         meta: 'Wiek • termin • lokalizacja — do potwierdzenia',
         status: 'Zapisy — status do potwierdzenia',
         imageLabel: 'Zdjęcie zajęć ruchowych — do podmiany',
-        action: {label: 'Zobacz szczegóły', href: '#kontakt'},
+        action: {label: 'Zobacz szczegóły', href: '/kontakt'},
       },
     ],
   },
@@ -124,7 +124,7 @@ export const homePageContent = {
     title: 'Spotkajmy się na żywo.',
     description:
       'Spektakle, koncerty, warsztaty i inne wydarzenia tworzone przez społeczność Pozytywki.',
-    action: {label: 'Zobacz wszystkie wydarzenia', href: '#kontakt'},
+    action: {label: 'Zobacz wszystkie wydarzenia', href: '/kontakt'},
     items: [
       {
         date: 'Termin — do potwierdzenia',
@@ -134,7 +134,7 @@ export const homePageContent = {
           'Wydarzenie przygotowywane przez społeczność Pozytywki — szczegóły do uzupełnienia.',
         place: 'Miejsce — do potwierdzenia',
         time: 'Godzina — do potwierdzenia',
-        action: {label: 'Zobacz wydarzenie', href: '#kontakt'},
+        action: {label: 'Zobacz wydarzenie', href: '/kontakt'},
       },
       {
         date: 'Termin — do potwierdzenia',
@@ -144,7 +144,7 @@ export const homePageContent = {
           'Warsztat lub działanie artystyczne dla uczestników — zakres do potwierdzenia.',
         place: 'Miejsce — do potwierdzenia',
         time: 'Godzina — do potwierdzenia',
-        action: {label: 'Zobacz wydarzenie', href: '#kontakt'},
+        action: {label: 'Zobacz wydarzenie', href: '/kontakt'},
       },
       {
         date: 'Termin — do potwierdzenia',
@@ -154,7 +154,7 @@ export const homePageContent = {
           'Otwarte wydarzenie Pozytywki — opis zostanie uzupełniony po potwierdzeniu programu.',
         place: 'Miejsce — do potwierdzenia',
         time: 'Godzina — do potwierdzenia',
-        action: {label: 'Zobacz wydarzenie', href: '#kontakt'},
+        action: {label: 'Zobacz wydarzenie', href: '/kontakt'},
       },
     ],
   },
@@ -171,7 +171,7 @@ export const homePageContent = {
       {icon: '◎', label: 'Grupa wiekowa — do potwierdzenia'},
     ],
     primaryAction: {label: 'Poznaj obóz', href: '#obozy'},
-    secondaryAction: {label: 'Zobacz zapisy', href: '#kontakt'},
+    secondaryAction: {label: 'Zobacz zapisy', href: '/kontakt'},
   },
   team: {
     eyebrow: 'Ludzie Pozytywki',
@@ -240,6 +240,6 @@ export const homePageContent = {
       'Wybierz najbliższą ścieżkę: zajęcia, wydarzenia albo obozy, a szczegóły potwierdzimy w kontakcie.',
     meta: 'Zajęcia / wydarzenia / obozy — do potwierdzenia',
     primaryAction: {label: 'Zobacz zapisy', href: '#zajecia'},
-    secondaryAction: {label: 'Skontaktuj się', href: '#kontakt'},
+    secondaryAction: {label: 'Skontaktuj się', href: '/kontakt'},
   },
 } satisfies HomePageContent

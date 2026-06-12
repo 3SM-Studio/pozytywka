@@ -12,7 +12,7 @@ export function SiteShell({children}: SiteShellProps) {
     <>
       <AnnouncementBar content={siteContent.announcement} />
       <SiteHeader navigation={siteContent.navigation} />
-      {children}
+      <main className="min-h-0">{children}</main>
       <SiteFooter content={siteContent.footer} />
     </>
   )
