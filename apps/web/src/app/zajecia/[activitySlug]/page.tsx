@@ -12,10 +12,6 @@ type ActivityPageProps = {
   }>
 }
 
-function withPendingLabel(value: string) {
-  return `${value} — do potwierdzenia`
-}
-
 export async function generateStaticParams() {
   const content = await getActivitiesContent()
 
@@ -72,8 +68,8 @@ export default async function ActivityPage({params}: ActivityPageProps) {
 
         <div className="mt-12 grid gap-4 md:grid-cols-2">
           <DetailItem label="Wiek" value={formatAgeRange(activity.ageRange)} />
-          <DetailItem label="Termin" value={withPendingLabel(activity.scheduleSummary)} />
-          <DetailItem label="Lokalizacja" value={withPendingLabel(activity.locationSummary)} />
+          <DetailItem label="Termin" value={activity.scheduleSummary} />
+          <DetailItem label="Lokalizacja" value={activity.locationSummary} />
           <DetailItem label="Status zapisów" value={classStatusLabel[activity.status]} />
         </div>
 

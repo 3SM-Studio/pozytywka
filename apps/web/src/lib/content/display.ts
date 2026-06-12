@@ -4,14 +4,14 @@ export const classStatusLabel: Record<ClassPreview['status'], string> = {
   open: 'Zapisy — otwarte',
   waitlist: 'Zapisy — lista rezerwowa',
   closed: 'Zapisy — zamknięte',
-  planned: 'Zapisy — status do potwierdzenia',
+  planned: 'Zapisy w przygotowaniu',
 }
 
 export const eventStatusLabel: Record<EventPreview['status'], string> = {
   scheduled: 'Zaplanowane',
   cancelled: 'Odwołane',
   past: 'Zakończone',
-  planned: 'Status — do potwierdzenia',
+  planned: 'Wydarzenie w przygotowaniu',
 }
 
 export function formatAgeRange(ageRange: ClassPreview['ageRange']) {
@@ -29,5 +29,5 @@ export function formatAgeRange(ageRange: ClassPreview['ageRange']) {
 export function formatClassInfo(activity: ClassPreview) {
   return `${formatAgeRange(activity.ageRange)} • ${activity.scheduleSummary} • ${
     activity.locationSummary
-  } — do potwierdzenia`
+  }`
 }
