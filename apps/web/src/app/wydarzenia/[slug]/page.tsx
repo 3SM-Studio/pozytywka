@@ -47,19 +47,22 @@ export async function generateMetadata({params}: EventPageProps): Promise<Metada
 export default async function EventPage({params}: EventPageProps) {
   const {slug} = await params
   const event = await getEventBySlug(slug)
+  const headingId = 'event-detail-heading'
 
   if (!event) {
     notFound()
   }
 
   return (
-    <Section tone="muted">
+    <Section labelledBy={headingId} tone="muted">
       <Container>
         <div className="max-w-3xl">
           <p className="text-primary text-sm font-semibold tracking-[0.14em] uppercase">
             {event.type}
           </p>
-          <h1 className="font-display mt-4 text-4xl font-bold md:text-6xl">{event.title}</h1>
+          <h1 id={headingId} className="font-display mt-4 text-4xl font-bold md:text-6xl">
+            {event.title}
+          </h1>
           <p className="text-muted-foreground mt-6 text-lg leading-8">{event.description}</p>
         </div>
 

@@ -8,11 +8,16 @@ type FinalCtaSectionProps = {
 }
 
 export function FinalCtaSection({content}: FinalCtaSectionProps) {
+  const headingId = 'home-final-cta-heading'
+
   return (
-    <Section tone="ink">
+    <Section labelledBy={headingId} tone="ink">
       <Container>
         <div className="mx-auto max-w-4xl text-center">
-          <h2 className="font-serif text-5xl leading-tight font-semibold tracking-tight md:text-6xl">
+          <h2
+            id={headingId}
+            className="font-serif text-5xl leading-tight font-semibold tracking-tight md:text-6xl"
+          >
             {content.title}
           </h2>
           <p className="text-inverse-surface-foreground/75 mt-6 text-lg leading-8">

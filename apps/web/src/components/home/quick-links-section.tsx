@@ -1,4 +1,6 @@
 import type {QuickLink} from '@/lib/content/types'
+import {Container} from '@/components/layout/container'
+import {Section} from '@/components/layout/section'
 import Link from 'next/link'
 
 type QuickLinksSectionProps = {
@@ -6,9 +8,14 @@ type QuickLinksSectionProps = {
 }
 
 export function QuickLinksSection({items}: QuickLinksSectionProps) {
+  const headingId = 'home-quick-links-heading'
+
   return (
-    <section aria-label="Szybkie ścieżki" className="bg-background px-5 py-16">
-      <div className="w-container mx-auto grid gap-4 md:grid-cols-3">
+    <Section labelledBy={headingId} className="px-5 py-16">
+      <Container className="grid gap-4 px-0 md:grid-cols-3">
+        <h2 id={headingId} className="sr-only">
+          Szybkie ścieżki
+        </h2>
         {items.map((item) => (
           <Link
             key={item.id}
@@ -33,7 +40,7 @@ export function QuickLinksSection({items}: QuickLinksSectionProps) {
             </span>
           </Link>
         ))}
-      </div>
-    </section>
+      </Container>
+    </Section>
   )
 }

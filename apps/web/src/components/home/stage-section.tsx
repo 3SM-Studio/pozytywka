@@ -9,11 +9,14 @@ type StageSectionProps = {
 }
 
 export function StageSection({content}: StageSectionProps) {
+  const headingId = 'home-stage-heading'
+
   return (
-    <Section id="scena" tone="surface">
+    <Section id="scena" labelledBy={headingId} tone="surface">
       <Container>
         <div className="mb-14">
           <SectionHeader
+            id={headingId}
             eyebrow={content.eyebrow}
             title={content.title}
             description={content.description}
@@ -23,8 +26,11 @@ export function StageSection({content}: StageSectionProps) {
         <div className="grid items-center gap-10 md:grid-cols-12">
           <div className="md:col-span-7">
             <div className="border-outline-variant/60 bg-inverse-surface relative isolate grid aspect-[4/3] place-items-center overflow-hidden rounded-2xl border shadow-lg md:min-h-[32rem]">
-              <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_20%_20%,rgba(255,215,0,0.28),transparent_18rem),linear-gradient(135deg,rgba(255,248,239,0.12),transparent_45%)]" />
-              <div className="absolute inset-0 -z-10 bg-black/25" />
+              <div
+                aria-hidden="true"
+                className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_20%_20%,rgba(255,215,0,0.28),transparent_18rem),linear-gradient(135deg,rgba(255,248,239,0.12),transparent_45%)]"
+              />
+              <div aria-hidden="true" className="absolute inset-0 -z-10 bg-black/25" />
               <p className="text-inverse-surface-foreground/75 max-w-xs px-6 text-center text-sm font-semibold tracking-[0.16em] uppercase">
                 {content.mediaLabel}
               </p>

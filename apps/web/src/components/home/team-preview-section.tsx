@@ -10,11 +10,14 @@ type TeamPreviewSectionProps = {
 }
 
 export function TeamPreviewSection({content}: TeamPreviewSectionProps) {
+  const headingId = 'home-team-heading'
+
   return (
-    <Section id="o-pozytywce" tone="surface">
+    <Section id="o-pozytywce" labelledBy={headingId} tone="surface">
       <Container>
         <div className="mb-14">
           <SectionHeader
+            id={headingId}
             eyebrow={content.eyebrow}
             title={content.title}
             description={content.description}
@@ -69,7 +72,7 @@ export function TeamPreviewSection({content}: TeamPreviewSectionProps) {
               href="#o-pozytywce"
               className="text-primary mt-2 inline-flex text-sm font-semibold"
             >
-              Poznaj cały zespół →
+              Poznaj cały zespół <span aria-hidden="true">→</span>
             </Link>
           </div>
         </div>

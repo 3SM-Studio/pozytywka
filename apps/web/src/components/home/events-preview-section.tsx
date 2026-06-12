@@ -10,11 +10,14 @@ type EventsPreviewSectionProps = {
 }
 
 export function EventsPreviewSection({content}: EventsPreviewSectionProps) {
+  const headingId = 'home-events-heading'
+
   return (
-    <Section id="wydarzenia" tone="muted">
+    <Section id="wydarzenia" labelledBy={headingId} tone="muted">
       <Container>
         <div className="flex flex-col justify-between gap-6 md:flex-row md:items-end">
           <SectionHeader
+            id={headingId}
             eyebrow={content.eyebrow}
             title={content.title}
             description={content.description}
@@ -50,8 +53,14 @@ export function EventsPreviewSection({content}: EventsPreviewSectionProps) {
                 <h3 className="font-serif text-2xl font-semibold">{item.title}</h3>
                 <p className="text-muted-foreground mt-2 text-sm leading-7">{item.description}</p>
                 <div className="text-foreground/75 mt-4 flex flex-wrap gap-x-5 gap-y-2 text-sm font-semibold">
-                  <span>⌖ {item.locationSummary}</span>
-                  {item.timeLabel ? <span>◷ {item.timeLabel}</span> : null}
+                  <span>
+                    <span aria-hidden="true">⌖</span> {item.locationSummary}
+                  </span>
+                  {item.timeLabel ? (
+                    <span>
+                      <span aria-hidden="true">◷</span> {item.timeLabel}
+                    </span>
+                  ) : null}
                 </div>
               </div>
               <Link href={item.action.href} className="text-primary text-sm font-semibold">

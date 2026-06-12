@@ -11,11 +11,14 @@ type ClassesPreviewSectionProps = {
 }
 
 export function ClassesPreviewSection({content}: ClassesPreviewSectionProps) {
+  const headingId = 'home-classes-heading'
+
   return (
-    <Section id="zajecia">
+    <Section id="zajecia" labelledBy={headingId}>
       <Container>
         <div className="flex flex-col justify-between gap-6 md:flex-row md:items-end">
           <SectionHeader
+            id={headingId}
             eyebrow={content.eyebrow}
             title={content.title}
             description={content.description}
@@ -35,7 +38,10 @@ export function ClassesPreviewSection({content}: ClassesPreviewSectionProps) {
               className="group border-outline-variant/60 bg-surface-raised overflow-hidden rounded-2xl border shadow-sm"
             >
               <div className="bg-surface-container-highest text-muted-foreground relative grid aspect-[4/3] place-items-center overflow-hidden px-6 text-center text-xs font-semibold tracking-[0.14em] uppercase transition group-hover:scale-[1.02]">
-                <span className="absolute inset-0 bg-[radial-gradient(circle_at_70%_20%,rgba(255,215,0,0.18),transparent_12rem)]" />
+                <span
+                  aria-hidden="true"
+                  className="absolute inset-0 bg-[radial-gradient(circle_at_70%_20%,rgba(255,215,0,0.18),transparent_12rem)]"
+                />
                 <span className="relative">{item.imageLabel}</span>
               </div>
               <div className="p-6">

@@ -18,11 +18,13 @@ export const metadata: Metadata = {
 }
 
 export default function ContactPage() {
+  const headingId = 'contact-heading'
+
   return (
-    <section className="w-container mx-auto px-5 py-16 md:py-24">
+    <section aria-labelledby={headingId} className="w-container mx-auto px-5 py-16 md:py-24">
       <div className="max-w-3xl">
         <p className="text-primary text-sm font-semibold tracking-[0.14em] uppercase">Kontakt</p>
-        <h1 className="font-display mt-4 text-4xl font-bold md:text-6xl">
+        <h1 id={headingId} className="font-display mt-4 text-4xl font-bold md:text-6xl">
           Dane kontaktowe są przygotowane do uzupełnienia
         </h1>
         <p className="text-muted-foreground mt-6 text-lg leading-8">
