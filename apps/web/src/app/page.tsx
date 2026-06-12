@@ -1,28 +1,8 @@
-import {CampSection} from '@/components/home/camp-section'
-import {ClassesPreviewSection} from '@/components/home/classes-preview-section'
-import {CreativeAreasSection} from '@/components/home/creative-areas-section'
-import {EventsPreviewSection} from '@/components/home/events-preview-section'
-import {FinalCtaSection} from '@/components/home/final-cta-section'
-import {HeroSection} from '@/components/home/hero-section'
-import {QuickLinksSection} from '@/components/home/quick-links-section'
-import {StageSection} from '@/components/home/stage-section'
-import {TeamPreviewSection} from '@/components/home/team-preview-section'
-import {TestimonialsSection} from '@/components/home/testimonials-section'
-import {homePageContent} from '@/lib/content/home-page'
+import {HomePageView} from '@/components/home/home-page-view'
+import {getHomePageContent} from '@/lib/content/get-home-page-content'
 
-export default function HomePage() {
-  return (
-    <>
-      <HeroSection content={homePageContent.hero} />
-      <QuickLinksSection items={homePageContent.quickLinks} />
-      <StageSection content={homePageContent.stage} />
-      <CreativeAreasSection content={homePageContent.creativeAreas} />
-      <ClassesPreviewSection content={homePageContent.classesPreview} />
-      <EventsPreviewSection content={homePageContent.eventsPreview} />
-      <CampSection content={homePageContent.camp} />
-      <TeamPreviewSection content={homePageContent.team} />
-      <TestimonialsSection content={homePageContent.testimonials} />
-      <FinalCtaSection content={homePageContent.finalCta} />
-    </>
-  )
+export default async function HomePage() {
+  const content = await getHomePageContent()
+
+  return <HomePageView content={content} />
 }
