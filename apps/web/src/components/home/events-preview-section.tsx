@@ -35,7 +35,7 @@ export function EventsPreviewSection({content}: EventsPreviewSectionProps) {
         <div className="mt-12 grid gap-4">
           {content.items.map((item) => (
             <article
-              key={`${item.type}-${item.title}`}
+              key={item.id}
               className="border-outline-variant/60 bg-surface-raised grid gap-6 rounded-2xl border p-6 shadow-sm md:grid-cols-[12rem_1fr_auto] md:items-center"
             >
               <div>

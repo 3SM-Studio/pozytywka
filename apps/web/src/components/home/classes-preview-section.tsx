@@ -30,7 +30,7 @@ export function ClassesPreviewSection({content}: ClassesPreviewSectionProps) {
         <div className="mt-12 grid gap-6 lg:grid-cols-3">
           {content.items.map((item) => (
             <article
-              key={`${item.category}-${item.title}`}
+              key={item.id}
               className="group border-outline-variant/60 bg-surface-raised overflow-hidden rounded-2xl border shadow-sm"
             >
               <div className="bg-surface-container-highest text-muted-foreground relative grid aspect-[4/3] place-items-center overflow-hidden px-6 text-center text-xs font-semibold tracking-[0.14em] uppercase transition group-hover:scale-[1.02]">

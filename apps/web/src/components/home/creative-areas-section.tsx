@@ -16,7 +16,7 @@ export function CreativeAreasSection({content}: CreativeAreasSectionProps) {
         <div className="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-4">
           {content.items.map((item) => (
             <article
-              key={item.title}
+              key={item.id}
               className="border-outline-variant/70 bg-surface-raised rounded-2xl border p-6"
             >
               <span

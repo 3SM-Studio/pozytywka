@@ -11,6 +11,7 @@ export const homePageContent = {
   },
   quickLinks: [
     {
+      id: 'quick-zajecia',
       eyebrow: 'Szukam zajęć',
       label: 'Odkryj zajęcia',
       href: '#zajecia',
@@ -19,6 +20,7 @@ export const homePageContent = {
         'Poznaj aktualne możliwości i znajdź kierunek odpowiadający zainteresowaniom uczestnika.',
     },
     {
+      id: 'quick-spektakle',
       eyebrow: 'Chcę zobaczyć spektakle',
       label: 'Repertuar',
       href: '#wydarzenia',
@@ -26,6 +28,7 @@ export const homePageContent = {
       description: 'Przeżyj wyjątkowe emocje i zobacz efekty naszej artystycznej pracy na scenie.',
     },
     {
+      id: 'quick-obozy',
       eyebrow: 'Szukam obozu',
       label: 'Sprawdź ofertę',
       href: '#obozy',
@@ -41,6 +44,7 @@ export const homePageContent = {
     mediaLabel: 'Zdjęcie teatralnej próby — do podmiany',
     highlights: [
       {
+        id: 'stage-teatr',
         type: 'Teatr',
         title: 'Grupa teatralna — do potwierdzenia',
         description:
@@ -48,6 +52,7 @@ export const homePageContent = {
         action: {label: 'Poznaj teatry', href: '#zajecia'},
       },
       {
+        id: 'stage-spektakl-musical',
         type: 'Spektakl / musical',
         title: 'Spektakl sezonowy — do potwierdzenia',
         description:
@@ -62,22 +67,26 @@ export const homePageContent = {
       'Pozytywka łączy różne dziedziny pracy artystycznej, pozwalając uczestnikom odkrywać własny sposób wyrażania siebie.',
     items: [
       {
+        id: 'area-teatr',
         icon: '🎭',
         title: 'Teatr',
         description:
           'Gra aktorska, improwizacja, praca z tekstem i wspólne tworzenie przedstawień.',
       },
       {
+        id: 'area-muzyka',
         icon: '♪',
         title: 'Muzyka',
         description: 'Śpiew, rytm, głos i działania muzyczne rozwijane podczas wspólnej pracy.',
       },
       {
+        id: 'area-taniec-ruch',
         icon: '↗',
         title: 'Taniec i ruch',
         description: 'Ruch sceniczny, taniec i świadoma praca z ciałem.',
       },
       {
+        id: 'area-obozy-dzialania',
         icon: '☀',
         title: 'Obozy i twórcze działania',
         description: 'Artystyczne wyjazdy, warsztaty i doświadczenia budujące relacje.',
@@ -91,6 +100,8 @@ export const homePageContent = {
     action: {label: 'Zobacz wszystkie zajęcia', href: '/kontakt'},
     items: [
       {
+        id: 'class-teatr-placeholder',
+        slug: 'teatr-placeholder',
         category: 'Teatr — do potwierdzenia',
         title: 'Grupa teatralna — do potwierdzenia',
         description: 'Praca z tekstem, improwizacją i wspólnym przygotowaniem scenicznych działań.',
@@ -100,6 +111,8 @@ export const homePageContent = {
         action: {label: 'Zobacz szczegóły', href: '/kontakt'},
       },
       {
+        id: 'class-wokal-rytm-placeholder',
+        slug: 'wokal-rytm-placeholder',
         category: 'Muzyka — do potwierdzenia',
         title: 'Wokal i rytm — do potwierdzenia',
         description: 'Zajęcia rozwijające głos, rytm i wspólne działania muzyczne.',
@@ -109,6 +122,8 @@ export const homePageContent = {
         action: {label: 'Zobacz szczegóły', href: '/kontakt'},
       },
       {
+        id: 'class-ruch-sceniczny-placeholder',
+        slug: 'ruch-sceniczny-placeholder',
         category: 'Ruch — do potwierdzenia',
         title: 'Ruch sceniczny — do potwierdzenia',
         description: 'Świadoma praca z ciałem, ekspresją i obecnością sceniczną.',
@@ -127,6 +142,8 @@ export const homePageContent = {
     action: {label: 'Zobacz wszystkie wydarzenia', href: '/kontakt'},
     items: [
       {
+        id: 'event-pokaz-sceniczny-placeholder',
+        slug: 'pokaz-sceniczny-placeholder',
         date: 'Termin — do potwierdzenia',
         type: 'Spektakl — do potwierdzenia',
         title: 'Pokaz sceniczny — do potwierdzenia',
@@ -137,6 +154,8 @@ export const homePageContent = {
         action: {label: 'Zobacz wydarzenie', href: '/kontakt'},
       },
       {
+        id: 'event-spotkanie-tworcze-placeholder',
+        slug: 'spotkanie-tworcze-placeholder',
         date: 'Termin — do potwierdzenia',
         type: 'Warsztat — do potwierdzenia',
         title: 'Spotkanie twórcze — do potwierdzenia',
@@ -147,6 +166,8 @@ export const homePageContent = {
         action: {label: 'Zobacz wydarzenie', href: '/kontakt'},
       },
       {
+        id: 'event-wspolne-wydarzenie-placeholder',
+        slug: 'wspolne-wydarzenie-placeholder',
         date: 'Termin — do potwierdzenia',
         type: 'Koncert / pokaz — do potwierdzenia',
         title: 'Wspólne wydarzenie — do potwierdzenia',
@@ -166,9 +187,9 @@ export const homePageContent = {
     mediaLabel: 'Zdjęcie ruchu artystycznego — do podmiany',
     detailsHeading: 'Szczegóły aktualnej edycji — do potwierdzenia',
     details: [
-      {icon: '▣', label: 'Termin — do potwierdzenia'},
-      {icon: '⌖', label: 'Miejsce — do potwierdzenia'},
-      {icon: '◎', label: 'Grupa wiekowa — do potwierdzenia'},
+      {id: 'camp-termin', icon: '▣', label: 'Termin — do potwierdzenia'},
+      {id: 'camp-miejsce', icon: '⌖', label: 'Miejsce — do potwierdzenia'},
+      {id: 'camp-grupa-wiekowa', icon: '◎', label: 'Grupa wiekowa — do potwierdzenia'},
     ],
     primaryAction: {label: 'Poznaj obóz', href: '#obozy'},
     secondaryAction: {label: 'Zobacz zapisy', href: '/kontakt'},
@@ -179,6 +200,7 @@ export const homePageContent = {
     description:
       'Pozytywkę tworzą osoby, które wspierają uczestników w odkrywaniu własnych możliwości, wspólnej pracy i wychodzeniu na scenę.',
     featured: {
+      id: 'team-iwona-pilarz',
       name: 'Iwona Pilarz',
       role: 'Założycielka / prowadząca — do potwierdzenia',
       description: 'Biografia i zakres działań zostaną uzupełnione po potwierdzeniu treści.',
@@ -187,18 +209,21 @@ export const homePageContent = {
     action: {label: 'Poznaj Pozytywkę', href: '#o-pozytywce'},
     members: [
       {
+        id: 'team-instruktor-teatr-placeholder',
         name: 'Instruktor / instruktorka — do potwierdzenia',
         role: 'Teatr — do potwierdzenia',
         description: 'Obszar pracy i krótka nota — do uzupełnienia',
         portraitLabel: 'Portret — do podmiany',
       },
       {
+        id: 'team-instruktor-muzyka-placeholder',
         name: 'Instruktor / instruktorka — do potwierdzenia',
         role: 'Muzyka — do potwierdzenia',
         description: 'Obszar pracy i krótka nota — do uzupełnienia',
         portraitLabel: 'Portret — do podmiany',
       },
       {
+        id: 'team-instruktor-ruch-placeholder',
         name: 'Instruktor / instruktorka — do potwierdzenia',
         role: 'Ruch — do potwierdzenia',
         description: 'Obszar pracy i krótka nota — do uzupełnienia',
