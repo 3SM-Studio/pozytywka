@@ -53,6 +53,7 @@ export default function RootLayout({
   return (
     <html
       lang="pl"
+      data-scroll-behavior="smooth"
       suppressHydrationWarning
       className={`${montserrat.variable} ${playfair.variable}`}
     >
