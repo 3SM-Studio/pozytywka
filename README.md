@@ -21,3 +21,7 @@ Monorepo strony internetowej Pracowni Twórczej Pozytywka.
 ## Status
 
 Projekt jest w fazie inicjalizacji.
+
+## Development workflow
+
+Changes to `main` require a reviewed pull request.
