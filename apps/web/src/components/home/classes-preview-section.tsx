@@ -9,6 +9,28 @@ type ClassesPreviewSectionProps = {
   content: HomePageContent['classesPreview']
 }
 
+const classStatusLabel: Record<
+  HomePageContent['classesPreview']['items'][number]['status'],
+  string
+> = {
+  open: 'Zapisy — otwarte',
+  waitlist: 'Zapisy — lista rezerwowa',
+  closed: 'Zapisy — zamknięte',
+  planned: 'Zapisy — status do potwierdzenia',
+}
+
+function formatAgeRange(ageRange: HomePageContent['classesPreview']['items'][number]['ageRange']) {
+  if (ageRange.from === 0 && ageRange.to === undefined) {
+    return 'Wiek'
+  }
+
+  if (ageRange.to === undefined) {
+    return `Wiek ${ageRange.from}+`
+  }
+
+  return `Wiek ${ageRange.from}-${ageRange.to}`
+}
+
 export function ClassesPreviewSection({content}: ClassesPreviewSectionProps) {
   return (
     <Section id="zajecia">
@@ -47,9 +69,14 @@ export function ClassesPreviewSection({content}: ClassesPreviewSectionProps) {
                 <p className="text-muted-foreground mt-3 text-sm leading-7">{item.description}</p>
                 <div className="bg-surface-container-low mt-5 rounded-xl p-4 text-sm">
                   <p className="font-semibold">Info</p>
-                  <p className="text-muted-foreground mt-1 leading-6">{item.meta}</p>
+                  <p className="text-muted-foreground mt-1 leading-6">
+                    {formatAgeRange(item.ageRange)} • {item.scheduleSummary} •{' '}
+                    {item.locationSummary} — do potwierdzenia
+                  </p>
                 </div>
-                <p className="text-primary mt-4 text-sm font-semibold">{item.status}</p>
+                <p className="text-primary mt-4 text-sm font-semibold">
+                  {classStatusLabel[item.status]}
+                </p>
                 <Link
                   href={item.action.href}
                   className="text-foreground mt-5 inline-flex text-sm font-semibold"
