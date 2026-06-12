@@ -8,10 +8,13 @@ type TestimonialsSectionProps = {
 }
 
 export function TestimonialsSection({content}: TestimonialsSectionProps) {
+  const headingId = 'home-testimonials-heading'
+
   return (
-    <Section>
+    <Section labelledBy={headingId}>
       <Container>
         <SectionHeader
+          id={headingId}
           eyebrow={content.eyebrow}
           title={content.title}
           description={content.description}

@@ -8,10 +8,17 @@ type CreativeAreasSectionProps = {
 }
 
 export function CreativeAreasSection({content}: CreativeAreasSectionProps) {
+  const headingId = 'home-creative-areas-heading'
+
   return (
-    <Section tone="muted">
+    <Section labelledBy={headingId} tone="muted">
       <Container>
-        <SectionHeader title={content.title} description={content.description} align="center" />
+        <SectionHeader
+          id={headingId}
+          title={content.title}
+          description={content.description}
+          align="center"
+        />
 
         <div className="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-4">
           {content.items.map((item) => (

@@ -21,11 +21,13 @@ export const metadata: Metadata = {
 
 export default async function EventsPage() {
   const content = await getEventsContent()
+  const headingId = 'events-heading'
 
   return (
-    <Section tone="muted">
+    <Section labelledBy={headingId} tone="muted">
       <Container>
         <SectionHeader
+          id={headingId}
           eyebrow={content.eyebrow}
           title={content.title}
           description={content.description}
@@ -49,8 +51,14 @@ export default async function EventsPage() {
                 <h2 className="font-serif text-2xl font-semibold">{event.title}</h2>
                 <p className="text-muted-foreground mt-2 text-sm leading-7">{event.description}</p>
                 <div className="text-foreground/75 mt-4 flex flex-wrap gap-x-5 gap-y-2 text-sm font-semibold">
-                  <span>⌖ {event.locationSummary}</span>
-                  {event.timeLabel ? <span>◷ {event.timeLabel}</span> : null}
+                  <span>
+                    <span aria-hidden="true">⌖</span> {event.locationSummary}
+                  </span>
+                  {event.timeLabel ? (
+                    <span>
+                      <span aria-hidden="true">◷</span> {event.timeLabel}
+                    </span>
+                  ) : null}
                   <span>{eventStatusLabel[event.status]}</span>
                 </div>
               </div>

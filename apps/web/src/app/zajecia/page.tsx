@@ -21,11 +21,13 @@ export const metadata: Metadata = {
 
 export default async function ActivitiesPage() {
   const content = await getActivitiesContent()
+  const headingId = 'activities-heading'
 
   return (
-    <Section>
+    <Section labelledBy={headingId}>
       <Container>
         <SectionHeader
+          id={headingId}
           eyebrow={content.eyebrow}
           title={content.title}
           description={content.description}

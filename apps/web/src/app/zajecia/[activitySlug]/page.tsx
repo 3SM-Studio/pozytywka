@@ -51,19 +51,22 @@ export async function generateMetadata({params}: ActivityPageProps): Promise<Met
 export default async function ActivityPage({params}: ActivityPageProps) {
   const {activitySlug} = await params
   const activity = await getActivityBySlug(activitySlug)
+  const headingId = 'activity-detail-heading'
 
   if (!activity) {
     notFound()
   }
 
   return (
-    <Section>
+    <Section labelledBy={headingId}>
       <Container>
         <div className="max-w-3xl">
           <p className="text-primary text-sm font-semibold tracking-[0.14em] uppercase">
             {activity.category}
           </p>
-          <h1 className="font-display mt-4 text-4xl font-bold md:text-6xl">{activity.title}</h1>
+          <h1 id={headingId} className="font-display mt-4 text-4xl font-bold md:text-6xl">
+            {activity.title}
+          </h1>
           <p className="text-muted-foreground mt-6 text-lg leading-8">{activity.description}</p>
         </div>
 
