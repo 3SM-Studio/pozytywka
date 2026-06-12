@@ -1,4 +1,4 @@
-import {siteRoutes} from '@/lib/content/routes'
+import {getActivityHref, getEventHref, siteRoutes} from '@/lib/content/routes'
 import {getActivitiesContent} from '@/lib/content/get-activities-content'
 import {getEventsContent} from '@/lib/content/get-events-content'
 import {absoluteUrl} from '@/lib/site-url'
@@ -16,13 +16,13 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       priority: route.priority,
     })),
     ...activities.items.map((activity) => ({
-      url: absoluteUrl(`/zajecia/${activity.slug}`),
+      url: absoluteUrl(getActivityHref(activity.slug)),
       lastModified,
       changeFrequency: 'monthly' as const,
       priority: 0.7,
     })),
     ...events.items.map((event) => ({
-      url: absoluteUrl(`/wydarzenia/${event.slug}`),
+      url: absoluteUrl(getEventHref(event.slug)),
       lastModified,
       changeFrequency: 'weekly' as const,
       priority: 0.7,

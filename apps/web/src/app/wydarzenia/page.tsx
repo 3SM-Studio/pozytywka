@@ -4,6 +4,7 @@ import {Section} from '@/components/layout/section'
 import {LinkButton} from '@/components/ui/link-button'
 import {eventStatusLabel} from '@/lib/content/display'
 import {getEventsContent} from '@/lib/content/get-events-content'
+import {getEventHref} from '@/lib/content/routes'
 import type {Metadata} from 'next'
 
 export const metadata: Metadata = {
@@ -62,7 +63,7 @@ export default async function EventsPage() {
                   <span>{eventStatusLabel[event.status]}</span>
                 </div>
               </div>
-              <LinkButton href={`/wydarzenia/${event.slug}`} variant="outline">
+              <LinkButton href={getEventHref(event.slug)} variant="outline">
                 Zobacz wydarzenie
               </LinkButton>
             </article>

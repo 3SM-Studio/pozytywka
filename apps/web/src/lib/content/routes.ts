@@ -1,7 +1,8 @@
-import type {MetadataRoute} from 'next'
+import type {MetadataRoute, Route} from 'next'
+import type {AppHref} from '@/lib/content/types'
 
 export type SiteRoute = {
-  path: string
+  path: AppHref
   label: string
   title: string
   description: string
@@ -47,9 +48,17 @@ export const siteRoutes = [
 ] satisfies SiteRoute[]
 
 export const homeAnchors = {
-  classes: '/#zajecia',
-  stage: '/#scena',
-  events: '/#wydarzenia',
-  camp: '/#obozy',
-  about: '/#o-pozytywce',
+  classes: '/zajecia',
+  stage: '/',
+  events: '/wydarzenia',
+  camp: '/kontakt',
+  about: '/',
 } as const
+
+export function getActivityHref(slug: string): Route {
+  return `/zajecia/${slug}` as Route
+}
+
+export function getEventHref(slug: string): Route {
+  return `/wydarzenia/${slug}` as Route
+}

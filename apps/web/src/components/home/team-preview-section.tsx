@@ -2,8 +2,8 @@ import type {HomePageContent} from '@/lib/content/types'
 import {Container} from '@/components/layout/container'
 import {SectionHeader} from '@/components/layout/section-header'
 import {Section} from '@/components/layout/section'
+import {AppLink} from '@/components/ui/app-link'
 import {LinkButton} from '@/components/ui/link-button'
-import Link from 'next/link'
 
 type TeamPreviewSectionProps = {
   content: HomePageContent['team']
@@ -68,12 +68,12 @@ export function TeamPreviewSection({content}: TeamPreviewSectionProps) {
                 </div>
               </article>
             ))}
-            <Link
-              href="#o-pozytywce"
+            <AppLink
+              href={content.action.href}
               className="text-primary mt-2 inline-flex text-sm font-semibold"
             >
               Poznaj cały zespół <span aria-hidden="true">→</span>
-            </Link>
+            </AppLink>
           </div>
         </div>
       </Container>

@@ -2,8 +2,8 @@ import type {HomePageContent} from '@/lib/content/types'
 import {Container} from '@/components/layout/container'
 import {SectionHeader} from '@/components/layout/section-header'
 import {Section} from '@/components/layout/section'
+import {AppLink} from '@/components/ui/app-link'
 import {LinkButton} from '@/components/ui/link-button'
-import Link from 'next/link'
 
 type EventsPreviewSectionProps = {
   content: HomePageContent['eventsPreview']
@@ -63,9 +63,9 @@ export function EventsPreviewSection({content}: EventsPreviewSectionProps) {
                   ) : null}
                 </div>
               </div>
-              <Link href={item.action.href} className="text-primary text-sm font-semibold">
+              <AppLink href={item.action.href} className="text-primary text-sm font-semibold">
                 {item.action.label}
-              </Link>
+              </AppLink>
             </article>
           ))}
         </div>

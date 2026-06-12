@@ -1,7 +1,7 @@
 import type {QuickLink} from '@/lib/content/types'
 import {Container} from '@/components/layout/container'
 import {Section} from '@/components/layout/section'
-import Link from 'next/link'
+import {AppLink} from '@/components/ui/app-link'
 
 type QuickLinksSectionProps = {
   items: QuickLink[]
@@ -17,7 +17,7 @@ export function QuickLinksSection({items}: QuickLinksSectionProps) {
           Szybkie ścieżki
         </h2>
         {items.map((item) => (
-          <Link
+          <AppLink
             key={item.id}
             href={item.href}
             className="group border-outline-variant/70 bg-surface-raised hover:bg-surface-container-low grid gap-4 rounded-2xl border p-6 shadow-sm transition-colors"
@@ -38,7 +38,7 @@ export function QuickLinksSection({items}: QuickLinksSectionProps) {
                 →
               </span>
             </span>
-          </Link>
+          </AppLink>
         ))}
       </Container>
     </Section>

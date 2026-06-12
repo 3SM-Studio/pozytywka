@@ -1,6 +1,6 @@
 import {SiteLogo} from '@/components/site/site-logo'
+import {AppLink} from '@/components/ui/app-link'
 import type {FooterContent} from '@/lib/content/types'
-import Link from 'next/link'
 
 type SiteFooterProps = {
   content: FooterContent
@@ -28,9 +28,12 @@ export function SiteFooter({content}: SiteFooterProps) {
             <ul className="text-foreground/80 dark:text-inverse-surface-foreground/80 mt-4 grid gap-3 text-sm font-semibold">
               {group.links.map((item) => (
                 <li key={`${group.title}-${item.label}`}>
-                  <Link href={item.href} className="hover:text-foreground dark:hover:text-primary">
+                  <AppLink
+                    href={item.href}
+                    className="hover:text-foreground dark:hover:text-primary"
+                  >
                     {item.label}
-                  </Link>
+                  </AppLink>
                 </li>
               ))}
             </ul>
@@ -48,9 +51,9 @@ export function SiteFooter({content}: SiteFooterProps) {
           </ul>
           <div className="mt-5 flex gap-4 text-sm font-semibold">
             {content.social.map((item) => (
-              <Link key={item.label} href={item.href} className="hover:text-primary">
+              <AppLink key={item.label} href={item.href} className="hover:text-primary">
                 {item.label}
-              </Link>
+              </AppLink>
             ))}
           </div>
         </div>
@@ -61,13 +64,13 @@ export function SiteFooter({content}: SiteFooterProps) {
           <p>© 2026 Pozytywka — Pracownia Twórcza.</p>
           <div className="flex flex-wrap gap-4">
             {content.legal.map((item) => (
-              <Link
+              <AppLink
                 key={item.label}
                 href={item.href}
                 className="hover:text-foreground dark:hover:text-primary"
               >
                 {item.label}
-              </Link>
+              </AppLink>
             ))}
           </div>
         </div>

@@ -1,6 +1,18 @@
+import type {Route} from 'next'
+
+export type InternalHref = Route
+
+export type ExternalHref =
+  | `http://${string}`
+  | `https://${string}`
+  | `mailto:${string}`
+  | `tel:${string}`
+
+export type AppHref = InternalHref | ExternalHref
+
 export type LinkTarget = {
   label: string
-  href: string
+  href: AppHref
 }
 
 export type NavigationItem = LinkTarget

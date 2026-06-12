@@ -4,6 +4,7 @@ import {Section} from '@/components/layout/section'
 import {LinkButton} from '@/components/ui/link-button'
 import {classStatusLabel, formatClassInfo} from '@/lib/content/display'
 import {getActivitiesContent} from '@/lib/content/get-activities-content'
+import {getActivityHref} from '@/lib/content/routes'
 import type {Metadata} from 'next'
 
 export const metadata: Metadata = {
@@ -54,7 +55,7 @@ export default async function ActivitiesPage() {
                 {classStatusLabel[activity.status]}
               </p>
               <LinkButton
-                href={`/zajecia/${activity.slug}`}
+                href={getActivityHref(activity.slug)}
                 variant="outline"
                 className="mt-6 w-fit"
               >

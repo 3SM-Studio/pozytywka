@@ -2,7 +2,7 @@ import type {HomePageContent} from '@/lib/content/types'
 import {Container} from '@/components/layout/container'
 import {SectionHeader} from '@/components/layout/section-header'
 import {Section} from '@/components/layout/section'
-import Link from 'next/link'
+import {AppLink} from '@/components/ui/app-link'
 
 type StageSectionProps = {
   content: HomePageContent['stage']
@@ -47,12 +47,12 @@ export function StageSection({content}: StageSectionProps) {
                   {item.title}
                 </h3>
                 <p className="text-muted-foreground mt-3 leading-7">{item.description}</p>
-                <Link
+                <AppLink
                   href={item.action.href}
                   className="border-outline hover:bg-surface-container-high mt-6 inline-flex min-h-11 items-center justify-center rounded-lg border px-6 text-sm font-semibold transition-colors"
                 >
                   {item.action.label}
-                </Link>
+                </AppLink>
               </article>
             ))}
           </div>

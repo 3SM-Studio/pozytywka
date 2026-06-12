@@ -1,9 +1,10 @@
+import {AppLink} from '@/components/ui/app-link'
 import {Button, type ButtonProps} from '@/components/ui/button'
-import Link from 'next/link'
+import type {AppHref} from '@/lib/content/types'
 import type {ReactNode} from 'react'
 
 type LinkButtonProps = {
-  href: string
+  href: AppHref
   children: ReactNode
   variant?: ButtonProps['variant']
   size?: ButtonProps['size']
@@ -11,27 +12,9 @@ type LinkButtonProps = {
 }
 
 export function LinkButton({href, children, variant, size, className}: LinkButtonProps) {
-  if (href.startsWith('/')) {
-    return (
-      <Button asChild variant={variant} size={size} className={className}>
-        <Link href={href}>{children}</Link>
-      </Button>
-    )
-  }
-
-  if (href.startsWith('http')) {
-    return (
-      <Button asChild variant={variant} size={size} className={className}>
-        <a href={href} rel="noreferrer">
-          {children}
-        </a>
-      </Button>
-    )
-  }
-
   return (
     <Button asChild variant={variant} size={size} className={className}>
-      <a href={href}>{children}</a>
+      <AppLink href={href}>{children}</AppLink>
     </Button>
   )
 }

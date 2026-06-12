@@ -1,12 +1,13 @@
 import type {HomePageContent} from './types'
+import {getActivityHref, getEventHref} from './routes'
 
 export const homePageContent = {
   hero: {
     title: 'Miejsce, w którym twórczość wychodzi na scenę.',
     description:
       'Teatr, muzyka, ruch, spektakle i artystyczne przygody dla dzieci, młodzieży i dorosłych.',
-    primaryAction: {label: 'Zobacz zajęcia', href: '#zajecia'},
-    secondaryAction: {label: 'Poznaj Pozytywkę', href: '#o-pozytywce'},
+    primaryAction: {label: 'Zobacz zajęcia', href: '/zajecia'},
+    secondaryAction: {label: 'Poznaj Pozytywkę', href: '/'},
     mediaLabel: 'Zdjęcie z próby teatralnej',
   },
   quickLinks: [
@@ -14,7 +15,7 @@ export const homePageContent = {
       id: 'quick-zajecia',
       eyebrow: 'Szukam zajęć',
       label: 'Odkryj zajęcia',
-      href: '#zajecia',
+      href: '/zajecia',
       icon: '✦',
       description:
         'Poznaj aktualne możliwości i znajdź kierunek odpowiadający zainteresowaniom uczestnika.',
@@ -23,7 +24,7 @@ export const homePageContent = {
       id: 'quick-spektakle',
       eyebrow: 'Chcę zobaczyć spektakle',
       label: 'Repertuar',
-      href: '#wydarzenia',
+      href: '/wydarzenia',
       icon: '🎭',
       description: 'Przeżyj wyjątkowe emocje i zobacz efekty naszej artystycznej pracy na scenie.',
     },
@@ -31,7 +32,7 @@ export const homePageContent = {
       id: 'quick-obozy',
       eyebrow: 'Szukam obozu',
       label: 'Sprawdź ofertę',
-      href: '#obozy',
+      href: '/kontakt',
       icon: '☀',
       description: 'Kreatywne wakacje pełne sztuki, integracji i niezapomnianych przeżyć.',
     },
@@ -48,14 +49,14 @@ export const homePageContent = {
         type: 'Teatr',
         title: 'Grupa teatralna',
         description: 'Stała praca aktorska, improwizacja i przygotowanie wspólnych pokazów.',
-        action: {label: 'Poznaj teatry', href: '#zajecia'},
+        action: {label: 'Poznaj teatry', href: '/zajecia'},
       },
       {
         id: 'stage-spektakl-musical',
         type: 'Spektakl / musical',
         title: 'Spektakl sezonowy',
         description: 'Projekt sceniczny przygotowywany przez uczestników Pozytywki.',
-        action: {label: 'Zobacz spektakle', href: '#wydarzenia'},
+        action: {label: 'Zobacz spektakle', href: '/wydarzenia'},
       },
     ],
   },
@@ -108,7 +109,7 @@ export const homePageContent = {
         locationSummary: 'Miejsce zostanie podane wkrótce',
         status: 'planned',
         imageLabel: 'Zdjęcie z zajęć teatralnych',
-        action: {label: 'Zobacz szczegóły', href: '/zajecia/teatr-dla-dzieci'},
+        action: {label: 'Zobacz szczegóły', href: getActivityHref('teatr-dla-dzieci')},
       },
       {
         id: 'class-wokal-i-rytm',
@@ -121,7 +122,7 @@ export const homePageContent = {
         locationSummary: 'Miejsce zostanie podane wkrótce',
         status: 'planned',
         imageLabel: 'Zdjęcie z warsztatów muzycznych',
-        action: {label: 'Zobacz szczegóły', href: '/zajecia/wokal-i-rytm'},
+        action: {label: 'Zobacz szczegóły', href: getActivityHref('wokal-i-rytm')},
       },
       {
         id: 'class-ruch-sceniczny',
@@ -134,7 +135,7 @@ export const homePageContent = {
         locationSummary: 'Miejsce zostanie podane wkrótce',
         status: 'planned',
         imageLabel: 'Zdjęcie z zajęć ruchu scenicznego',
-        action: {label: 'Zobacz szczegóły', href: '/zajecia/ruch-sceniczny'},
+        action: {label: 'Zobacz szczegóły', href: getActivityHref('ruch-sceniczny')},
       },
     ],
   },
@@ -155,7 +156,7 @@ export const homePageContent = {
         type: 'Spektakl',
         title: 'Pokaz sceniczny',
         description: 'Wydarzenie przygotowywane przez społeczność Pozytywki.',
-        action: {label: 'Zobacz wydarzenie', href: '/wydarzenia/pokaz-sceniczny'},
+        action: {label: 'Zobacz wydarzenie', href: getEventHref('pokaz-sceniczny')},
       },
       {
         id: 'event-spotkanie-tworcze',
@@ -167,7 +168,7 @@ export const homePageContent = {
         type: 'Warsztat',
         title: 'Spotkanie twórcze',
         description: 'Warsztat lub działanie artystyczne dla uczestników.',
-        action: {label: 'Zobacz wydarzenie', href: '/wydarzenia/spotkanie-tworcze'},
+        action: {label: 'Zobacz wydarzenie', href: getEventHref('spotkanie-tworcze')},
       },
       {
         id: 'event-wspolne-wydarzenie',
@@ -179,7 +180,7 @@ export const homePageContent = {
         type: 'Koncert / pokaz',
         title: 'Wspólne wydarzenie',
         description: 'Otwarte wydarzenie Pozytywki przygotowywane w ramach programu artystycznego.',
-        action: {label: 'Zobacz wydarzenie', href: '/wydarzenia/wspolne-wydarzenie'},
+        action: {label: 'Zobacz wydarzenie', href: getEventHref('wspolne-wydarzenie')},
       },
     ],
   },
@@ -195,7 +196,7 @@ export const homePageContent = {
       {id: 'camp-miejsce', icon: '⌖', label: 'Miejsce zostanie podane wkrótce'},
       {id: 'camp-grupa-wiekowa', icon: '◎', label: 'Grupa wiekowa zostanie opisana wkrótce'},
     ],
-    primaryAction: {label: 'Poznaj obóz', href: '#obozy'},
+    primaryAction: {label: 'Poznaj obóz', href: '/kontakt'},
     secondaryAction: {label: 'Zobacz zapisy', href: '/kontakt'},
   },
   team: {
@@ -211,7 +212,7 @@ export const homePageContent = {
         'Biografia i zakres działań zostaną uzupełnione wraz z pełną prezentacją zespołu.',
       portraitLabel: 'Zdjęcie Iwony',
     },
-    action: {label: 'Poznaj Pozytywkę', href: '#o-pozytywce'},
+    action: {label: 'Poznaj Pozytywkę', href: '/'},
     members: [
       {
         id: 'team-instruktor-teatr',
@@ -266,7 +267,7 @@ export const homePageContent = {
     description:
       'Wybierz najbliższą ścieżkę: zajęcia, wydarzenia albo obozy, a szczegóły potwierdzimy w kontakcie.',
     meta: 'Zajęcia / wydarzenia / obozy artystyczne',
-    primaryAction: {label: 'Zobacz zapisy', href: '#zajecia'},
+    primaryAction: {label: 'Zobacz zapisy', href: '/zajecia'},
     secondaryAction: {label: 'Skontaktuj się', href: '/kontakt'},
   },
 } satisfies HomePageContent

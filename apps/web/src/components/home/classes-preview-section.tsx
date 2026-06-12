@@ -2,9 +2,9 @@ import type {HomePageContent} from '@/lib/content/types'
 import {Container} from '@/components/layout/container'
 import {SectionHeader} from '@/components/layout/section-header'
 import {Section} from '@/components/layout/section'
+import {AppLink} from '@/components/ui/app-link'
 import {LinkButton} from '@/components/ui/link-button'
 import {classStatusLabel, formatClassInfo} from '@/lib/content/display'
-import Link from 'next/link'
 
 type ClassesPreviewSectionProps = {
   content: HomePageContent['classesPreview']
@@ -59,12 +59,12 @@ export function ClassesPreviewSection({content}: ClassesPreviewSectionProps) {
                 <p className="text-primary mt-4 text-sm font-semibold">
                   {classStatusLabel[item.status]}
                 </p>
-                <Link
+                <AppLink
                   href={item.action.href}
                   className="text-foreground mt-5 inline-flex text-sm font-semibold"
                 >
                   {item.action.label}
-                </Link>
+                </AppLink>
               </div>
             </article>
           ))}
