@@ -50,7 +50,7 @@ export function TeamPreviewSection({content}: TeamPreviewSectionProps) {
           <div className="grid gap-5 md:col-span-5">
             {content.members.map((member) => (
               <article
-                key={`${member.name}-${member.role}`}
+                key={member.id}
                 className="border-outline-variant/60 bg-surface-raised flex items-center gap-4 rounded-2xl border p-4"
               >
                 <div className="bg-surface-container-highest text-muted-foreground grid size-20 shrink-0 place-items-center rounded-xl px-2 text-center text-[0.62rem] leading-tight font-semibold uppercase">

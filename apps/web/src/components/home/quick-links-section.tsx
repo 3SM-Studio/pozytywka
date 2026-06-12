@@ -11,7 +11,7 @@ export function QuickLinksSection({items}: QuickLinksSectionProps) {
       <div className="w-container mx-auto grid gap-4 md:grid-cols-3">
         {items.map((item) => (
           <Link
-            key={item.eyebrow}
+            key={item.id}
             href={item.href}
             className="group border-outline-variant/70 bg-surface-raised hover:bg-surface-container-low grid gap-4 rounded-2xl border p-6 shadow-sm transition-colors"
           >

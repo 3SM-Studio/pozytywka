@@ -38,7 +38,7 @@ export function CampSection({content}: CampSectionProps) {
               </h3>
               <ul className="mt-5 grid gap-3">
                 {content.details.map((detail) => (
-                  <li key={detail.label} className="text-muted-foreground flex items-center gap-3">
+                  <li key={detail.id} className="text-muted-foreground flex items-center gap-3">
                     <span aria-hidden="true" className="text-primary font-bold">
                       {detail.icon}
                     </span>

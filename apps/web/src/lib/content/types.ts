@@ -19,12 +19,14 @@ export type HeroContent = {
 }
 
 export type QuickLink = LinkTarget & {
+  id: string
   description: string
   eyebrow: string
   icon: string
 }
 
 export type StageHighlight = {
+  id: string
   type: string
   title: string
   description: string
@@ -32,12 +34,15 @@ export type StageHighlight = {
 }
 
 export type CreativeArea = {
+  id: string
   title: string
   description: string
   icon: string
 }
 
 export type ClassPreview = {
+  id: string
+  slug?: string
   category: string
   title: string
   description: string
@@ -48,6 +53,8 @@ export type ClassPreview = {
 }
 
 export type EventPreview = {
+  id: string
+  slug?: string
   date: string
   type: string
   title: string
@@ -58,6 +65,7 @@ export type EventPreview = {
 }
 
 export type CampDetail = {
+  id: string
   icon: string
   label: string
 }
@@ -74,6 +82,7 @@ export type CampContent = {
 }
 
 export type TeamMember = {
+  id: string
   name: string
   role: string
   description: string

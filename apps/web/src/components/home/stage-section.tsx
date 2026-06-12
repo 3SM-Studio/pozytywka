@@ -33,7 +33,7 @@ export function StageSection({content}: StageSectionProps) {
 
           <div className="grid gap-10 md:col-span-5">
             {content.highlights.map((item) => (
-              <article key={item.type} className="flex flex-col items-start">
+              <article key={item.id} className="flex flex-col items-start">
                 <p className="bg-primary-container text-primary-container-foreground rounded-full px-3 py-1 text-sm font-semibold tracking-[0.04em] uppercase">
                   {item.type}
                 </p>
