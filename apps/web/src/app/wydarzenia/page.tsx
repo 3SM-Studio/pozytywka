@@ -9,13 +9,13 @@ import type {Metadata} from 'next'
 
 export const metadata: Metadata = {
   title: 'Wydarzenia',
-  description: 'Lista wydarzeń Pozytywki przygotowana na bazie lokalnych danych.',
+  description: 'Wydarzenia i działania sceniczne Pozytywki.',
   alternates: {
     canonical: '/wydarzenia',
   },
   openGraph: {
     title: 'Wydarzenia | Pozytywka',
-    description: 'Lista wydarzeń Pozytywki przygotowana na bazie lokalnych danych.',
+    description: 'Wydarzenia i działania sceniczne Pozytywki.',
     url: '/wydarzenia',
   },
 }
@@ -41,9 +41,11 @@ export default async function EventsPage() {
               className="border-outline-variant/60 bg-surface-raised grid gap-6 rounded-2xl border p-6 shadow-sm md:grid-cols-[12rem_1fr_auto] md:items-center"
             >
               <div>
-                <p className="text-primary text-sm font-semibold tracking-[0.04em] uppercase">
-                  {event.dateLabel}
-                </p>
+                {event.dateLabel ? (
+                  <p className="text-primary text-sm font-semibold tracking-[0.04em] uppercase">
+                    {event.dateLabel}
+                  </p>
+                ) : null}
                 <p className="text-muted-foreground mt-2 text-xs font-semibold tracking-[0.14em] uppercase">
                   {event.type}
                 </p>
@@ -52,9 +54,11 @@ export default async function EventsPage() {
                 <h2 className="font-serif text-2xl font-semibold">{event.title}</h2>
                 <p className="text-muted-foreground mt-2 text-sm leading-7">{event.description}</p>
                 <div className="text-foreground/75 mt-4 flex flex-wrap gap-x-5 gap-y-2 text-sm font-semibold">
-                  <span>
-                    <span aria-hidden="true">⌖</span> {event.locationSummary}
-                  </span>
+                  {event.locationSummary ? (
+                    <span>
+                      <span aria-hidden="true">⌖</span> {event.locationSummary}
+                    </span>
+                  ) : null}
                   {event.timeLabel ? (
                     <span>
                       <span aria-hidden="true">◷</span> {event.timeLabel}

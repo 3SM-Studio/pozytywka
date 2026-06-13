@@ -95,7 +95,7 @@ export const homePageContent = {
   classesPreview: {
     eyebrow: 'Zapisy',
     title: 'Znajdź zajęcia dla siebie.',
-    description: 'Aktualna oferta zajęć zostanie uzupełniona po potwierdzeniu programu i terminów.',
+    description: 'Poznaj obszary zajęć planowane w Pozytywce.',
     action: {id: 'classes-preview-action', label: 'Zobacz wszystkie zajęcia', href: '/zajecia'},
     items: [
       {
@@ -104,9 +104,7 @@ export const homePageContent = {
         category: 'Teatr',
         title: 'Grupa teatralna',
         description: 'Praca z tekstem, improwizacją i wspólnym przygotowaniem scenicznych działań.',
-        ageRange: {from: 0},
-        scheduleSummary: 'Termin zostanie podany wkrótce',
-        locationSummary: 'Miejsce zostanie podane wkrótce',
+        ageRange: {kind: 'unknown', label: 'Grupa wiekowa w ustaleniu'},
         status: 'planned',
         imageLabel: 'Zdjęcie z zajęć teatralnych',
         action: {
@@ -121,9 +119,7 @@ export const homePageContent = {
         category: 'Muzyka',
         title: 'Zajęcia wokalne i rytmiczne',
         description: 'Zajęcia rozwijające głos, rytm i wspólne działania muzyczne.',
-        ageRange: {from: 0},
-        scheduleSummary: 'Termin zostanie podany wkrótce',
-        locationSummary: 'Miejsce zostanie podane wkrótce',
+        ageRange: {kind: 'unknown', label: 'Grupa wiekowa w ustaleniu'},
         status: 'planned',
         imageLabel: 'Zdjęcie z warsztatów muzycznych',
         action: {
@@ -138,9 +134,7 @@ export const homePageContent = {
         category: 'Ruch',
         title: 'Ruch sceniczny',
         description: 'Świadoma praca z ciałem, ekspresją i obecnością sceniczną.',
-        ageRange: {from: 0},
-        scheduleSummary: 'Termin zostanie podany wkrótce',
-        locationSummary: 'Miejsce zostanie podane wkrótce',
+        ageRange: {kind: 'unknown', label: 'Grupa wiekowa w ustaleniu'},
         status: 'planned',
         imageLabel: 'Zdjęcie z zajęć ruchu scenicznego',
         action: {
@@ -165,9 +159,6 @@ export const homePageContent = {
       {
         id: 'event-pokaz-sceniczny',
         slug: 'pokaz-sceniczny',
-        dateLabel: 'Termin zostanie podany wkrótce',
-        timeLabel: 'Godzina zostanie podana wkrótce',
-        locationSummary: 'Miejsce zostanie podane wkrótce',
         status: 'planned',
         type: 'Spektakl',
         title: 'Pokaz sceniczny',
@@ -181,9 +172,6 @@ export const homePageContent = {
       {
         id: 'event-spotkanie-tworcze',
         slug: 'spotkanie-tworcze',
-        dateLabel: 'Termin zostanie podany wkrótce',
-        timeLabel: 'Godzina zostanie podana wkrótce',
-        locationSummary: 'Miejsce zostanie podane wkrótce',
         status: 'planned',
         type: 'Warsztat',
         title: 'Spotkanie twórcze',
@@ -197,9 +185,6 @@ export const homePageContent = {
       {
         id: 'event-wspolne-wydarzenie',
         slug: 'wspolne-wydarzenie',
-        dateLabel: 'Termin zostanie podany wkrótce',
-        timeLabel: 'Godzina zostanie podana wkrótce',
-        locationSummary: 'Miejsce zostanie podane wkrótce',
         status: 'planned',
         type: 'Koncert / pokaz',
         title: 'Wspólne wydarzenie',
@@ -219,11 +204,7 @@ export const homePageContent = {
       'Artystyczne wyjazdy, wspólne działania i przestrzeń do budowania relacji oraz niezapomnianych doświadczeń.',
     mediaLabel: 'Zdjęcie ruchu artystycznego',
     detailsHeading: 'Szczegóły aktualnej edycji',
-    details: [
-      {id: 'camp-termin', icon: '▣', label: 'Termin zostanie podany wkrótce'},
-      {id: 'camp-miejsce', icon: '⌖', label: 'Miejsce zostanie podane wkrótce'},
-      {id: 'camp-grupa-wiekowa', icon: '◎', label: 'Grupa wiekowa zostanie opisana wkrótce'},
-    ],
+    details: [],
     primaryAction: {id: 'camp-primary-contact', label: 'Poznaj obóz', href: '/kontakt'},
     secondaryAction: {id: 'camp-secondary-contact', label: 'Zobacz zapisy', href: '/kontakt'},
   },
@@ -236,59 +217,17 @@ export const homePageContent = {
       id: 'team-iwona-pilarz',
       name: 'Iwona Pilarz',
       role: 'Założycielka / prowadząca',
-      description:
-        'Biografia i zakres działań zostaną uzupełnione wraz z pełną prezentacją zespołu.',
+      description: '',
       portraitLabel: 'Zdjęcie Iwony',
     },
     action: {id: 'team-action-home', label: 'Poznaj Pozytywkę', href: '/'},
-    members: [
-      {
-        id: 'team-instruktor-teatr',
-        name: 'Prowadzący zajęcia teatralne',
-        role: 'Teatr',
-        description: 'Obszar pracy i krótka nota zostaną uzupełnione w prezentacji zespołu.',
-        portraitLabel: 'Portret osoby prowadzącej',
-      },
-      {
-        id: 'team-instruktor-muzyka',
-        name: 'Prowadzący zajęcia muzyczne',
-        role: 'Muzyka',
-        description: 'Obszar pracy i krótka nota zostaną uzupełnione w prezentacji zespołu.',
-        portraitLabel: 'Portret osoby prowadzącej',
-      },
-      {
-        id: 'team-instruktor-ruch',
-        name: 'Prowadzący zajęcia ruchowe',
-        role: 'Ruch',
-        description: 'Obszar pracy i krótka nota zostaną uzupełnione w prezentacji zespołu.',
-        portraitLabel: 'Portret osoby prowadzącej',
-      },
-    ],
+    members: [],
   },
   testimonials: {
     eyebrow: 'Opinie',
     title: 'Pozytywkę najlepiej opisują ludzie, którzy ją tworzą.',
-    description: 'Miejsce na opinie uczestników i rodziców po uruchomieniu pełnej oferty.',
-    items: [
-      {
-        id: 'testimonial-parent',
-        quote: 'Cudowne miejsce, pełne profesjonalizmu i ciepła. Moje dziecko uwielbia te zajęcia.',
-        author: 'Rodzic uczestnika',
-        caption: 'Zajęcia teatralne',
-      },
-      {
-        id: 'testimonial-participant',
-        quote: 'Scena to mój drugi dom. Świetni instruktorzy i wspaniała atmosfera na próbach.',
-        author: 'Uczestnik zajęć',
-        caption: 'Próby sceniczne',
-      },
-      {
-        id: 'testimonial-camp',
-        quote: 'Najlepsze obozy letnie, dużo kreatywnych działań i świetna atmosfera.',
-        author: 'Uczestniczka obozu',
-        caption: 'Obóz artystyczny',
-      },
-    ],
+    description: '',
+    items: [],
   },
   finalCta: {
     title: 'Znajdź swoje miejsce w Pozytywce.',

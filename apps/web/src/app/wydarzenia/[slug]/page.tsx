@@ -67,12 +67,11 @@ export default async function EventPage({params}: EventPageProps) {
         </div>
 
         <div className="mt-12 grid gap-4 md:grid-cols-2">
-          <DetailItem label="Termin" value={event.dateLabel} />
-          <DetailItem
-            label="Godzina"
-            value={event.timeLabel ?? 'Godzina zostanie podana wkrótce'}
-          />
-          <DetailItem label="Lokalizacja" value={event.locationSummary} />
+          {event.dateLabel ? <DetailItem label="Termin" value={event.dateLabel} /> : null}
+          {event.timeLabel ? <DetailItem label="Godzina" value={event.timeLabel} /> : null}
+          {event.locationSummary ? (
+            <DetailItem label="Lokalizacja" value={event.locationSummary} />
+          ) : null}
           <DetailItem label="Status" value={eventStatusLabel[event.status]} />
         </div>
 

@@ -9,13 +9,13 @@ import type {Metadata} from 'next'
 
 export const metadata: Metadata = {
   title: 'Zajęcia',
-  description: 'Lista zajęć Pozytywki przygotowana na bazie lokalnych danych.',
+  description: 'Obszary zajęć planowane w Pozytywce.',
   alternates: {
     canonical: '/zajecia',
   },
   openGraph: {
     title: 'Zajęcia | Pozytywka',
-    description: 'Lista zajęć Pozytywki przygotowana na bazie lokalnych danych.',
+    description: 'Obszary zajęć planowane w Pozytywce.',
     url: '/zajecia',
   },
 }
