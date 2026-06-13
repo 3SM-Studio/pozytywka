@@ -58,6 +58,9 @@ jobs:
         run: git show --check --format=fuller --no-renames HEAD
 
       - name: Validate monorepo
+        env:
+          # CI-only value for build validation. Production must set the real URL.
+          NEXT_PUBLIC_SITE_URL: https://pozytywka.example
         run: pnpm check
 
       - name: Verify tracked files were not generated or modified
