@@ -11,6 +11,7 @@ export type ExternalHref =
 export type AppHref = InternalHref | ExternalHref
 
 export type LinkTarget = {
+  id: string
   label: string
   href: AppHref
 }
@@ -116,6 +117,7 @@ export type Testimonial = {
 }
 
 export type FooterLinkGroup = {
+  id: string
   title: string
   links: LinkTarget[]
 }

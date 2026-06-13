@@ -21,13 +21,13 @@ export function SiteFooter({content}: SiteFooterProps) {
         </div>
 
         {content.groups.map((group) => (
-          <div key={group.title}>
+          <div key={group.id}>
             <h2 className="text-muted-foreground dark:text-primary text-sm font-semibold tracking-[0.14em] uppercase">
               {group.title}
             </h2>
             <ul className="text-foreground/80 dark:text-inverse-surface-foreground/80 mt-4 grid gap-3 text-sm font-semibold">
               {group.links.map((item) => (
-                <li key={`${group.title}-${item.label}`}>
+                <li key={item.id}>
                   <AppLink
                     href={item.href}
                     className="hover:text-foreground dark:hover:text-primary"
@@ -51,7 +51,7 @@ export function SiteFooter({content}: SiteFooterProps) {
           </ul>
           <div className="mt-5 flex gap-4 text-sm font-semibold">
             {content.social.map((item) => (
-              <AppLink key={item.label} href={item.href} className="hover:text-primary">
+              <AppLink href={item.href} key={item.id} className="hover:text-primary">
                 {item.label}
               </AppLink>
             ))}
@@ -65,7 +65,7 @@ export function SiteFooter({content}: SiteFooterProps) {
           <div className="flex flex-wrap gap-4">
             {content.legal.map((item) => (
               <AppLink
-                key={item.label}
+                key={item.id}
                 href={item.href}
                 className="hover:text-foreground dark:hover:text-primary"
               >

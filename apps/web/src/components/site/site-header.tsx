@@ -19,7 +19,7 @@ export function SiteHeader({navigation}: SiteHeaderProps) {
         <nav aria-label="Główna nawigacja" className="hidden items-center gap-7 md:flex">
           {navigation.map((item) => (
             <AppLink
-              key={item.href}
+              key={item.id}
               href={item.href}
               className="text-foreground/75 hover:text-foreground dark:hover:text-primary text-sm font-semibold transition"
             >
@@ -49,7 +49,7 @@ export function SiteHeader({navigation}: SiteHeaderProps) {
             <nav aria-label="Nawigacja mobilna" className="grid gap-1">
               {navigation.map((item) => (
                 <AppLink
-                  key={item.href}
+                  key={item.id}
                   href={item.href}
                   className="text-foreground/80 hover:bg-surface-container rounded-lg px-4 py-3 text-sm font-semibold"
                 >
