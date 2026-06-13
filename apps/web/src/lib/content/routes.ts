@@ -24,8 +24,7 @@ export const siteRoutes = [
     path: '/kontakt',
     label: 'Kontakt',
     title: 'Kontakt',
-    description:
-      'Miejsce na potwierdzone dane kontaktowe Pozytywki, zanim zostanie podłączony formularz i Sanity.',
+    description: 'Informacje o kontakcie z Pozytywką.',
     changeFrequency: 'monthly',
     priority: 0.6,
   },

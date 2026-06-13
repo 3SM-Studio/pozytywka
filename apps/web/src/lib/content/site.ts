@@ -39,14 +39,29 @@ export const siteContent = {
         ],
       },
     ],
-    contact: ['Dane kontaktowe zostaną uzupełnione przed uruchomieniem zapisów.'],
-    social: [
-      {id: 'footer-social-facebook', label: 'Facebook', href: '/kontakt'},
-      {id: 'footer-social-instagram', label: 'Instagram', href: '/kontakt'},
+    contact: ['Oficjalne dane kontaktowe nie są jeszcze opublikowane na stronie.'],
+    social: [],
+    legal: [],
+  },
+  contactPage: {
+    status:
+      'Kontakt przez stronę jest przygotowany jako miejsce informacyjne. Oficjalne dane kontaktowe nie są jeszcze opublikowane.',
+    contactEmail: null,
+    contactPhone: null,
+    contactHours: null,
+    messageGuidance: [
+      'imię osoby kontaktującej się',
+      'temat wiadomości: zajęcia, wydarzenia albo obóz',
+      'wiek uczestnika, jeśli pytanie dotyczy zajęć',
+      'krótki opis sprawy i preferowany sposób odpowiedzi',
     ],
-    legal: [
-      {id: 'footer-legal-privacy', label: 'Polityka prywatności', href: '/kontakt'},
-      {id: 'footer-legal-cookies', label: 'Polityka cookies', href: '/kontakt'},
-    ],
+    formStatus:
+      'Formularz kontaktowy nie jest jeszcze dostępny, dlatego aplikacja nie zbiera teraz danych przez formularz.',
+    privacyDocument: {
+      id: 'contact-privacy-document',
+      label: 'Polityka prywatności',
+      href: '/polityka-prywatnosci',
+      note: 'Dokument jest roboczy i wymaga uzupełnienia oraz weryfikacji przed publicznym uruchomieniem.',
+    },
   },
 } satisfies SiteContent
