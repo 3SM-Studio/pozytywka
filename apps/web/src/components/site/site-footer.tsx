@@ -7,6 +7,9 @@ type SiteFooterProps = {
 }
 
 export function SiteFooter({content}: SiteFooterProps) {
+  const hasSocialLinks = content.social.length > 0
+  const hasLegalLinks = content.legal.length > 0
+
   return (
     <footer
       id="kontakt"
@@ -49,30 +52,34 @@ export function SiteFooter({content}: SiteFooterProps) {
               <li key={item}>{item}</li>
             ))}
           </ul>
-          <div className="mt-5 flex gap-4 text-sm font-semibold">
-            {content.social.map((item) => (
-              <AppLink href={item.href} key={item.id} className="hover:text-primary">
-                {item.label}
-              </AppLink>
-            ))}
-          </div>
+          {hasSocialLinks ? (
+            <div className="mt-5 flex gap-4 text-sm font-semibold">
+              {content.social.map((item) => (
+                <AppLink href={item.href} key={item.id} className="hover:text-primary">
+                  {item.label}
+                </AppLink>
+              ))}
+            </div>
+          ) : null}
         </div>
       </div>
 
       <div className="border-outline-variant/60 border-t px-5 py-5">
         <div className="w-container text-muted-foreground dark:text-inverse-surface-foreground/60 mx-auto flex flex-col justify-between gap-4 text-xs md:flex-row">
           <p>© 2026 Pozytywka — Pracownia Twórcza.</p>
-          <div className="flex flex-wrap gap-4">
-            {content.legal.map((item) => (
-              <AppLink
-                key={item.id}
-                href={item.href}
-                className="hover:text-foreground dark:hover:text-primary"
-              >
-                {item.label}
-              </AppLink>
-            ))}
-          </div>
+          {hasLegalLinks ? (
+            <div className="flex flex-wrap gap-4">
+              {content.legal.map((item) => (
+                <AppLink
+                  key={item.id}
+                  href={item.href}
+                  className="hover:text-foreground dark:hover:text-primary"
+                >
+                  {item.label}
+                </AppLink>
+              ))}
+            </div>
+          ) : null}
         </div>
       </div>
     </footer>
