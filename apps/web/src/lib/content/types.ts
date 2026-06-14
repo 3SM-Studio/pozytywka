@@ -1,6 +1,19 @@
+import type {Route} from 'next'
+
+export type InternalHref = Route
+
+export type ExternalHref =
+  | `http://${string}`
+  | `https://${string}`
+  | `mailto:${string}`
+  | `tel:${string}`
+
+export type AppHref = InternalHref | ExternalHref
+
 export type LinkTarget = {
+  id: string
   label: string
-  href: string
+  href: AppHref
 }
 
 export type NavigationItem = LinkTarget
@@ -19,12 +32,14 @@ export type HeroContent = {
 }
 
 export type QuickLink = LinkTarget & {
+  id: string
   description: string
   eyebrow: string
   icon: string
 }
 
 export type StageHighlight = {
+  id: string
   type: string
   title: string
   description: string
@@ -32,32 +47,45 @@ export type StageHighlight = {
 }
 
 export type CreativeArea = {
+  id: string
   title: string
   description: string
   icon: string
 }
 
 export type ClassPreview = {
+  id: string
+  slug?: string
   category: string
   title: string
   description: string
-  meta: string
-  status: string
+  ageRange: {
+    from: number
+    to?: number
+  }
+  scheduleSummary: string
+  locationSummary: string
+  status: 'open' | 'waitlist' | 'closed' | 'planned'
   imageLabel: string
   action: LinkTarget
 }
 
 export type EventPreview = {
-  date: string
+  id: string
+  slug?: string
+  startsAt?: string
+  dateLabel: string
+  timeLabel?: string
+  locationSummary: string
+  status: 'scheduled' | 'cancelled' | 'past' | 'planned'
   type: string
   title: string
   description: string
-  place: string
-  time: string
   action: LinkTarget
 }
 
 export type CampDetail = {
+  id: string
   icon: string
   label: string
 }
@@ -74,6 +102,7 @@ export type CampContent = {
 }
 
 export type TeamMember = {
+  id: string
   name: string
   role: string
   description: string
@@ -88,6 +117,7 @@ export type Testimonial = {
 }
 
 export type FooterLinkGroup = {
+  id: string
   title: string
   links: LinkTarget[]
 }

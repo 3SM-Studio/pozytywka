@@ -1,4 +1,5 @@
 import {SiteLogo} from '@/components/site/site-logo'
+import {AppLink} from '@/components/ui/app-link'
 import type {FooterContent} from '@/lib/content/types'
 
 type SiteFooterProps = {
@@ -20,16 +21,19 @@ export function SiteFooter({content}: SiteFooterProps) {
         </div>
 
         {content.groups.map((group) => (
-          <div key={group.title}>
+          <div key={group.id}>
             <h2 className="text-muted-foreground dark:text-primary text-sm font-semibold tracking-[0.14em] uppercase">
               {group.title}
             </h2>
             <ul className="text-foreground/80 dark:text-inverse-surface-foreground/80 mt-4 grid gap-3 text-sm font-semibold">
               {group.links.map((item) => (
-                <li key={`${group.title}-${item.label}`}>
-                  <a href={item.href} className="hover:text-foreground dark:hover:text-primary">
+                <li key={item.id}>
+                  <AppLink
+                    href={item.href}
+                    className="hover:text-foreground dark:hover:text-primary"
+                  >
                     {item.label}
-                  </a>
+                  </AppLink>
                 </li>
               ))}
             </ul>
@@ -47,9 +51,9 @@ export function SiteFooter({content}: SiteFooterProps) {
           </ul>
           <div className="mt-5 flex gap-4 text-sm font-semibold">
             {content.social.map((item) => (
-              <a key={item.label} href={item.href} className="hover:text-primary">
+              <AppLink href={item.href} key={item.id} className="hover:text-primary">
                 {item.label}
-              </a>
+              </AppLink>
             ))}
           </div>
         </div>
@@ -60,13 +64,13 @@ export function SiteFooter({content}: SiteFooterProps) {
           <p>© 2026 Pozytywka — Pracownia Twórcza.</p>
           <div className="flex flex-wrap gap-4">
             {content.legal.map((item) => (
-              <a
-                key={item.label}
+              <AppLink
+                key={item.id}
                 href={item.href}
                 className="hover:text-foreground dark:hover:text-primary"
               >
                 {item.label}
-              </a>
+              </AppLink>
             ))}
           </div>
         </div>

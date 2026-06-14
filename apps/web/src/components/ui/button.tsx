@@ -10,13 +10,24 @@ const buttonVariants = cva(
     variants: {
       variant: {
         default: 'bg-primary text-primary-foreground hover:bg-primary/90',
+        brand:
+          'bg-primary-container text-primary-container-foreground hover:bg-primary hover:text-primary-foreground',
+        inverse:
+          'bg-inverse-surface text-inverse-surface-foreground hover:bg-primary hover:text-primary-foreground',
         outline:
           'border border-outline-variant bg-surface-raised text-foreground hover:bg-surface-container-high',
+        surfaceOutline:
+          'border border-outline bg-surface text-foreground hover:bg-surface-container-high',
+        inverseOutline:
+          'border border-inverse-surface-foreground/40 text-inverse-surface-foreground hover:bg-inverse-surface-foreground/10',
         ghost: 'hover:bg-surface-container-high hover:text-foreground',
       },
       size: {
-        default: 'h-10 px-4 py-2',
-        icon: 'h-10 w-10',
+        default: 'min-h-11 px-5 py-2.5',
+        wide: 'min-h-11 px-8 py-2.5',
+        lg: 'min-h-12 px-8 py-3',
+        icon: 'size-11',
+        iconSm: 'size-8',
       },
     },
     defaultVariants: {
