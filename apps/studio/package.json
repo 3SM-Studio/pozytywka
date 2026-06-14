@@ -12,10 +12,10 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "@sanity/vision": "5.31.0",
+    "@sanity/vision": "6.0.0",
     "react": "19.2.7",
     "react-dom": "19.2.7",
-    "sanity": "5.31.0",
+    "sanity": "6.0.0",
     "styled-components": "6.4.2"
   },
   "devDependencies": {
