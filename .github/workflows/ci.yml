@@ -19,6 +19,36 @@ env:
   HUSKY: 0
 
 jobs:
+  security:
+    name: security
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+
+    steps:
+      # GitHub Actions are pinned to full commit SHA for supply-chain safety.
+      # Update them through Dependabot, not by switching back to moving tags.
+      - name: Checkout repository
+        uses: actions/checkout@df4cb1c069e1874edd31b4311f1884172cec0e10 # v6
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+
+      - name: Install pnpm
+        uses: pnpm/action-setup@0e279bb959325dab635dd2c09392533439d90093 # v6
+
+      - name: Set up Node.js
+        uses: actions/setup-node@48b55a011bda9f5d6aeb4c2d9c7362e8dae4041e # v6
+        with:
+          node-version-file: .node-version
+          cache: pnpm
+          cache-dependency-path: pnpm-lock.yaml
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Audit dependencies
+        run: pnpm audit --audit-level high
+
   quality:
     name: quality
     runs-on: ubuntu-24.04
