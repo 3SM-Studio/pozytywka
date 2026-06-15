@@ -40,13 +40,7 @@ export const siteContent = {
       },
     ],
     contact: ['Dane kontaktowe zostaną uzupełnione przed uruchomieniem zapisów.'],
-    social: [
-      {id: 'footer-social-facebook', label: 'Facebook', href: '/kontakt'},
-      {id: 'footer-social-instagram', label: 'Instagram', href: '/kontakt'},
-    ],
-    legal: [
-      {id: 'footer-legal-privacy', label: 'Polityka prywatności', href: '/kontakt'},
-      {id: 'footer-legal-cookies', label: 'Polityka cookies', href: '/kontakt'},
-    ],
+    social: [],
+    legal: [],
   },
 } satisfies SiteContent
