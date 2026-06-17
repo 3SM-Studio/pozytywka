@@ -1,5 +1,5 @@
-import type {SiteContent} from './types'
 import {homeAnchors} from './routes'
+import type {SiteContent} from './types'
 
 export const siteContent = {
   announcement: {
@@ -39,14 +39,8 @@ export const siteContent = {
         ],
       },
     ],
-    contact: ['Dane kontaktowe zostaną uzupełnione przed uruchomieniem zapisów.'],
-    social: [
-      {id: 'footer-social-facebook', label: 'Facebook', href: '/kontakt'},
-      {id: 'footer-social-instagram', label: 'Instagram', href: '/kontakt'},
-    ],
-    legal: [
-      {id: 'footer-legal-privacy', label: 'Polityka prywatności', href: '/kontakt'},
-      {id: 'footer-legal-cookies', label: 'Polityka cookies', href: '/kontakt'},
-    ],
+    contact: ['Oficjalne dane kontaktowe nie są jeszcze opublikowane na stronie.'],
+    social: [],
+    legal: [],
   },
 } satisfies SiteContent

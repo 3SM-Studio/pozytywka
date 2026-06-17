@@ -5,11 +5,18 @@ export type ActivityPreview = ClassPreview & {
   slug: string
 }
 
+export type ActivitiesContent = {
+  eyebrow: string
+  title: string
+  description: string
+  items: ActivityPreview[]
+}
+
 function hasActivitySlug(activity: ClassPreview): activity is ActivityPreview {
   return typeof activity.slug === 'string' && activity.slug.length > 0
 }
 
-export async function getActivitiesContent() {
+export async function getActivitiesContent(): Promise<ActivitiesContent> {
   return {
     eyebrow: homePageContent.classesPreview.eyebrow,
     title: homePageContent.classesPreview.title,
