@@ -68,8 +68,12 @@ export default async function ActivityPage({params}: ActivityPageProps) {
 
         <div className="mt-12 grid gap-4 md:grid-cols-2">
           <DetailItem label="Wiek" value={formatAgeRange(activity.ageRange)} />
-          <DetailItem label="Termin" value={activity.scheduleSummary} />
-          <DetailItem label="Lokalizacja" value={activity.locationSummary} />
+          {activity.scheduleSummary ? (
+            <DetailItem label="Termin" value={activity.scheduleSummary} />
+          ) : null}
+          {activity.locationSummary ? (
+            <DetailItem label="Lokalizacja" value={activity.locationSummary} />
+          ) : null}
           <DetailItem label="Status zapisów" value={classStatusLabel[activity.status]} />
         </div>
 

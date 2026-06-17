@@ -1,5 +1,5 @@
-import type {SiteContent} from './types'
 import {homeAnchors} from './routes'
+import type {SiteContent} from './types'
 
 export const siteContent = {
   announcement: {

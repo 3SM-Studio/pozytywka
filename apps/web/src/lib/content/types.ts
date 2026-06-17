@@ -53,18 +53,26 @@ export type CreativeArea = {
   icon: string
 }
 
+export type AgeRange =
+  | {
+      kind: 'known'
+      from: number
+      to?: number
+    }
+  | {
+      kind: 'unknown'
+      label: string
+    }
+
 export type ClassPreview = {
   id: string
   slug?: string
   category: string
   title: string
   description: string
-  ageRange: {
-    from: number
-    to?: number
-  }
-  scheduleSummary: string
-  locationSummary: string
+  ageRange: AgeRange
+  scheduleSummary?: string
+  locationSummary?: string
   status: 'open' | 'waitlist' | 'closed' | 'planned'
   imageLabel: string
   action: LinkTarget
@@ -74,9 +82,9 @@ export type EventPreview = {
   id: string
   slug?: string
   startsAt?: string
-  dateLabel: string
+  dateLabel?: string
   timeLabel?: string
-  locationSummary: string
+  locationSummary?: string
   status: 'scheduled' | 'cancelled' | 'past' | 'planned'
   type: string
   title: string
@@ -111,6 +119,7 @@ export type TeamMember = {
 
 export type Testimonial = {
   id: string
+  verified: boolean
   quote: string
   author: string
   caption: string
