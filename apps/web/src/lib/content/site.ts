@@ -43,4 +43,25 @@ export const siteContent = {
     social: [],
     legal: [],
   },
+  contactPage: {
+    status:
+      'Kontakt przez stronę jest przygotowany jako miejsce informacyjne. Oficjalne dane kontaktowe nie są jeszcze opublikowane.',
+    contactEmail: null,
+    contactPhone: null,
+    contactHours: null,
+    messageGuidance: [
+      'imię osoby kontaktującej się',
+      'temat wiadomości: zajęcia, wydarzenia albo obóz',
+      'wiek uczestnika, jeśli pytanie dotyczy zajęć',
+      'krótki opis sprawy i preferowany sposób odpowiedzi',
+    ],
+    formStatus:
+      'Formularz kontaktowy nie jest jeszcze dostępny, dlatego aplikacja nie zbiera teraz danych przez formularz.',
+    privacyDocument: {
+      id: 'contact-privacy-document',
+      label: 'Polityka prywatności',
+      href: '/polityka-prywatnosci',
+      note: 'Dokument jest roboczy i wymaga uzupełnienia oraz weryfikacji przed publicznym uruchomieniem.',
+    },
+  },
 } satisfies SiteContent

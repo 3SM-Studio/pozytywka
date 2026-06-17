@@ -139,10 +139,23 @@ export type FooterContent = {
   groups: FooterLinkGroup[]
 }
 
+export type ContactPageContent = {
+  status: string
+  contactEmail: LinkTarget | null
+  contactPhone: LinkTarget | null
+  contactHours: string | null
+  messageGuidance: string[]
+  formStatus: string
+  privacyDocument: LinkTarget & {
+    note: string
+  }
+}
+
 export type SiteContent = {
   announcement: AnnouncementContent
   navigation: NavigationItem[]
   footer: FooterContent
+  contactPage: ContactPageContent
 }
 
 export type HomePageContent = {
