@@ -5,11 +5,18 @@ export type EventListItem = EventPreview & {
   slug: string
 }
 
+export type EventsContent = {
+  eyebrow: string
+  title: string
+  description: string
+  items: EventListItem[]
+}
+
 function hasEventSlug(event: EventPreview): event is EventListItem {
   return typeof event.slug === 'string' && event.slug.length > 0
 }
 
-export async function getEventsContent() {
+export async function getEventsContent(): Promise<EventsContent> {
   return {
     eyebrow: homePageContent.eventsPreview.eyebrow,
     title: homePageContent.eventsPreview.title,

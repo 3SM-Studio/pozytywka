@@ -9,6 +9,7 @@ type CampSectionProps = {
 
 export function CampSection({content}: CampSectionProps) {
   const headingId = 'home-camp-heading'
+  const hasDetails = content.details.length > 0
 
   return (
     <Section id="obozy" labelledBy={headingId} tone="muted">
@@ -43,21 +44,23 @@ export function CampSection({content}: CampSectionProps) {
             </h2>
             <p className="text-muted-foreground mt-5 text-lg leading-8">{content.description}</p>
 
-            <div className="border-outline-variant/60 bg-surface-raised/70 mt-8 rounded-xl border p-6">
-              <h3 className="text-sm font-semibold tracking-[0.14em] uppercase">
-                {content.detailsHeading}
-              </h3>
-              <ul className="mt-5 grid gap-3">
-                {content.details.map((detail) => (
-                  <li key={detail.id} className="text-muted-foreground flex items-center gap-3">
-                    <span aria-hidden="true" className="text-primary font-bold">
-                      {detail.icon}
-                    </span>
-                    <span>{detail.label}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
+            {hasDetails ? (
+              <div className="border-outline-variant/60 bg-surface-raised/70 mt-8 rounded-xl border p-6">
+                <h3 className="text-sm font-semibold tracking-[0.14em] uppercase">
+                  {content.detailsHeading}
+                </h3>
+                <ul className="mt-5 grid gap-3">
+                  {content.details.map((detail) => (
+                    <li key={detail.id} className="text-muted-foreground flex items-center gap-3">
+                      <span aria-hidden="true" className="text-primary font-bold">
+                        {detail.icon}
+                      </span>
+                      <span>{detail.label}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ) : null}
 
             <div className="mt-8 flex flex-wrap gap-4">
               <LinkButton href={content.primaryAction.href} variant="brand" size="wide">

@@ -42,9 +42,11 @@ export function EventsPreviewSection({content}: EventsPreviewSectionProps) {
               className="border-outline-variant/60 bg-surface-raised grid gap-6 rounded-2xl border p-6 shadow-sm md:grid-cols-[12rem_1fr_auto] md:items-center"
             >
               <div>
-                <p className="text-primary text-sm font-semibold tracking-[0.04em] uppercase">
-                  {item.dateLabel}
-                </p>
+                {item.dateLabel ? (
+                  <p className="text-primary text-sm font-semibold tracking-[0.04em] uppercase">
+                    {item.dateLabel}
+                  </p>
+                ) : null}
                 <p className="text-muted-foreground mt-2 text-xs font-semibold tracking-[0.14em] uppercase">
                   {item.type}
                 </p>
@@ -53,9 +55,11 @@ export function EventsPreviewSection({content}: EventsPreviewSectionProps) {
                 <h3 className="font-serif text-2xl font-semibold">{item.title}</h3>
                 <p className="text-muted-foreground mt-2 text-sm leading-7">{item.description}</p>
                 <div className="text-foreground/75 mt-4 flex flex-wrap gap-x-5 gap-y-2 text-sm font-semibold">
-                  <span>
-                    <span aria-hidden="true">⌖</span> {item.locationSummary}
-                  </span>
+                  {item.locationSummary ? (
+                    <span>
+                      <span aria-hidden="true">⌖</span> {item.locationSummary}
+                    </span>
+                  ) : null}
                   {item.timeLabel ? (
                     <span>
                       <span aria-hidden="true">◷</span> {item.timeLabel}
