@@ -15,8 +15,8 @@ export const eventStatusLabel: Record<EventPreview['status'], string> = {
 }
 
 export function formatAgeRange(ageRange: ClassPreview['ageRange']) {
-  if (ageRange.from === 0 && ageRange.to === undefined) {
-    return 'Wiek'
+  if (ageRange.kind === 'unknown') {
+    return ageRange.label
   }
 
   if (ageRange.to === undefined) {
@@ -27,7 +27,7 @@ export function formatAgeRange(ageRange: ClassPreview['ageRange']) {
 }
 
 export function formatClassInfo(activity: ClassPreview) {
-  return `${formatAgeRange(activity.ageRange)} • ${activity.scheduleSummary} • ${
-    activity.locationSummary
-  }`
+  return [formatAgeRange(activity.ageRange), activity.scheduleSummary, activity.locationSummary]
+    .filter(Boolean)
+    .join(' • ')
 }

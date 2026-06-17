@@ -9,6 +9,11 @@ type TestimonialsSectionProps = {
 
 export function TestimonialsSection({content}: TestimonialsSectionProps) {
   const headingId = 'home-testimonials-heading'
+  const verifiedTestimonials = content.items.filter((item) => item.verified)
+
+  if (verifiedTestimonials.length === 0) {
+    return null
+  }
 
   return (
     <Section labelledBy={headingId}>
@@ -22,7 +27,7 @@ export function TestimonialsSection({content}: TestimonialsSectionProps) {
         />
 
         <div className="mt-12 grid gap-5 md:grid-cols-3">
-          {content.items.map((item) => (
+          {verifiedTestimonials.map((item) => (
             <figure
               key={item.id}
               className="border-outline-variant/60 bg-surface-raised rounded-2xl border p-6"

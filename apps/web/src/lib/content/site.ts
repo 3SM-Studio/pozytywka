@@ -1,5 +1,5 @@
-import type {SiteContent} from './types'
 import {homeAnchors} from './routes'
+import type {SiteContent} from './types'
 
 export const siteContent = {
   announcement: {
@@ -39,7 +39,7 @@ export const siteContent = {
         ],
       },
     ],
-    contact: ['Dane kontaktowe zostaną uzupełnione przed uruchomieniem zapisów.'],
+    contact: ['Oficjalne dane kontaktowe nie są jeszcze opublikowane na stronie.'],
     social: [],
     legal: [],
   },
