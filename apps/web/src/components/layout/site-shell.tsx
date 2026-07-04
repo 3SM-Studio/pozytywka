@@ -1,7 +1,7 @@
 import {AnnouncementBar} from '@/components/site/announcement-bar'
 import {SiteFooter} from '@/components/site/site-footer'
 import {SiteHeader} from '@/components/site/site-header'
-import {siteContent} from '@/lib/content/site'
+import {siteContent} from '@/lib/content/site-content'
 
 type SiteShellProps = {
   children: React.ReactNode

@@ -44,14 +44,47 @@ export const siteRoutes = [
     changeFrequency: 'weekly',
     priority: 0.8,
   },
+  {
+    path: '/zespoly',
+    label: 'Zespoły',
+    title: 'Zespoły',
+    description: 'Grupy teatralne, wokalno-taneczne, musicalowe i taneczne Pozytywki.',
+    changeFrequency: 'weekly',
+    priority: 0.8,
+  },
+  {
+    path: '/spektakle',
+    label: 'Spektakle',
+    title: 'Spektakle',
+    description: 'Projekty sceniczne, spektakle, musicale i prezentacje Pozytywki.',
+    changeFrequency: 'weekly',
+    priority: 0.9,
+  },
+  {
+    path: '/obozy',
+    label: 'Obozy',
+    title: 'Obozy',
+    description: 'Pozytywne Lato i zapytania o artystyczno-rekreacyjne obozy Pozytywki.',
+    changeFrequency: 'weekly',
+    priority: 0.9,
+  },
+  {
+    path: '/o-pozytywce',
+    label: 'O Pozytywce',
+    title: 'O Pozytywce',
+    description: 'Podejście Pozytywki, Iwona Pilarz, scena, wspólnota i twórcza praca.',
+    changeFrequency: 'monthly',
+    priority: 0.7,
+  },
 ] satisfies SiteRoute[]
 
 export const homeAnchors = {
   classes: '/zajecia',
-  stage: '/',
-  events: '/wydarzenia',
-  camp: '/kontakt',
-  about: '/',
+  groups: '/zespoly',
+  stage: '/spektakle',
+  events: '/spektakle',
+  camp: '/obozy',
+  about: '/o-pozytywce',
 } as const
 
 export function getActivityHref(slug: string): Route {
@@ -59,5 +92,5 @@ export function getActivityHref(slug: string): Route {
 }
 
 export function getEventHref(slug: string): Route {
-  return `/wydarzenia/${slug}` as Route
+  return `/spektakle/${slug}` as Route
 }

@@ -1,4 +1,4 @@
-import {homePageContent} from '@/lib/content/home-page'
+import {homePageContent} from '@/lib/content/home-page-content'
 import type {EventPreview} from '@/lib/content/types'
 
 export type EventListItem = EventPreview & {
