@@ -3,6 +3,7 @@ import {ClassesPreviewSection} from '@/components/home/classes-preview-section'
 import {CreativeAreasSection} from '@/components/home/creative-areas-section'
 import {EventsPreviewSection} from '@/components/home/events-preview-section'
 import {FinalCtaSection} from '@/components/home/final-cta-section'
+import {GroupsPreviewSection} from '@/components/home/groups-preview-section'
 import {HeroSection} from '@/components/home/hero-section'
 import {QuickLinksSection} from '@/components/home/quick-links-section'
 import {StageSection} from '@/components/home/stage-section'
@@ -22,6 +23,7 @@ export function HomePageView({content}: HomePageViewProps) {
       <StageSection content={content.stage} />
       <CreativeAreasSection content={content.creativeAreas} />
       <ClassesPreviewSection content={content.classesPreview} />
+      <GroupsPreviewSection content={content.groupsPreview} />
       <EventsPreviewSection content={content.eventsPreview} />
       <CampSection content={content.camp} />
       <TeamPreviewSection content={content.team} />

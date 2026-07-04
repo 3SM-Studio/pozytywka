@@ -1,21 +1,23 @@
-import type {ClassPreview, EventPreview} from '@/lib/content/types'
+﻿import type {ClassPreview, EventPreview} from '@/lib/content/types'
 
 export const classStatusLabel: Record<ClassPreview['status'], string> = {
-  open: 'Zapisy — otwarte',
-  waitlist: 'Zapisy — lista rezerwowa',
-  closed: 'Zapisy — zamknięte',
-  planned: 'Zapisy w przygotowaniu',
+  enquiry: 'Zapytaj o nabór',
+  open: 'Zapisy otwarte',
+  waitlist: 'Lista rezerwowa',
+  closed: 'Zapisy zamknięte',
+  planned: 'Zapytaj o nabór',
 }
 
 export const eventStatusLabel: Record<EventPreview['status'], string> = {
+  enquiry: 'Szczegóły do potwierdzenia',
   scheduled: 'Zaplanowane',
   cancelled: 'Odwołane',
   past: 'Zakończone',
-  planned: 'Wydarzenie w przygotowaniu',
+  planned: 'Szczegóły do potwierdzenia',
 }
 
 export function formatAgeRange(ageRange: ClassPreview['ageRange']) {
-  if (ageRange.kind === 'unknown') {
+  if (ageRange.kind === 'unknown' || ageRange.kind === 'descriptive') {
     return ageRange.label
   }
 

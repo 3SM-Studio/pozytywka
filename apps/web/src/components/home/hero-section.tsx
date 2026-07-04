@@ -21,14 +21,14 @@ export function HeroSection({content}: HeroSectionProps) {
         <div className="from-background absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t to-transparent" />
       </div>
 
-      <div className="w-container relative z-10 mx-auto grid min-h-[68vh] items-center gap-12 lg:grid-cols-[1.05fr_0.95fr]">
-        <div className="max-w-3xl">
-          <p className="text-primary mb-5 text-sm font-semibold tracking-[0.18em] uppercase">
+      <div className="w-container relative z-10 mx-auto grid min-h-[68vh] items-center gap-10 xl:grid-cols-[minmax(0,1.05fr)_minmax(0,0.95fr)] xl:gap-12">
+        <div className="max-w-3xl min-w-0">
+          <p className="text-primary mb-5 text-sm font-bold tracking-[0.14em] uppercase sm:tracking-[0.18em]">
             Pozytywka — Pracownia Twórcza
           </p>
           <h1
             id={headingId}
-            className="font-serif text-[3rem] leading-[1.02] font-bold tracking-[-0.035em] md:text-[5rem]"
+            className="max-w-[11ch] font-serif text-[clamp(2.75rem,9vw,4.5rem)] leading-[1.03] font-bold tracking-tight xl:text-[clamp(4.5rem,5.6vw,5.6rem)]"
           >
             {content.title}
           </h1>
@@ -48,14 +48,14 @@ export function HeroSection({content}: HeroSectionProps) {
               href={content.secondaryAction.href}
               variant="outline"
               size="lg"
-              className="bg-surface-raised/70"
+              className="border-outline bg-surface-raised text-foreground font-bold"
             >
               {content.secondaryAction.label}
             </LinkButton>
           </div>
         </div>
 
-        <div className="relative min-h-[28rem] lg:min-h-[36rem]">
+        <div className="relative min-h-[24rem] w-full max-w-full min-w-0 sm:min-h-[28rem] xl:min-h-[36rem]">
           <div className="border-outline-variant/70 bg-surface-raised/70 absolute inset-0 overflow-hidden rounded-[2rem] border p-4 shadow-2xl backdrop-blur">
             <div className="bg-ink relative grid h-full place-items-center overflow-hidden rounded-[1.5rem]">
               <div
@@ -70,7 +70,7 @@ export function HeroSection({content}: HeroSectionProps) {
           </div>
 
           <div className="border-outline-variant/70 bg-surface-raised/90 absolute right-6 bottom-6 left-6 rounded-2xl border p-5 shadow-2xl backdrop-blur sm:left-auto sm:w-72">
-            <p className="text-primary text-xs font-semibold tracking-[0.18em] uppercase">
+            <p className="text-primary text-xs font-bold tracking-[0.14em] uppercase">
               Teatr • Muzyka • Ruch
             </p>
             <p className="text-muted-foreground mt-2 text-sm leading-6">

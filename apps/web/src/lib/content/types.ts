@@ -10,10 +10,42 @@ export type ExternalHref =
 
 export type AppHref = InternalHref | ExternalHref
 
+export type SourceStatus = 'client-confirmed' | 'public-source' | 'draft'
+
+export type SourceMeta = {
+  sourceStatus: SourceStatus
+  sourceNote: string
+}
+
+export type SeoFields = {
+  seoTitle: string
+  seoDescription: string
+}
+
+export type SlugFields = {
+  slug: string
+}
+
+export type PublishableDocument = SourceMeta &
+  SeoFields &
+  SlugFields & {
+    title: string
+    isPublished: boolean
+  }
+
 export type LinkTarget = {
   id: string
   label: string
   href: AppHref
+}
+
+export type Cta = LinkTarget & {
+  description?: string
+}
+
+export type ImageWithAlt = {
+  alt: string
+  label: string
 }
 
 export type NavigationItem = LinkTarget
@@ -63,6 +95,89 @@ export type AgeRange =
       kind: 'unknown'
       label: string
     }
+  | {
+      kind: 'descriptive'
+      label: string
+    }
+
+export type ActivityDocument = PublishableDocument & {
+  category: 'teatr' | 'muzyka' | 'taniec' | 'animacje' | 'warsztaty'
+  categoryLabel: string
+  summary: string
+  description: string
+  ageRange: AgeRange
+  scheduleSummary?: string
+  locationSummary?: string
+  status: 'open' | 'waitlist' | 'closed' | 'enquiry' | 'planned'
+  image: ImageWithAlt
+  tags: string[]
+}
+
+export type GroupDocument = PublishableDocument & {
+  category: 'wokalno-taneczna' | 'teatralna' | 'musicalowa' | 'taniec'
+  categoryLabel: string
+  summary: string
+  description: string
+  ageRange: AgeRange
+  status: 'open' | 'waitlist' | 'enquiry'
+  relatedActivitySlugs: string[]
+}
+
+export type ShowDocument = PublishableDocument & {
+  type: 'spektakl' | 'musical' | 'koncert' | 'projekt-sceniczny'
+  typeLabel: string
+  summary: string
+  description: string
+  startsAt?: string
+  dateLabel?: string
+  timeLabel?: string
+  locationSummary?: string
+  status: 'scheduled' | 'cancelled' | 'past' | 'planned' | 'enquiry'
+}
+
+export type CampDocument = PublishableDocument & {
+  season: string
+  summary: string
+  description: string
+  details: CampDetail[]
+  status: 'enquiry' | 'open' | 'waitlist' | 'closed'
+  primaryAction: LinkTarget
+  secondaryAction: LinkTarget
+}
+
+export type PersonDocument = PublishableDocument & {
+  name: string
+  role: string
+  summary: string
+  description: string
+  portrait: ImageWithAlt
+}
+
+export type TestimonialDocument = PublishableDocument & {
+  quote: string
+  author: string
+  caption: string
+  verified: boolean
+}
+
+export type LegalPageDocument = PublishableDocument & {
+  body: string[]
+}
+
+export type SiteSettingsDocument = SourceMeta &
+  SeoFields & {
+    title: string
+    isPublished: boolean
+    navigation: NavigationItem[]
+    footer: FooterContent
+  }
+
+export type HomePageDocument = SourceMeta &
+  SeoFields & {
+    title: string
+    isPublished: boolean
+    sections: HomePageContent
+  }
 
 export type ClassPreview = {
   id: string
@@ -73,7 +188,7 @@ export type ClassPreview = {
   ageRange: AgeRange
   scheduleSummary?: string
   locationSummary?: string
-  status: 'open' | 'waitlist' | 'closed' | 'planned'
+  status: ActivityDocument['status']
   imageLabel: string
   action: LinkTarget
 }
@@ -85,7 +200,7 @@ export type EventPreview = {
   dateLabel?: string
   timeLabel?: string
   locationSummary?: string
-  status: 'scheduled' | 'cancelled' | 'past' | 'planned'
+  status: ShowDocument['status']
   type: string
   title: string
   description: string
@@ -167,6 +282,13 @@ export type HomePageContent = {
     action: LinkTarget
     items: ClassPreview[]
   }
+  groupsPreview: {
+    eyebrow: string
+    title: string
+    description: string
+    action: LinkTarget
+    items: GroupDocument[]
+  }
   eventsPreview: {
     eyebrow: string
     title: string
@@ -196,4 +318,20 @@ export type HomePageContent = {
     primaryAction: LinkTarget
     secondaryAction: LinkTarget
   }
+}
+
+export type AboutPageContent = {
+  eyebrow: string
+  title: string
+  description: string
+  pillars: CreativeArea[]
+  featuredPerson: PersonDocument
+}
+
+export type ContactPageContent = {
+  eyebrow: string
+  title: string
+  description: string
+  contactMethods: LinkTarget[]
+  notes: string[]
 }
