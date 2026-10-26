@@ -8,3 +8,6 @@ coverage
 pnpm-lock.yaml
 *.log
 .husky/_
+
+# Reviewed third-party skills stay byte-for-byte aligned with their pinned sources.
+.agents/skills/

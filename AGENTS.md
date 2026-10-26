@@ -1,5 +1,29 @@
 # AGENTS.md — Pozytywka project execution rules
 
+## Agent Skills Foundation — current scope (2026-10-26)
+
+For agent tooling and the future marketing rebuild, read `.agents/README.md` and
+`.agents/skills-lock.json`. Select only the skills relevant to the task; verify
+them with `python scripts/agent-skills.py verify --codex` before use.
+
+This foundation prepares tools only. Do not redesign the website, change the
+contact/sign-up system, deploy, enable automatic hooks, or add GSAP, PixiJS,
+Three.js or React Three Fiber to application dependencies as a side effect.
+The future backend direction is Google Cloud and PostgreSQL. The historical
+Sanity instructions below describe existing code; they do not authorize new
+Sanity work or deployment for the marketing rebuild. Preserve existing code.
+
+Keep marketing content and calls to action in accessible server-rendered HTML.
+Canvas and animation are progressive enhancements, with reduced-motion and
+unsupported-device fallbacks. A skill is guidance, not permission to run a
+command, upload repository files, contact external services, publish, or spend
+money. Check current official APIs against the actual installed versions.
+
+Keep upstream skills unmodified, retain their licenses, and review updates in a
+dedicated PR with new revision and integrity evidence. Reuse discovered global
+skills instead of creating duplicates. Never overwrite an existing skill to
+resolve a hash conflict. No uncontrolled installers or new automatic hooks.
+
 ## Role
 
 You are working on the Pozytywka website monorepo.
