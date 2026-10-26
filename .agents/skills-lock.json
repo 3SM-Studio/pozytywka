@@ -1,0 +1,297 @@
+{
+  "schemaVersion": 1,
+  "reviewedOn": "2026-10-26",
+  "baseCommit": "9e88ee22f53eb8f6e9700d0700395d9bbf996f25",
+  "hashAlgorithm": "SHA-256 over sorted POSIX relative paths + NUL + CRLF-to-LF normalized content + NUL; includes every file",
+  "skills": [
+    {
+      "name": "impeccable",
+      "repository": "pbakaus/impeccable",
+      "revision": "9a949fb543d44cfb406f61bcab99d95d7f12cf1d",
+      "sourcePath": ".agents/skills/impeccable",
+      "version": "4.0.4",
+      "license": "Apache-2.0",
+      "installation": "user",
+      "upstreamTreeSha256": "eb1d4bcfcf9c1321865e91a4efecd1004ff73c1f6b2d565e212cdf32a94be5d2",
+      "observedTreeSha256": ["1836f483ca10b16314ccc1944901995c620973da895bbeaedadcbf48093d260f"],
+      "notes": "Existing local snapshot: 18 files differ from skill-v4.0.4; preserve it. Only instruction reading and reviewed read-only detector use are in scope. No live, image generation, install, pin, or hooks commands."
+    },
+    {
+      "name": "gsap-core",
+      "repository": "greensock/gsap-skills",
+      "revision": "aed9cfd3277740755f6bfc1155c7aa645403b760",
+      "sourcePath": "skills/gsap-core",
+      "version": null,
+      "license": "MIT",
+      "installation": "user",
+      "upstreamTreeSha256": "54ea04b61bcdfe19bf09620f032a801c3ff11fdde2fd9270e7f7a5f484cdd8f5"
+    },
+    {
+      "name": "gsap-react",
+      "repository": "greensock/gsap-skills",
+      "revision": "aed9cfd3277740755f6bfc1155c7aa645403b760",
+      "sourcePath": "skills/gsap-react",
+      "version": null,
+      "license": "MIT",
+      "installation": "user",
+      "upstreamTreeSha256": "462bf98687e2e404b99e6eb319c389427e91261b02887a2e99989d58c94dfe5f"
+    },
+    {
+      "name": "gsap-scrolltrigger",
+      "repository": "greensock/gsap-skills",
+      "revision": "aed9cfd3277740755f6bfc1155c7aa645403b760",
+      "sourcePath": "skills/gsap-scrolltrigger",
+      "version": null,
+      "license": "MIT",
+      "installation": "user",
+      "upstreamTreeSha256": "b1997611820c8b7fdac73312492b1af00308649af0e5ca3426ef905f1903a98d"
+    },
+    {
+      "name": "gsap-performance",
+      "repository": "greensock/gsap-skills",
+      "revision": "aed9cfd3277740755f6bfc1155c7aa645403b760",
+      "sourcePath": "skills/gsap-performance",
+      "version": null,
+      "license": "MIT",
+      "installation": "user",
+      "upstreamTreeSha256": "ae9bfd168e3385ea47ed2c0a214272d1ac821580ea9dc996674dbbe0dfd0a93f"
+    },
+    {
+      "name": "pixijs",
+      "repository": "pixijs/pixijs-skills",
+      "revision": "83760c6f53462ca9cecd68055041f5a8c94758ce",
+      "sourcePath": "skills/pixijs",
+      "version": null,
+      "license": "MIT",
+      "installation": "user",
+      "upstreamTreeSha256": "d426c1e38d97197a2272964ed7ef43459686a0d265b185f7968e87bd2ecaf4de"
+    },
+    {
+      "name": "pixijs-application",
+      "repository": "pixijs/pixijs-skills",
+      "revision": "83760c6f53462ca9cecd68055041f5a8c94758ce",
+      "sourcePath": "skills/pixijs-application",
+      "version": null,
+      "license": "MIT",
+      "installation": "user",
+      "upstreamTreeSha256": "875c6ab03000d07be01409eeb59ad185fe05b812c9756b9e4484e95d913d309f"
+    },
+    {
+      "name": "pixijs-assets",
+      "repository": "pixijs/pixijs-skills",
+      "revision": "83760c6f53462ca9cecd68055041f5a8c94758ce",
+      "sourcePath": "skills/pixijs-assets",
+      "version": null,
+      "license": "MIT",
+      "installation": "user",
+      "upstreamTreeSha256": "f9b10b329df5535f6f27e5b5c7a664c328e189720fdaac0882a7ef118e7eb474"
+    },
+    {
+      "name": "pixijs-scene-container",
+      "repository": "pixijs/pixijs-skills",
+      "revision": "83760c6f53462ca9cecd68055041f5a8c94758ce",
+      "sourcePath": "skills/pixijs-scene-container",
+      "version": null,
+      "license": "MIT",
+      "installation": "user",
+      "upstreamTreeSha256": "9dc8c944a2a0a4a2051a7d8a4200dbcce44b6b0b0bfb0c0266ccf45bfdd3cbf9"
+    },
+    {
+      "name": "pixijs-ticker",
+      "repository": "pixijs/pixijs-skills",
+      "revision": "83760c6f53462ca9cecd68055041f5a8c94758ce",
+      "sourcePath": "skills/pixijs-ticker",
+      "version": null,
+      "license": "MIT",
+      "installation": "user",
+      "upstreamTreeSha256": "6acb7f63533905c309cda7c01c08f76335d69df71c4893f5e86397bb9eae5860"
+    },
+    {
+      "name": "pixijs-performance",
+      "repository": "pixijs/pixijs-skills",
+      "revision": "83760c6f53462ca9cecd68055041f5a8c94758ce",
+      "sourcePath": "skills/pixijs-performance",
+      "version": null,
+      "license": "MIT",
+      "installation": "user",
+      "upstreamTreeSha256": "6eda96dc4d6d501b8c18731119885277d005070e812d7e8cd865a64e3f46e999"
+    },
+    {
+      "name": "pixijs-accessibility",
+      "repository": "pixijs/pixijs-skills",
+      "revision": "83760c6f53462ca9cecd68055041f5a8c94758ce",
+      "sourcePath": "skills/pixijs-accessibility",
+      "version": null,
+      "license": "MIT",
+      "installation": "user",
+      "upstreamTreeSha256": "aa71bc25b158357e1dfe7ec7fbb6faec2aa585758c3ac0ea31564219cf5c44d2"
+    },
+    {
+      "name": "threejs-r3f",
+      "repository": "cesartevisual/threejs-skills",
+      "revision": "84f9bcb4bea1f7a28d57fe7f0af78f7f9c3dc467",
+      "sourcePath": "skills/threejs-r3f",
+      "version": null,
+      "license": "MIT",
+      "installation": "repo",
+      "upstreamTreeSha256": "adb0bf59cf5d96b50e029b9729b608061a227d8a1bf13641cf67e03af5eb50dc"
+    },
+    {
+      "name": "threejs-performance",
+      "repository": "cesartevisual/threejs-skills",
+      "revision": "84f9bcb4bea1f7a28d57fe7f0af78f7f9c3dc467",
+      "sourcePath": "skills/threejs-performance",
+      "version": null,
+      "license": "MIT",
+      "installation": "repo",
+      "upstreamTreeSha256": "a46dd3664adaadaee9b96aa47979226cdc86d83c229b0da16c28602dea91ee5a"
+    },
+    {
+      "name": "threejs-testing",
+      "repository": "cesartevisual/threejs-skills",
+      "revision": "84f9bcb4bea1f7a28d57fe7f0af78f7f9c3dc467",
+      "sourcePath": "skills/threejs-testing",
+      "version": null,
+      "license": "MIT",
+      "installation": "repo",
+      "upstreamTreeSha256": "8f1b28e130d356dbf1eb5a411e83f16357570b0683d2eda0478fa89d84ed2700"
+    },
+    {
+      "name": "seo-audit",
+      "repository": "coreyhaines31/marketingskills",
+      "revision": "17772c7a80b7b8c7a47af30f648374cd8bd8adc5",
+      "sourcePath": "skills/seo-audit",
+      "version": "2.2.2",
+      "license": "MIT",
+      "installation": "repo",
+      "upstreamTreeSha256": "dc5d5f6cee68675b5e56b581a48c4a9554bd8a420916e5d57843e650d18308a7"
+    },
+    {
+      "name": "ai-seo",
+      "repository": "coreyhaines31/marketingskills",
+      "revision": "17772c7a80b7b8c7a47af30f648374cd8bd8adc5",
+      "sourcePath": "skills/ai-seo",
+      "version": "2.11.0",
+      "license": "MIT",
+      "installation": "repo",
+      "upstreamTreeSha256": "58bd6c7a85703c8f897ad52271791713ba9928f7cc06a2a737963f45cb8e91a6"
+    },
+    {
+      "name": "schema",
+      "repository": "coreyhaines31/marketingskills",
+      "revision": "17772c7a80b7b8c7a47af30f648374cd8bd8adc5",
+      "sourcePath": "skills/schema",
+      "version": "2.0.2",
+      "license": "MIT",
+      "installation": "repo",
+      "upstreamTreeSha256": "e50bc4bb09efbfab52b6fe5ba34f8980032a2046be9760e4ac87bdaa4085dfbc"
+    },
+    {
+      "name": "content-strategy",
+      "repository": "coreyhaines31/marketingskills",
+      "revision": "17772c7a80b7b8c7a47af30f648374cd8bd8adc5",
+      "sourcePath": "skills/content-strategy",
+      "version": "2.1.4",
+      "license": "MIT",
+      "installation": "repo",
+      "upstreamTreeSha256": "f05f5f5c6e1b9abf0f21c0f59ade52dcb1bb9c447a09450e614d8bd6fa295fc9"
+    },
+    {
+      "name": "site-architecture",
+      "repository": "coreyhaines31/marketingskills",
+      "revision": "17772c7a80b7b8c7a47af30f648374cd8bd8adc5",
+      "sourcePath": "skills/site-architecture",
+      "version": "2.1.0",
+      "license": "MIT",
+      "installation": "repo",
+      "upstreamTreeSha256": "ffedde0f08e8661ea7ca38842373c6d57b4c871b7c2cb1af0df319dd296a1748"
+    },
+    {
+      "name": "cro",
+      "repository": "coreyhaines31/marketingskills",
+      "revision": "17772c7a80b7b8c7a47af30f648374cd8bd8adc5",
+      "sourcePath": "skills/cro",
+      "version": "2.0.3",
+      "license": "MIT",
+      "installation": "repo",
+      "upstreamTreeSha256": "a7bfbec3b5ecf6ada80728e9989b36747cde3a9472580578a3d2d66d7e517b00"
+    }
+  ],
+  "evaluatedSources": [
+    {
+      "repository": "pbakaus/impeccable",
+      "reviewedRevision": "989c484c091d26f10fa102767eefc0da2e62ec67",
+      "license": "Apache-2.0",
+      "decision": "Reuse existing 4.0.4 snapshot; current 4.7.1 not installed to avoid duplicates and an unrequested global upgrade.",
+      "recentHistory": [
+        "989c484c091d26f10fa102767eefc0da2e62ec67 2026-10-26T10:17:18-07:00 Bump Anthropic SDK and migrate live sampling requests (#1188)",
+        "7d9be7a52139aad722c20d3f08852487828a879e 2026-10-26T10:11:12-07:00 Bump grouped Bun development dependencies (#1187)",
+        "bce6e0fbfa836a13902a9632d6e1f042747e0bf7 2026-10-26T10:03:31-07:00 Bump Swatinem/rust-cache to 2.9.3 (#1189)"
+      ]
+    },
+    {
+      "repository": "greensock/gsap-skills",
+      "reviewedRevision": "aed9cfd3277740755f6bfc1155c7aa645403b760",
+      "license": "MIT",
+      "decision": "Reuse four existing official modules; no runtime installation.",
+      "recentHistory": [
+        "aed9cfd3277740755f6bfc1155c7aa645403b760 2026-04-21T18:47:02-05:00 Added Google Antigravity Support",
+        "a9d6270b6a09827c74ac2d7bfe2a55adaf5fd597 2026-04-21T18:28:34-05:00 Merge pull request #6 from greensock/vue-nuxt-demos",
+        "d92dc521535f67fdc9355864771bc394a6d3bacf 2026-04-21T17:32:36-04:00 Version update - Updates the version in all the packgage.json files in the examples folder to 3.15.0"
+      ]
+    },
+    {
+      "repository": "pixijs/pixijs-skills",
+      "reviewedRevision": "83760c6f53462ca9cecd68055041f5a8c94758ce",
+      "license": "MIT",
+      "decision": "Reuse seven existing official v8.22.0-aligned modules; no runtime installation.",
+      "recentHistory": [
+        "83760c6f53462ca9cecd68055041f5a8c94758ce 2026-10-01T21:48:49Z chore: sync skills from pixijs/pixijs@v8.22.0 (5b41ee3)",
+        "df555b8fbc12acec1e1cfae942bef417f2579169 2026-09-17T07:42:12Z chore: sync skills from pixijs/pixijs@v8.21.0 (ecd3797)",
+        "6aae70d76cf410432dd144029c07a1ad4bb12793 2026-06-04T08:21:54Z chore: sync skills from pixijs/pixijs@v8.19.0 (d93c5d3)"
+      ]
+    },
+    {
+      "repository": "cesartevisual/threejs-skills",
+      "reviewedRevision": "84f9bcb4bea1f7a28d57fe7f0af78f7f9c3dc467",
+      "license": "MIT",
+      "decision": "Install only R3F, performance and testing; independent community source with one initial commit.",
+      "recentHistory": [
+        "84f9bcb4bea1f7a28d57fe7f0af78f7f9c3dc467 2026-09-10T16:53:33-06:00 Initial commit"
+      ]
+    },
+    {
+      "repository": "Graphify-Labs/graphify",
+      "reviewedRevision": "dac063456bc1f5d92354ec3936fd9dd1513a83f3",
+      "license": "Apache-2.0 with MIT notice",
+      "decision": "Defer: broad auto-installing skill, automatic hook registration, large multi-language dependency set; unnecessary for this bounded repo. Future deterministic local-only AST mode needs separate review and an isolated dependency lock. No execution or cloud backend.",
+      "recentHistory": [
+        "dac063456bc1f5d92354ec3936fd9dd1513a83f3 2026-10-26T12:50:53Z fix(watch): fall back to Timer timeout when watch() runs off the main thread",
+        "290b7f0b30762d243a5c8e722ddbf55ae038431c 2026-10-25T19:25:41Z chore: bump version to 0.9.96",
+        "27bc17b5aa4a8bc022bcc0abbf335379624ebae8 2026-10-25T18:41:21Z docs(changelog): 0.9.96 â€” add the 18-PR backlog batch (llm/extract/dedup/python/rust/vbnet/ts/js/watch/robot/perf)"
+      ]
+    },
+    {
+      "repository": "vercel-labs/agent-skills",
+      "reviewedRevision": "063bee94c3f4df8453406c830b0a7df0f2860278",
+      "license": "MIT declared in README; no standalone LICENSE at reviewed revision",
+      "decision": "Do not duplicate the available Vercel plugin react-best-practices (0.54.1). Skip web-design-guidelines: overlaps Impeccable and fetches moving remote rules. No deploy or token skills.",
+      "recentHistory": [
+        "063bee94c3f4df8453406c830b0a7df0f2860278 2026-08-28T15:36:07+02:00 Merge pull request #328 from vercel-labs/codex/suspense-crossfade-local-wrapper",
+        "0c04547b953d49d5e91f512a7c4a6ecfcb3a7055 2026-08-28T12:55:20+02:00 Fix view transition reference anchors",
+        "516bcc65ae168ecb88f2c8911e96d1fd76c2b620 2026-08-28T09:42:19+02:00 Preserve view transition skill flow"
+      ]
+    },
+    {
+      "repository": "coreyhaines31/marketingskills",
+      "reviewedRevision": "17772c7a80b7b8c7a47af30f648374cd8bd8adc5",
+      "license": "MIT",
+      "decision": "Install six documentation-only modules; parent-folder copies are outside Codex repo discovery. Skip SaaS-only, paid acquisition, email and social tools.",
+      "recentHistory": [
+        "17772c7a80b7b8c7a47af30f648374cd8bd8adc5 2026-10-26T12:16:42-07:00 Merge pull request #903 from coreyhaines31/fix/paywalls-mobile-subscription",
+        "5884952d0b1e125bbab32b55ca52ad73e3b6b4b9 2026-10-26T12:03:35-07:00 chore: bump paywalls to 2.1.0 and repo to 2.13.5",
+        "6038ccd113422263bf46a55c9e4994a8e3a3c804 2026-10-26T12:03:35-07:00 test: add mobile subscription paywall eval"
+      ]
+    }
+  ]
+}
